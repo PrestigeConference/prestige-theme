@@ -3,6 +3,10 @@
 	<div class="columns-6"></div> is 50% width in a 12-column layout
 */
 
+.row {
+    @include clearfix();
+}
+
 $columnCssCounter: 1;
 $columnsList: '';
 
@@ -21,7 +25,7 @@ $columnsList: '';
 
 $columnCssCounter: 1;
 
-@media only screen and (min-width: #{$largeBreakpoint}) {
+@media only screen and (min-width: #{$midBreakpoint}) {
 	@while $columnCssCounter <= $nbrOfColumns {
 		.columns-#{$columnCssCounter} {
 			float: left;

@@ -69,14 +69,15 @@
         }
 
     .header--blog-name {
+        @include css3-calc('width', '100% - 2rem');
+        max-width: 7em;
         margin: 1em auto 0 auto;
-        @include rem-px('padding', 0, 1rem);
 
         a {
             display: block;
             height: 0;
             @include rem-px(margin-bottom, 1rem);
-            padding-top: 36.1666666667%;
+            padding-top: 81.1666666667%;
             background: url(assets/img/logo.png) no-repeat left top;
             background-size: 100% auto;
             @include hide-text();
@@ -87,8 +88,8 @@
 
 @media only screen and (min-width: #{$smallBreakpoint}) {
     .header--blog-name {
-        width: 70%;
-        max-width: 9em;
+        //width: 70%;
+        //max-width: 9em;
     }
 }
 
@@ -110,8 +111,7 @@
 
             .header--blog-name {
                 float: left;
-                width: 9em;
-                margin-top: 0;
+                margin-top: -3rem;
             }
 }
 

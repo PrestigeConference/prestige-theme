@@ -306,18 +306,17 @@ sub {
 /* LINKS */
 a {
     color: $linkColor;
-    text-decoration: none;
+    text-decoration: underline;
     cursor: pointer;
 
     &:hover {
         color: $linkHover;
-        text-decoration: underline;
+        text-decoration: none;
         border: 0;
         outline: 0;
     }
 
     &:visited {
-        color: $linkVisited;
         color: $linkVisited;
     }
 

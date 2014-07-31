@@ -1,5 +1,5 @@
 <?php get_template_part('templates/header'); ?>
-<section class="content row">
+<section class="content">
     <main class="content--body <?php echo spring_main_class(); ?>" role="main">
         <?php include spring_template_path(); ?>
     </main>

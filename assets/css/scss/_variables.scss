@@ -1,14 +1,5 @@
 // ---- ---- ---- ---- VARIABLES ---- ---- ---- ----
 
-// Site Colors
-$springGreen: #84b100;
-$springLightGreen: #bada55;
-$springBlack: #322e2f;
-$springDarkGrey: #58595b;
-$springGrey: #92948f;
-$springLightGrey: #d3d5cb;
-$springWhite: #f4f4f2;
-
 // Greys
 $black: rgb(0,0,0); //#000000
 $darkerGrey: lighten($black, 10%);
@@ -17,6 +8,15 @@ $midGrey: lighten($black, 50%); //#808080
 $lightGrey: lighten($black, 75%); //#bfbfbf
 $lighterGrey: lighten($black, 90%); //#e6e6e6
 $white: rgb(255,255,255); //#ffffff
+
+// Site Colors
+$springGreen: #84b100;
+$springLightGreen: #bada55;
+$springBlack: black;
+$springDarkGrey: #404041;
+$springGrey: $midGrey;
+$springLightGrey: $lightGrey;
+$springWhite: white;
 
 // Root
 $bodyColor: $white;
@@ -33,7 +33,7 @@ $baselineHeight: 1.35em;
 $headingFont: $baseFont;
 $headingLineHeight: 1.1;
 
-$h1Color: $springBlack;
+$h1Color: $springGrey;
 $h1Size: 2.25em;
 $h1FontWeight: 200;
 
@@ -61,7 +61,7 @@ $headingTextShadow: none;
 $codeFont: 'Source Code Pro', monospace;
 
 // Links
-$linkColor: $springGreen;
+$linkColor: $midGrey;
 $linkHover: darken($linkColor,5%);
 $linkVisited: darken($linkColor,10%);
 $linkFocus: darken($linkColor,15%);
@@ -83,13 +83,13 @@ $textboxMaxWidth: 30em;
 $labelFontSize: 1.125em;
 $labelColor: $textColor;
 
-$buttonBackground: $springGreen;
-$buttonBackground2: $springLightGreen; //Uncomment if you want a gradient background on a button. Also uncomment gradient in
+$buttonBackground: $springDarkGrey;
+$buttonBackground2: lighten($springDarkGrey, 10%); //Uncomment if you want a gradient background on a button. Also uncomment gradient in
 $buttonBorderColor: darken($buttonBackground,5%);
 $buttonBorderWidth: 1px;
 $buttonBorderStyle: solid;
 $buttonColor: $springWhite;
-$buttonOutlineColor: $springGreen;
+$buttonOutlineColor: $springDarkGrey;
 $buttonFont: $baseFont;
 $buttonFontSize: 1em;
 $buttonFontWeight: 200;

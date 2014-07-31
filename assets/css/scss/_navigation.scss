@@ -72,6 +72,17 @@
             }
         }
 
+.nav-quicklinks,
+.nav-main {
+    a {
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
 .nav-pager {
     @include clearfix();
 }
