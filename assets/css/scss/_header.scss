@@ -69,18 +69,50 @@
         }
 
     .header--blog-name {
+        overflow: hidden;
         @include css3-calc('width', '100% - 2rem');
         max-width: 7em;
         margin: 1em auto 0 auto;
 
         a {
             display: block;
+            position: relative;
+            overflow: hidden;
             height: 0;
             @include rem-px(margin-bottom, 1rem);
             padding-top: 81.1666666667%;
-            background: url(assets/img/logo.png) no-repeat left top;
-            background-size: 100% auto;
-            @include hide-text();
+
+            svg {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                height: 100%;
+                width: 100%;
+
+                .building,
+                .underline {
+                    fill: none;
+                    stroke: #404041;
+                    stroke-linejoin: round;
+                    stroke-linecap: round;
+                    stroke-miterlimit: 10;
+                    fill-rule: evenodd;
+                    clip-rule: evenodd;
+                    webkit-transition: all 1s;
+                }
+
+                .letter,
+                .state {
+                    fill: #404041;
+                }
+            }
+        }
+
+        .blog-name {
+            position: absolute;
+            right: 100%;
         }
     }
 
@@ -97,7 +129,6 @@
 
 @media only screen and (min-width: #{$midBreakpoint}) {
     .header-main {
-        margin-bottom: 0;
     }
 
         .header--inner {

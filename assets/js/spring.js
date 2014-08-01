@@ -1,9 +1,8 @@
 ;(function($){
     //Add event listeners to buttons
     var menuBtn = document.getElementById('openMainMenu');
-    console.log('hello');
     var sidebarBtn = document.getElementById('openSidebar');
-    console.log(sidebarBtn);
+
     if (menuBtn.attachEvent) {
         menuBtn.attachEvent('onclick', openCloseMenu);
 
@@ -42,5 +41,33 @@
         } else {
             htmlEl.className = htmlElClasses.replace(' open-the-sidebar', '');
         }
+    }
+
+    var buildings = document.querySelectorAll('.building, .underline');
+    for(var i = 0, len = buildings.length; i < len; i++) {
+        (function(b) {
+            var length = b.getTotalLength();
+
+            b.style.strokeDasharray = length + ' ' + length;
+            b.style.strokeDashoffset = length;
+
+            var currentFrame = 0;
+            var totalFrames = 120;
+            var handle = 0;
+
+            var drawPath = function() {
+                var progress = currentFrame / totalFrames;
+                if (progress >= 1) {
+                    window.cancelAnimationFrame(handle);
+                } else {
+                    currentFrame++;
+                    b.style.strokeDashoffset = Math.floor(length * (1 - progress));
+                    handle = window.requestAnimationFrame(drawPath);
+                }
+            }
+
+            drawPath();
+
+        })(buildings[i]);
     }
 })(jQuery);

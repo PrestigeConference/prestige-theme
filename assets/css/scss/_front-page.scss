@@ -1,1 +1,36 @@
+.home--the-best {
+    margin-bottom: .5rem;
+}
 
+
+.home--row {
+    @include flexbox();
+    @include flexbox-justify-content(space-between);
+    @include flexbox-align-items(flex-start);
+}
+
+    .home--column {
+        @include css3-calc('width', '33.33333333% - 1.33333333em');
+
+        h3 {
+            border-top: 1px solid $springLightGrey;
+            border-bottom: 1px solid $springLightGrey;
+            padding: .5rem 0;
+            margin-bottom: .5rem;
+        }
+    }
+
+.no-flexbox.no-flexboxlegacy {
+    .home--row {
+        display: block;
+        @include clearfix();
+    }
+
+    .home--column {
+        margin-right: 1.3333333333em;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

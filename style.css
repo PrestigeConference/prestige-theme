@@ -739,7 +739,6 @@ td {
   vertical-align: middle;
   line-height: 1.35em;
   text-align: left;
-  font-size: .875em;
 }
 
 th {
@@ -1054,6 +1053,7 @@ body {
 }
 
 .header--blog-name {
+  overflow: hidden;
   width: -moz-calc(100% - 2rem);
   width: -webkit-calc(100% - 2rem);
   width: calc(100% - 2rem);
@@ -1062,23 +1062,43 @@ body {
 }
 .header--blog-name a {
   display: block;
+  position: relative;
+  overflow: hidden;
   height: 0;
   margin-bottom: 16px;
   margin-bottom: 1rem;
   padding-top: 81.1666666667%;
-  background: url(assets/img/logo.png) no-repeat left top;
-  background-size: 100% auto;
-  text-shadow: none;
-  text-indent: 1000%;
-  white-space: nowrap;
-  overflow: hidden;
+}
+.header--blog-name a svg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+.header--blog-name a svg .building,
+.header--blog-name a svg .underline {
+  fill: none;
+  stroke: #404041;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  webkit-transition: all 1s;
+}
+.header--blog-name a svg .letter,
+.header--blog-name a svg .state {
+  fill: #404041;
+}
+.header--blog-name .blog-name {
+  position: absolute;
+  right: 100%;
 }
 
 @media only screen and (min-width: 48.5em) {
-  .header-main {
-    margin-bottom: 0;
-  }
-
   .header--inner {
     *zoom: 1;
     padding: 0 3em;
@@ -1333,6 +1353,59 @@ body {
     white-space: nowrap;
   }
 }
+.home--the-best {
+  margin-bottom: .5rem;
+}
+
+.home--row {
+  display: -ms-flexbox;
+  -ms-box-orient: horizontal;
+  display: -moz-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  -ms-flex-align: start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+}
+
+.home--column {
+  width: -moz-calc(33.33333333% - 1.33333333em);
+  width: -webkit-calc(33.33333333% - 1.33333333em);
+  width: calc(33.33333333% - 1.33333333em);
+}
+.home--column h3 {
+  border-top: 1px solid #bfbfbf;
+  border-bottom: 1px solid #bfbfbf;
+  padding: .5rem 0;
+  margin-bottom: .5rem;
+}
+
+.no-flexbox.no-flexboxlegacy .home--row {
+  display: block;
+  *zoom: 1;
+}
+.no-flexbox.no-flexboxlegacy .home--row:before, .no-flexbox.no-flexboxlegacy .home--row:after {
+  display: table;
+  content: "";
+}
+.no-flexbox.no-flexboxlegacy .home--row:after {
+  clear: both;
+}
+.no-flexbox.no-flexboxlegacy .home--column {
+  margin-right: 1.3333333333em;
+}
+.no-flexbox.no-flexboxlegacy .home--column:last-child {
+  margin-right: 0;
+}
+
 .post {
   *zoom: 1;
   margin-bottom: 5em;
@@ -1581,6 +1654,7 @@ body {
 }
 .widget {
   margin-bottom: 1.5em;
+  width: 100%;
 }
 .widget:last-child {
   margin-bottom: 0;
@@ -1647,6 +1721,93 @@ body {
     float: right;
     width: 15em;
     margin-right: 1.375em;
+  }
+}
+.speaker {
+  margin-bottom: 2em;
+  padding-bottom: 2em;
+  border-bottom: 1px solid gray;
+}
+.speaker:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.speaker--name {
+  font-weight: bold;
+}
+
+.speaker--picture {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.speaker--picture img {
+  max-width: 260px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background-clip: padding-box;
+  border: 2px solid gray;
+}
+
+.speaker--name {
+  margin: .5rem 0;
+}
+
+.speaker--links {
+  margin-top: .25rem;
+  padding-top: .25rem;
+  border-top: 1px solid #bfbfbf;
+}
+
+@media only screen and (min-width: 48.5em) {
+  .speaker {
+    display: -ms-flexbox;
+    -ms-box-orient: horizontal;
+    display: -moz-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    @incldue flexbox-align-items(flex-start);
+  }
+
+  .speaker--picture {
+    text-align: left;
+    width: 260px;
+  }
+
+  .speaker--content {
+    width: -moz-calc(100% - 292px);
+    width: -webkit-calc(100% - 292px);
+    width: calc(100% - 292px);
+  }
+
+  .speaker--name {
+    margin-top: 0;
+  }
+
+  .no-flexbox.no-flexboxlegacy .speaker {
+    *zoom: 1;
+  }
+  .no-flexbox.no-flexboxlegacy .speaker:before, .no-flexbox.no-flexboxlegacy .speaker:after {
+    display: table;
+    content: "";
+  }
+  .no-flexbox.no-flexboxlegacy .speaker:after {
+    clear: both;
+  }
+  .no-flexbox.no-flexboxlegacy .speaker--picture {
+    float: left;
+  }
+  .no-flexbox.no-flexboxlegacy .speaker--content {
+    float: right;
   }
 }
 /*
