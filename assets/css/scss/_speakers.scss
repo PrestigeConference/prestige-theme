@@ -1,0 +1,75 @@
+.speaker {
+    margin-bottom: 2em;
+    padding-bottom: 2em;
+    border-bottom: 1px solid $springGrey;
+
+    &:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: 0;
+    }
+}
+
+    .speaker--name {
+        font-weight: bold;
+    }
+
+    .speaker--picture {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+
+        img {
+            max-width: 260px;
+            @include rounded(50%);
+            border: 2px solid $springGrey;
+        }
+    }
+
+    .speaker--name {
+        margin: .5rem 0;
+    }
+
+    .speaker--links {
+        margin-top: .25rem;
+        padding-top: .25rem;
+        border-top: 1px solid $lightGrey;
+    }
+
+
+
+
+@media only screen and (min-width: #{$midBreakpoint}) {
+    .speaker {
+        @include flexbox();
+        @include flexbox-justify-content(space-between);
+        @incldue flexbox-align-items(flex-start);
+    }
+
+        .speaker--picture {
+            text-align: left;
+            width: 260px;
+        }
+
+        .speaker--content {
+            @include css3-calc('width', '100% - 292px');
+        }
+
+        .speaker--name {
+            margin-top: 0;
+        }
+
+    .no-flexbox.no-flexboxlegacy {
+        .speaker {
+            @include clearfix();
+        }
+
+            .speaker--picture {
+                float: left;
+            }
+
+            .speaker--content {
+                float: right;
+            }
+    }
+}
