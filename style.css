@@ -552,7 +552,7 @@ textarea:active,
 textarea:focus,
 .textbox:active,
 .textbox:focus {
-  outline-color: #84b100;
+  outline-color: gray;
 }
 
 input[type="checkbox"],
@@ -1570,6 +1570,10 @@ body {
 }
 
 @media only screen and (max-width: 48.5em) {
+  .content--sidebar {
+    display: none;
+  }
+
   .open-the-sidebar .content--sidebar {
     height: 100%;
     overflow-y: auto;

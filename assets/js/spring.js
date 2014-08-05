@@ -34,12 +34,19 @@
         console.log('here');
         var htmlEl = document.querySelectorAll('html')[0];
         var htmlElClasses = htmlEl.className;
+        var sidebar = document.querySelectorAll('.content--sidebar')[0];
 
         // Add or remove the open-menu class
         if (htmlElClasses.indexOf('open-the-sidebar') === -1) {
+            sidebar.style.display = 'block';
             htmlEl.className = htmlElClasses + ' open-the-sidebar';
+
         } else {
             htmlEl.className = htmlElClasses.replace(' open-the-sidebar', '');
+
+            setTimeout(function() {
+                sidebar.style.display = 'none';
+            }, 300);
         }
     }
 

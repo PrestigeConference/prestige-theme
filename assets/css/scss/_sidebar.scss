@@ -9,6 +9,10 @@
 
 
 @media only screen and (max-width: #{$midBreakpoint}) {
+    .content--sidebar {
+        display: none;
+    }
+
     .open-the-sidebar {
         .content--sidebar {
             height: 100%;
