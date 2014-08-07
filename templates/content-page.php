@@ -22,7 +22,10 @@
                 <figure class="post--thumbnail"><?php the_post_thumbnail() ?></figure>
             <?php endif; ?>
             <div class="post--summary">
-                <?php the_content('<p>Continue Reading...</p>'); ?>
+                <?php
+                global $more;
+                $more = 0;
+                the_content('<p>Continue Reading...</p>'); ?>
             </div>
             <footer class="post--metadata">
                 <section class="post--metadata_categories">
