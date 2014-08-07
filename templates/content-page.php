@@ -33,10 +33,7 @@
                 </section>
             </footer>
         </article>
-    <?php
-    endwhile;
-    //wp_reset_postdata();
-    ?>
+    <?php endwhile; ?>
 </section>
 <?php endif; ?>
 
