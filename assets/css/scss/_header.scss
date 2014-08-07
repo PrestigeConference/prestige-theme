@@ -142,8 +142,14 @@
 
             .header--blog-name {
                 float: left;
-                margin-top: -3rem;
+                margin-top: -1rem;
             }
+}
+
+@media only screen and (min-width: #{$largeBreakpoint}) {
+    .header--blog-name {
+        margin-top: -3rem;
+    }
 }
 
 

@@ -1117,6 +1117,11 @@ body {
 
   .header--blog-name {
     float: left;
+    margin-top: -1rem;
+  }
+}
+@media only screen and (min-width: 64em) {
+  .header--blog-name {
     margin-top: -3rem;
   }
 }
@@ -1388,6 +1393,13 @@ body {
   margin-bottom: .5rem;
 }
 
+.home--recent-posts {
+  margin-top: 3em;
+}
+.home--recent-posts > h1 {
+  margin-bottom: .5rem;
+}
+
 .no-flexbox.no-flexboxlegacy .home--row {
   display: block;
   *zoom: 1;
@@ -1419,8 +1431,8 @@ body {
 }
 
 .post--title {
-  margin-bottom: 12px;
-  margin-bottom: 0.75rem;
+  margin-bottom: 2px;
+  margin-bottom: 0.125rem;
 }
 .post--title a:hover {
   text-decoration: none;
@@ -1477,6 +1489,34 @@ body {
   margin: 3em auto;
 }
 
+.post--thumbnail {
+  margin: 0;
+  margin-bottom: .75em;
+  padding: 0;
+}
+
+@media only screen and (min-width: 48.5em) {
+  .post {
+    *zoom: 1;
+  }
+  .post:before, .post:after {
+    display: table;
+    content: "";
+  }
+  .post:after {
+    clear: both;
+  }
+
+  .post--metadata {
+    clear: both;
+  }
+
+  .post--thumbnail {
+    float: right;
+    margin-left: .75em;
+    max-width: 45%;
+  }
+}
 .comments--list {
   margin: 0;
   padding: 0;

@@ -20,6 +20,14 @@
         }
     }
 
+.home--recent-posts {
+    margin-top: 3em;
+
+    &>h1 {
+        margin-bottom: .5rem;
+    }
+}
+
 .no-flexbox.no-flexboxlegacy {
     .home--row {
         display: block;
