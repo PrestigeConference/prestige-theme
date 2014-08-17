@@ -13,7 +13,7 @@
                 <?php the_field('biography'); ?>
                 <div class="speaker--links">
                     <a href="http://www.twitter.com/<?php the_field('twitter'); ?>">@<?php the_field('twitter'); ?></a>
-                    | <a href="<?php the_field('website'); ?>">website</a>
+                    | <a href="<?php the_field('url'); ?>">website</a>
                 </div>
             </section>
         </section>

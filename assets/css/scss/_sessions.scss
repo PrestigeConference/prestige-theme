@@ -1,0 +1,26 @@
+.session {
+    margin-bottom: 2em;
+    padding-bottom: 2em;
+    border-bottom: 1px solid $springGrey;
+
+    &:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: 0;
+    }
+}
+
+.session--subtitle {
+    font-size: .75em;
+}
+
+.session--speaker {
+    line-height: 2em;
+    margin: -1em 0 1em 0;
+
+    img {
+        @include rounded(50%);
+        height: 2em;
+        vertical-align: middle;
+    }
+}

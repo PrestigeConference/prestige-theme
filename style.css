@@ -1362,30 +1362,6 @@ body {
   margin-bottom: .5rem;
 }
 
-.home--row {
-  display: -ms-flexbox;
-  -ms-box-orient: horizontal;
-  display: -moz-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: justify;
-  -moz-box-pack: justify;
-  -ms-flex-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-align: start;
-  -moz-box-align: start;
-  -ms-flex-align: start;
-  -webkit-align-items: flex-start;
-  align-items: flex-start;
-}
-
-.home--column {
-  width: -moz-calc(33.33333333% - 1.33333333em);
-  width: -webkit-calc(33.33333333% - 1.33333333em);
-  width: calc(33.33333333% - 1.33333333em);
-}
 .home--column h3 {
   border-top: 1px solid #bfbfbf;
   border-bottom: 1px solid #bfbfbf;
@@ -1400,24 +1376,50 @@ body {
   margin-bottom: .5rem;
 }
 
-.no-flexbox.no-flexboxlegacy .home--row {
-  display: block;
-  *zoom: 1;
-}
-.no-flexbox.no-flexboxlegacy .home--row:before, .no-flexbox.no-flexboxlegacy .home--row:after {
-  display: table;
-  content: "";
-}
-.no-flexbox.no-flexboxlegacy .home--row:after {
-  clear: both;
-}
-.no-flexbox.no-flexboxlegacy .home--column {
-  margin-right: 1.3333333333em;
-}
-.no-flexbox.no-flexboxlegacy .home--column:last-child {
-  margin-right: 0;
-}
+@media only screen and (min-width: 48.5em) {
+  .home--row {
+    display: -ms-flexbox;
+    -ms-box-orient: horizontal;
+    display: -moz-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+  }
 
+  .home--column {
+    width: -moz-calc(33.33333333% - 1.33333333em);
+    width: -webkit-calc(33.33333333% - 1.33333333em);
+    width: calc(33.33333333% - 1.33333333em);
+  }
+
+  .no-flexbox.no-flexboxlegacy .home--row {
+    display: block;
+    *zoom: 1;
+  }
+  .no-flexbox.no-flexboxlegacy .home--row:before, .no-flexbox.no-flexboxlegacy .home--row:after {
+    display: table;
+    content: "";
+  }
+  .no-flexbox.no-flexboxlegacy .home--row:after {
+    clear: both;
+  }
+  .no-flexbox.no-flexboxlegacy .home--column {
+    margin-right: 1.3333333333em;
+  }
+  .no-flexbox.no-flexboxlegacy .home--column:last-child {
+    margin-right: 0;
+  }
+}
 .post {
   *zoom: 1;
   margin-bottom: 5em;
@@ -1854,6 +1856,34 @@ body {
     float: right;
   }
 }
+.session {
+  margin-bottom: 2em;
+  padding-bottom: 2em;
+  border-bottom: 1px solid gray;
+}
+.session:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.session--subtitle {
+  font-size: .75em;
+}
+
+.session--speaker {
+  line-height: 2em;
+  margin: -1em 0 1em 0;
+}
+.session--speaker img {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background-clip: padding-box;
+  height: 2em;
+  vertical-align: middle;
+}
+
 /*
  * Temporary fix for https://core.trac.wordpress.org/ticket/26609
  */

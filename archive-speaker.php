@@ -1,8 +1,5 @@
 <h1>The Prestige Speakers</h1>
-<h3>Friday/Saturday Speakers</h3>
 <?php while (have_posts()) : the_post(); ?>
-    <?php $day = get_field('day');
-        if($day != 'sunday') : ?>
     <section class="speaker">
         <?php if ( has_post_thumbnail() ) : ?>
             <figure class="speaker--picture">
@@ -17,36 +14,9 @@
                 <?php the_field('biography'); ?>
                 <div class="speaker--links">
                     <a href="http://www.twitter.com/<?php the_field('twitter'); ?>">@<?php the_field('twitter'); ?></a>
-                    | <a href="<?php the_field('website'); ?>">website</a>
+                    | <a href="<?php the_field('url'); ?>">website</a>
                 </div>
             </section>
         </section>
     </section>
-    <?php endif; ?>
-<?php endwhile; ?>
-<h3>Sunday Speakers</h3>
-<?php while (have_posts()) : the_post(); ?>
-    <?php
-        $day = get_field('day');
-        if($day == 'sunday') : ?>
-    <section class="speaker">
-        <?php if ( has_post_thumbnail() ) : ?>
-            <figure class="speaker--picture">
-                <?php the_post_thumbnail(); ?>
-            </figure>
-        <?php endif; ?>
-        <section class="speaker--content">
-            <h3 class="speaker--name">
-                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-            </h3>
-            <section class="speaker--bio">
-                <?php the_field('biography'); ?>
-                <div class="speaker--links">
-                    <a href="http://www.twitter.com/<?php the_field('twitter'); ?>">@<?php the_field('twitter'); ?></a>
-                    | <a href="<?php the_field('website'); ?>">website</a>
-                </div>
-            </section>
-        </section>
-    </section>
-    <?php endif; ?>
 <?php endwhile; ?>
