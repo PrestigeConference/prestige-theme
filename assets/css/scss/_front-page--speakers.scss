@@ -17,10 +17,12 @@
 }
 
     .speaker {
+        @include flexbox();
+        @include flexbox-align-items(center);
         margin: 0;
         padding: 0;
         opacity: .5;
-        @include transition(opacity .3s ease);
+        @include multi-transition('opacity .3s ease, background-color .3s ease');
 
         .speaker--biography {
             display: none;
@@ -29,28 +31,22 @@
         &:hover,
         &.active {
             opacity: 1;
-
-            .speaker--content {
-                background-color: $siteLightGrey;
-            }
+            background-color: $siteLightGrey;
         }
     }
 
         .speaker--picture {
             margin: 0;
             padding: 0;
-
-            img {
-                width: 100%;
-            }
+            width: 8em;
+            height: 8em;
         }
 
         .speaker--content {
-            padding: 2em 0;
+            @include css3-calc('width', '100% - 8em');
+            padding: 1em 0;
             text-align: center;
             text-transform: uppercase;
-            background-color: white;
-            @include transition(background-color .3s ease);
         }
 
             .speaker--name {
@@ -83,19 +79,22 @@
         }
 
             .speaker {
+                display: block;
                 width: 24rem;
             }
 
-    .speaker--content {
-        height: 11em;
-        width: 24rem;
-    }
+                .speaker--content {
+                    padding: 4em;
+                    height: 11em;
+                    width: 24rem;
+                }
 
-    .speaker--picture {
-        width: 24rem;
+                .speaker--picture {
+                    width: 24rem;
+                    height: 24rem;
 
-        img {
-            width: 24rem;
-        }
-    }
+                    img {
+                        width: 24rem;
+                    }
+                }
 }
