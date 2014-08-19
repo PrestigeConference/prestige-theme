@@ -251,19 +251,28 @@
 <!-- SPONSORS -->
 <section class="home--sponsors">
     <header class="speakers--header">
-        <h1 class="home--title speakers--title">
+        <h1 class="home--title sponsors--title">
             <span>Our</span>
             Sponsors
         </h1>
         <section class="header--description">
-            Instead of many tracks filled with volunteer speakers, we've scoured the WordPress community for some fo the very best speakers and are paying for their travel to come and speak in Minneapolis. What does that mean for you? You'll have a day full of great sessions on managing a business and your career.
-            <section class="header--biography_wrapper" id="headerBiography"></section>
+            These awesome community members make Prestige Conference possible.
         </section>
-        <nav class="speakers--nav">
-            <a class="arrow-left"></a>
-            <a class="arrow-right"></a>
-        </nav>
     </header>
+    <section class="sponsors--content">
+        <ul class="sponsors--list">
+            <li class="sponsor">
+                <a href="/sponsor/press75/">
+                    <img src="/link/to/sponsor/square/image.png" />
+                </a>
+            </li>
+            <li class="sponsor">
+                <a href="/sponsor/press75/">
+                    <img src="/link/to/sponsor/square/image.png" />
+                </a>
+            </li>
+        </ul>
+    </section>
 </section>
 
 <script type="text/javascript">
