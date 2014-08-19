@@ -1,9 +1,16 @@
+.home--schedule {
+    padding: 0 1em;
+}
+
 .schedule--content {
     position: relative;
+    max-width: 60em;
+    @include center-block();
 }
 
     .schedule--title {
         text-align: center;
+        margin: 4rem 0;
 
         &:after {
             margin-left: auto;
@@ -76,7 +83,7 @@
 
     .schedule--progress-line {
         position: absolute;
-        top: 1.5em;
+        top: 1.75em;
         left: .625em;
         bottom: 0;
         height: 100%;
@@ -130,7 +137,6 @@
         }
 
     .schedule--progress-line {
-        top: 1.75em;
         left: 16em;
     }
 }

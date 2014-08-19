@@ -14,36 +14,39 @@
             <a class="arrow-right"></a>
         </nav>
     </header>
-    <ul class="speakers--list">
-        <?php
-        $speakerQueryArgs = array('post_type' => 'Speaker',
-            'posts_per_page' => '100');
-        $speakerQuery = new WP_Query( $speakerQueryArgs );
+    <section class="speakers--list_wrapper">
+        <ul class="speakers--list">
+            <?php
+            $speakerQueryArgs = array('post_type' => 'Speaker',
+                'posts_per_page' => '100');
+            $speakerQuery = new WP_Query( $speakerQueryArgs );
 
-        while($speakerQuery->have_posts()) : $speakerQuery->the_post(); ?>
-            <li class="speaker">
-                <?php if ( has_post_thumbnail() ) : ?>
-                    <figure class="speaker--picture">
-                        <?php the_post_thumbnail(); ?>
-                    </figure>
-                <?php endif; ?>
-                <section class="speaker--content">
-                    <h3 class="speaker--name">
-                        <?php the_title(); ?>
-                    </h3>
-                    <section class="speaker--biography_wrapper">
-                        <section class="speaker--biography">
-                            <?php the_field('biography'); ?>
+            while($speakerQuery->have_posts()) : $speakerQuery->the_post(); ?>
+                <li class="speaker">
+                    <?php if ( has_post_thumbnail() ) : ?>
+                        <figure class="speaker--picture">
+                            <?php the_post_thumbnail(); ?>
+                        </figure>
+                    <?php endif; ?>
+                    <section class="speaker--content">
+                        <h3 class="speaker--name">
+                            <?php the_title(); ?>
+                        </h3>
+                        <section class="speaker--biography_wrapper">
+                            <section class="speaker--biography">
+                                <?php the_field('biography'); ?>
+                            </section>
+                            <div class="speaker--links">
+                                <a href="http://www.twitter.com/<?php the_field('twitter'); ?>">@<?php the_field('twitter'); ?></a>
+                                | <a href="<?php the_field('url'); ?>">website</a>
+                            </div>
                         </section>
-                        <div class="speaker--links">
-                            <a href="http://www.twitter.com/<?php the_field('twitter'); ?>">@<?php the_field('twitter'); ?></a>
-                            | <a href="<?php the_field('url'); ?>">website</a>
-                        </div>
                     </section>
-                </section>
-            </li>
-        <?php endwhile; ?>
-    </ul>
+                </li>
+            <?php endwhile; ?>
+        </ul>
+    </section>
+
 </section>
 
 
@@ -51,8 +54,7 @@
 <section class="home--schedule">
     <header class="schedule--header">
         <h1 class="home--title schedule--title">
-            <span>The</span>
-            Schedule
+            <span>The</span>Schedule
         </h1>
     </header>
     <section class="schedule--content">

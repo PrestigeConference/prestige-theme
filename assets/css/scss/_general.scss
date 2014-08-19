@@ -14,7 +14,7 @@ body {
 }
 
 .content {
-    padding: 0 1.5em;
+    //padding: 0 1.5em;
 }
 
 .youtube {
@@ -143,7 +143,7 @@ body {
 
 @media only screen and (min-width: #{$midBreakpoint}) {
     .content {
-        padding: 0 3em;
+        //padding: 0 3em;
     }
 
     .open-the-menu {
@@ -194,7 +194,7 @@ body {
 
 @media only screen and (min-width: #{$widescreenBreakpoint}) {
     .content {
-        @include rem-px('max-width', 84.5rem);
-        margin: 0 auto;
+        //@include rem-px('max-width', 84.5rem);
+        //margin: 0 auto;
     }
 }
