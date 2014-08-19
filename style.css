@@ -101,6 +101,34 @@
     padding: 0 0.625em;
   }
 }
+@font-face {
+  font-family: 'icomoon';
+  src: url("assets/fonts/icomoon.eot?njtygp");
+  src: url("assets/fonts/icomoon.eot?#iefixnjtygp") format("embedded-opentype"), url("assets/fonts/icomoon.woff?njtygp") format("woff"), url("assets/fonts/icomoon.ttf?njtygp") format("truetype"), url("assets/fonts/icomoon.svg?njtygp#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-right:before {
+  content: "\e602";
+}
+
+.icon-arrow-left:before {
+  content: "\e603";
+}
+
 /*
   ---- ---- ---- ---- RESET STYLESHEET ---- ---- ---- ----
 */
@@ -298,7 +326,6 @@ dl {
 p,
 address {
   margin-bottom: 0.675em;
-  line-height: 1.6875em;
 }
 
 small {
@@ -425,21 +452,21 @@ sub {
 
 /* LINKS */
 a {
-  color: gray;
+  color: #397dc4;
   text-decoration: underline;
   cursor: pointer;
 }
 a:hover {
-  color: #737373;
+  color: #3370b0;
   text-decoration: none;
   border: 0;
   outline: 0;
 }
 a:visited {
-  color: #666666;
+  color: #2e649c;
 }
 a:focus, a:active {
-  color: #595959;
+  color: #285789;
   border: 0;
   outline: 0;
 }
@@ -1181,11 +1208,11 @@ body {
   -ms-transition: color 0.2s;
   -o-transition: color 0.2s;
   transition: color 0.2s;
-  color: gray;
+  color: #397dc4;
 }
 .menu-item a:hover,
 .menu-item a:visited:hover {
-  color: #737373;
+  color: #3370b0;
 }
 
 .nav-quicklinks a,
@@ -1397,19 +1424,9 @@ body {
   align-items: center;
   margin: 0;
   padding: 0;
-  opacity: .5;
-  -webkit-transition: opacity .3s ease, background-color .3s ease;
-  -moz-transition: opacity .3s ease, background-color .3s ease;
-  -ms-transition: opacity .3s ease, background-color .3s ease;
-  -o-transition: opacity .3s ease, background-color .3s ease;
-  transition: opacity .3s ease, background-color .3s ease;
 }
 .speaker .speaker--biography {
   display: none;
-}
-.speaker:hover, .speaker.active {
-  opacity: 1;
-  background-color: #f2f2f2;
 }
 
 .speaker--picture {
@@ -1451,8 +1468,36 @@ body {
   }
 
   .speakers--header {
+    position: relative;
     padding: 6em 4em;
     width: 35em;
+  }
+
+  .speakers--nav {
+    display: block;
+    position: absolute;
+    left: 4em;
+    bottom: 6em;
+  }
+
+  .arrow-left,
+  .arrow-right {
+    font-size: 1.5em;
+    text-decoration: none;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -ms-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+  }
+  .arrow-left:hover, .arrow-left:active,
+  .arrow-right:hover,
+  .arrow-right:active {
+    color: white;
+  }
+
+  .arrow-right {
+    margin-left: 1.5em;
   }
 
   .speakers--list_wrapper {
@@ -1469,6 +1514,16 @@ body {
   .speaker {
     display: block;
     width: 24rem;
+    opacity: .5;
+    -webkit-transition: opacity .3s ease, background-color .3s ease;
+    -moz-transition: opacity .3s ease, background-color .3s ease;
+    -ms-transition: opacity .3s ease, background-color .3s ease;
+    -o-transition: opacity .3s ease, background-color .3s ease;
+    transition: opacity .3s ease, background-color .3s ease;
+  }
+  .speaker:hover, .speaker.active {
+    opacity: 1;
+    background-color: #f2f2f2;
   }
 
   .speaker--content {

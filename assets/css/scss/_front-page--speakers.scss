@@ -21,17 +21,9 @@
         @include flexbox-align-items(center);
         margin: 0;
         padding: 0;
-        opacity: .5;
-        @include multi-transition('opacity .3s ease, background-color .3s ease');
 
         .speaker--biography {
             display: none;
-        }
-
-        &:hover,
-        &.active {
-            opacity: 1;
-            background-color: $siteLightGrey;
         }
     }
 
@@ -65,9 +57,33 @@
     }
 
     .speakers--header {
+        position: relative;
         padding: 6em 4em;
         width: 35em;
     }
+
+        .speakers--nav {
+            display: block;
+            position: absolute;
+            left: 4em;
+            bottom: 6em;
+        }
+
+            .arrow-left,
+            .arrow-right {
+                font-size: 1.5em;
+                text-decoration: none;
+                @include transition(color .3s ease);
+
+                &:hover,
+                &:active {
+                    color: white;
+                }
+            }
+
+            .arrow-right {
+                margin-left: 1.5em;
+            }
 
     .speakers--list_wrapper {
         @include css3-calc('width', '100% - 35em');
@@ -81,6 +97,14 @@
             .speaker {
                 display: block;
                 width: 24rem;
+                opacity: .5;
+                @include multi-transition('opacity .3s ease, background-color .3s ease');
+
+                &:hover,
+                &.active {
+                    opacity: 1;
+                    background-color: $siteLightGrey;
+                }
             }
 
                 .speaker--content {

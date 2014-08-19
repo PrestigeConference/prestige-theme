@@ -33,6 +33,7 @@ function spring_scripts() {
     wp_enqueue_script('spring_scripts');
     //Uncomment for Dev
     wp_enqueue_script('spring_app', get_template_directory_uri() . '/assets/js/spring.js','', '', true);
+    wp_enqueue_script('home_speakers', get_template_directory_uri() . '/assets/js/home--speakers.js','', '', true);
     //Uncomment for Production
     //wp_enqueue_script('spring_app', get_template_directory_uri() . '/assets/js/build/spring-production.js','', '', true);
     wp_enqueue_script('skrollr', get_template_directory_uri() . '/assets/js/vendor/skrollr.min.js','', '', true);
