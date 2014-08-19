@@ -12,9 +12,11 @@ $white: rgb(255,255,255); //#ffffff
 // Site Colors
 $siteLightBlue: #9daff9;
 $siteBlue: #397dc4;
+$siteTitleBlue: #5293cb;
+$siteScheduleDateBlue: #85a0d7;
 $siteGreyBlue: #7a6d98;
 $siteLightGrey: #f2f2f2;
-$siteGrey: #333333;i
+$siteGrey: #333333;
 $springGreen: #84b100;
 $springLightGreen: #bada55;
 $springBlack: black;
@@ -29,7 +31,7 @@ $textColor: $siteGrey;
 $columnMargin: .5em;
 $gutter: 1em;
 $warningColor: red;
-$textFontSize: .875rem;
+$textFontSize: 1em;
 
 // Typography
 $baseFont: 'Source Sans Pro', sans-serif;

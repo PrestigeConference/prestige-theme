@@ -1,0 +1,136 @@
+.schedule--content {
+    position: relative;
+}
+
+    .schedule--title {
+        text-align: center;
+
+        &:after {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .schedule--date {
+        display: block;
+        position: relative;
+        margin-bottom: .25em;
+        color: $siteScheduleDateBlue;
+        text-transform: uppercase;
+        z-index: 1;
+    }
+
+    .schedule--day-list {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        padding-left: 2em;
+        list-style: none;
+        z-index: 1;
+    }
+
+        .schedule--session {
+            margin: 0;
+            margin-bottom: 3em;
+            padding: 0;
+        }
+
+            .session--start-time {
+                position: relative;
+
+                &:before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    left: -1.75em;
+                    top: .1875em;
+                    height: .875em;
+                    width: .875em;
+                    @include rounded(50%);
+                    background-color: $siteLightGrey;
+                    @include transition(background-color .3s ease);
+                }
+
+                &.skrollable-after {
+                    &:before {
+                        background-color: $siteScheduleDateBlue;
+                    }
+                }
+            }
+
+            .session--title {
+                margin-bottom: 0;
+                font-size: 1em;
+                font-weight: bold;
+                line-height: 1.35;
+            }
+
+            .session--speaker {
+                margin-bottom: .5em;
+            }
+
+
+
+
+
+
+    .schedule--progress-line {
+        position: absolute;
+        top: 1.5em;
+        left: .625em;
+        bottom: 0;
+        height: 100%;
+        width: .125em;
+        background: $siteLightGrey;
+        overflow: hidden;
+        z-index: 0;
+    }
+
+        .schedule--progress-line_inner {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: $siteScheduleDateBlue;
+        }
+
+
+
+@media only screen and (min-width: #{$midBreakpoint}) {
+    .schedule--date {
+        width: 14em;
+        text-align: right;
+    }
+
+    .schedule--day-list {
+        padding-left: 0;
+    }
+
+    .schedule--session {
+        @include flexbox();
+        @include flexbox-align-items(flex-start);
+        @include flexbox-justify-content(space-between);
+    }
+
+        .session--start-time {
+            width: 14em;
+            text-align: right;
+
+            &:before {
+                left: auto;
+                right: -2.5em;
+
+            }
+        }
+
+        .session--content {
+            @include css3-calc('width', '100% - 18em');
+        }
+
+    .schedule--progress-line {
+        top: 1.75em;
+        left: 16em;
+    }
+}

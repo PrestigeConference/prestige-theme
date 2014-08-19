@@ -1,49 +1,20 @@
-.home--the-best {
-    margin-bottom: .5rem;
-}
+.home--title {
+    color: $siteTitleBlue;
+    font-size: 2em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 
-    .home--column {
-        h3 {
-            border-top: 1px solid $springLightGrey;
-            border-bottom: 1px solid $springLightGrey;
-            padding: .5rem 0;
-            margin-bottom: .5rem;
-        }
+    span {
+        display: block;
+        font-size: .625em;
     }
 
-.home--recent-posts {
-    margin-top: 3em;
-
-    &>h1 {
-        margin-bottom: .5rem;
-    }
-}
-
-
-
-@media only screen and (min-width: #{$midBreakpoint}) {
-    .home--row {
-        @include flexbox();
-        @include flexbox-justify-content(space-between);
-        @include flexbox-align-items(flex-start);
-    }
-
-    .home--column {
-        @include css3-calc('width', '33.33333333% - 1.33333333em');
-    }
-
-    .no-flexbox.no-flexboxlegacy {
-        .home--row {
-            display: block;
-            @include clearfix();
-        }
-
-        .home--column {
-            margin-right: 1.3333333333em;
-
-            &:last-child {
-                margin-right: 0;
-            }
-        }
+    &:after {
+        content: '';
+        display: block;
+        height: 2px;
+        width: 4rem;
+        margin-top: 1rem;
+        background: $siteTitleBlue;
     }
 }
