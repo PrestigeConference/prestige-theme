@@ -60,8 +60,8 @@
 <body <?php body_class(); ?>>
 <div class="wrapper" role="document">
     <header class="header-main"
-        data-top-top="background-position: center 0px;"
-        data-top-bottom="background-position: center 2420027005212771800px;">
+        data-top-top="background-position: 50% 0px;"
+        data-top-bottom="background-position: 50% 200px;">
         <section class="sponsors--menu-button_wrapper">
             <a href="http://gravityforms.com">
                         <span data-picture data-alt="Gravity Forms">
