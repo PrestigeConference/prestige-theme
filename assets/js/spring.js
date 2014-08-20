@@ -2,9 +2,11 @@
     //Add event listeners to buttons
     var menuBtn = document.getElementById('openMainMenu');
     var sidebarBtn = document.getElementById('openSidebar');
+    var closeMenuBtn = document.getElementById('closeMainMenu');
 
     if (menuBtn.attachEvent) {
         menuBtn.attachEvent('onclick', openCloseMenu);
+        closeMenuBtn.attachEvent('onclick', openCloseMenu);
 
         if(sidebarBtn !== null) {
             sidebarBtn.attachEvent('onclick', openSidebar);
@@ -12,6 +14,7 @@
     } else {
 
         menuBtn.addEventListener('click', openCloseMenu);
+        closeMenuBtn.addEventListener('click', openCloseMenu);
 
         if(sidebarBtn !== null) {
             sidebarBtn.addEventListener('click', openSidebar);

@@ -96,13 +96,6 @@
             <button id="openMainMenu" class="open-main-menu open-button"><span>Open Main Menu</span></button>
         </section>
         <div class="header--inner">
-            <nav class="nav-main" role="navigation">
-                <?php
-                if (has_nav_menu('primary_navigation')) :
-                    wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav-main--menu'));
-                endif;
-                ?>
-            </nav>
             <h1 class="header--blog-name">
                 <a href="<?php echo home_url(); ?>" title="<?php bloginfo('name'); ?>">
                     <div class="blog-name">
@@ -376,4 +369,12 @@
                 Hosted in Downtown <strong>Minneapolis, Minnesota</strong> and <strong>streamed live</strong> wherever you are
             </section>
         </div>
+        <nav class="nav-main" role="navigation">
+            <a class="close-menu-button" id="closeMainMenu">X</a>
+            <?php
+            if (has_nav_menu('primary_navigation')) :
+                wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav-main--menu'));
+            endif;
+            ?>
+        </nav>
     </header>

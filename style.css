@@ -888,35 +888,6 @@ body {
   margin: 0 0 1em 1em;
 }
 
-@media only screen and (max-width: 48.5em) {
-  .open-the-menu {
-    overflow: hidden;
-  }
-  .open-the-menu body {
-    overflow: hidden;
-    height: 100%;
-  }
-  .open-the-menu .wrapper {
-    width: 100%;
-    height: 100%;
-    margin-left: 80%;
-    margin-right: -80%;
-  }
-
-  .open-the-sidebar {
-    overflow: hidden;
-  }
-  .open-the-sidebar body {
-    overflow: hidden;
-    height: 100%;
-  }
-  .open-the-sidebar .wrapper {
-    width: 100%;
-    height: 100%;
-    margin-left: -80%;
-    margin-right: 80%;
-  }
-}
 @media only screen and (min-width: 30.5em) {
   .alignright {
     float: right;
@@ -998,7 +969,7 @@ body {
   }
 }
 .header-main {
-  margin-bottom: 2em;
+  position: relative;
   background: url(assets/img/header-bg_mobile.jpg) no-repeat center top;
 }
 
@@ -1411,9 +1382,76 @@ body {
     }
 }*/
 .nav-main {
-  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 1em;
+  background: rgba(51, 51, 51, 0.95);
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  -ms-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 
+.open-the-menu .nav-main {
+  opacity: 1;
+  pointer-events: auto;
+}
+.open-the-menu .nav-main li {
+  text-align: right;
+}
+.open-the-menu .nav-main a {
+  display: block;
+  width: 100%;
+  padding: 1rem 1.75rem 0;
+  color: white;
+  font-size: 1.75em;
+  font-weight: lighter;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  -ms-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+.open-the-menu .nav-main a:visited {
+  color: white;
+}
+.open-the-menu .nav-main a:hover, .open-the-menu .nav-main a:active, .open-the-menu .nav-main a:focus {
+  color: #a775c9;
+}
+.open-the-menu .nav-main .close-menu-button {
+  width: auto;
+  color: white;
+  text-align: right;
+  padding-bottom: 2rem;
+}
+
+@media only screen and (min-width: 30.5em) {
+  .open-the-menu .nav-main a {
+    padding-right: 1rem;
+  }
+}
+@media only screen and (min-width: 48.5em) {
+  .open-the-menu .nav-main a {
+    padding-right: 3rem;
+  }
+}
+@media only screen and (min-width: 64em) {
+  .open-the-menu .nav-main a {
+    padding-right: -moz-calc(50% - 31.5rem);
+    padding-right: -webkit-calc(50% - 31.5rem);
+    padding-right: calc(50% - 31.5rem);
+  }
+}
 @media only screen and (min-width: 48.5em) {
   .nav-main--menu, .nav-main--menu * {
     margin: 0;
@@ -1484,7 +1522,7 @@ body {
   height: 2px;
   width: 4rem;
   margin-top: 1rem;
-  background: #a183c9;
+  background: #a775c9;
 }
 
 .home .content--body {
