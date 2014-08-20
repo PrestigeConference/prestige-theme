@@ -432,18 +432,19 @@ input[type="reset"] {
     width: auto;
     height: auto;
     padding: $buttonPadding;
-    //background-color: $buttonBackground;
-    @include vertical($buttonBackground, $buttonBackground2);
-    border: 0;
-    border-bottom: $buttonBorderWidth $buttonBorderStyle $buttonBorderColor;
+    background-color: $buttonBackground;
+    //@include vertical($buttonBackground, $buttonBackground2);
+    border: $buttonBorderWidth $buttonBorderStyle $buttonBorderColor;
     color: $buttonColor;
     font-family: $buttonFont;
     font-size: $buttonFontSize;
     font-weight: $buttonFontWeight;
     cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
 
     &.alt {
-        @include vertical($buttonAltBackground, $buttonAltBackground2);
+        //@include vertical($buttonAltBackground, $buttonAltBackground2);
     }
 
     &:active,

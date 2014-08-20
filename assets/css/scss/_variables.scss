@@ -18,6 +18,7 @@ $siteGreyBlue: #7a6d98;
 $siteLightGrey: #f2f2f2;
 $siteGrey: #333333;
 $siteLightPurple: #a183c9;
+$sitePurple: #d794fe;
 $springGreen: #84b100;
 $springLightGreen: #bada55;
 $springBlack: black;
@@ -35,7 +36,7 @@ $warningColor: red;
 $textFontSize: 1em;
 
 // Typography
-$baseFont: 'Source Sans Pro', sans-serif;
+$baseFont: 'Brandon Grotesque', sans-serif;
 $baseFontSize: 100%;
 $baselineHeight: 1.35em;
 $headingFont: $baseFont;
@@ -43,27 +44,27 @@ $headingLineHeight: 1.1;
 
 $h1Color: $springGrey;
 $h1Size: 2.25em;
-$h1FontWeight: 200;
+$h1FontWeight: regular;
 
 $h2Color: $springDarkGrey;
 $h2Size: 1.75em;
-$h2FontWeight: 200;
+$h2FontWeight: regular;
 
 $h3Color: $springDarkGrey;
 $h3Size: 1.5em;
-$h3FontWeight: 200;
+$h3FontWeight: regular;
 
 $h4Color: $springDarkGrey;
 $h4Size: 1em;
-$h4FontWeight: 200;
+$h4FontWeight: regular;
 
 $h5Color: $springGrey;
 $h5Size: 1em;
-$h5FontWeight: 300;
+$h5FontWeight: regular;
 
 $h6Color: $springGrey;
 $h6Size: .875em;
-$h6FontWeight: 200;
+$h6FontWeight: regular;
 
 $headingTextShadow: none;
 $codeFont: 'Source Code Pro', monospace;
@@ -91,9 +92,9 @@ $textboxMaxWidth: 30em;
 $labelFontSize: 1.125em;
 $labelColor: $textColor;
 
-$buttonBackground: $springDarkGrey;
-$buttonBackground2: lighten($springDarkGrey, 10%); //Uncomment if you want a gradient background on a button. Also uncomment gradient in
-$buttonBorderColor: darken($buttonBackground,5%);
+$buttonBackground: rgba(144, 128, 184, .86);
+//$buttonBackground2: lighten($springDarkGrey, 10%); //Uncomment if you want a gradient background on a button. Also uncomment gradient in
+$buttonBorderColor: rgba(215, 148, 254, .86);
 $buttonBorderWidth: 1px;
 $buttonBorderStyle: solid;
 $buttonColor: $springWhite;

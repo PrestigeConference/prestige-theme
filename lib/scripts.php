@@ -37,6 +37,7 @@ function spring_scripts() {
     //Uncomment for Production
     //wp_enqueue_script('spring_app', get_template_directory_uri() . '/assets/js/build/spring-production.js','', '', true);
     wp_enqueue_script('skrollr', get_template_directory_uri() . '/assets/js/vendor/skrollr.min.js','', '', true);
+    wp_enqueue_script('picturefill', get_template_directory_uri() . '/assets/js/vendor/picturefill.js','', '', true);
 }
 
 add_action('wp_enqueue_scripts', 'spring_scripts', 100);

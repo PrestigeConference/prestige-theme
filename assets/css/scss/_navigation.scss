@@ -1,3 +1,4 @@
+/*
 .nav-quicklinks {
     width: 100%;
     background: $springDarkGrey;
@@ -184,4 +185,8 @@
         @include rem-px('max-width', 84.5rem);
         @include center-block();
     }
+}*/
+
+.nav-main {
+    display: none;
 }

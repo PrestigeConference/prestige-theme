@@ -17,17 +17,6 @@
     <link href="<?php echo get_template_directory_uri(); ?>/images/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" />
     <link href="<?php echo get_template_directory_uri(); ?>/images/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" />
 
-    <!-- LEGACY IOS6- REMOVE IF UNNECESSARY -->
-    <!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
-    <!-- <link rel="apple-touch-icon-precomposed" href="<?php echo get_template_directory_uri(); ?>/images/apple-touch-icon-precomposed.png"> -->
-    <!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
-    <!-- <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo get_template_directory_uri(); ?>/images/apple-touch-icon-72x72-precomposed.png"> -->
-    <!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
-    <!-- <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo get_template_directory_uri(); ?>/images/apple-touch-icon-114x114-precomposed.png"> -->
-    <!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
-    <!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo get_template_directory_uri(); ?>/images/apple-touch-icon-144x144-precomposed.png"> -->
-
-
     <!-- STARTUP IMAGES -->
     <!-- iPhone 3GS, pre-2011 iPod Touch -->
     <!-- <link rel="apple-touch-startup-image" href="<?php echo get_template_directory_uri(); ?>/images/startup/startup-320x460.png" media="screen and (max-device-width:320px)"> -->
@@ -70,19 +59,43 @@
 </head>
 <body <?php body_class(); ?>>
 <div class="wrapper" role="document">
-    <header class="header-main">
-        <nav class="nav-quicklinks" role="navigation">
-            <?php
-            if (has_nav_menu('quicklink_navigation')) :
-                wp_nav_menu(array('theme_location' => 'quicklink_navigation', 'menu_class' => 'quicklinks-menu'));
-            endif;
-            ?>
-        </nav>
+    <header class="header-main"
+        data-top-top="background-position: center 0px;"
+        data-top-bottom="background-position: center 2420027005212771800px;">
+        <section class="sponsors--menu-button_wrapper">
+            <a href="http://gravityforms.com">
+                        <span data-picture data-alt="Gravity Forms">
+                            <span data-src="<?php echo get_template_directory_uri(); ?>/assets/img/sponsor-logos/gravity-forms-logo_header.png"></span>
+                            <span data-src="<?php echo get_template_directory_uri(); ?>/assets/img/sponsor-logos/gravity-forms-logo_header_2x.png"  data-media="(-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)"></span>
+                            <noscript>
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sponsor-logos/gravity-forms-logo_header.png" alt="Gravity Forms">
+                            </noscript>
+                        </span>
+            </a>
+            <a href="http://press75.com">
+                        <span data-picture data-alt="Press75">
+                            <span data-src="<?php echo get_template_directory_uri(); ?>/assets/img/sponsor-logos/press75-logo_header.png"></span>
+                            <span data-src="<?php echo get_template_directory_uri(); ?>/assets/img/sponsor-logos/press75-logo_header_2x.png"  data-media="(-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)"></span>
+                            <noscript>
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sponsor-logos/press75-logo_header.png" alt="Press75">
+                            </noscript>
+                        </span>
+            </a>
+            <a href="http://wpengine.com">
+                        <span data-picture data-alt="WP Engine">
+                            <span data-src="<?php echo get_template_directory_uri(); ?>/assets/img/sponsor-logos/wpengine-logo_header.png"></span>
+                            <span data-src="<?php echo get_template_directory_uri(); ?>/assets/img/sponsor-logos/wpengine-logo_header_2x.png"  data-media="(-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)"></span>
+                            <noscript>
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sponsor-logos/wpengine-logo_header.png" alt="WP Engine">
+                            </noscript>
+                        </span>
+            </a>
+            <span class="sponsors--presents">
+                Present:
+            </span>
+            <button id="openMainMenu" class="open-main-menu open-button"><span>Open Main Menu</span></button>
+        </section>
         <div class="header--inner">
-            <section class="open-button-wrapper">
-                <button id="openMainMenu" class="open-main-menu open-button"><span>Open Main Menu</span></button>
-                <button id="openSidebar" class="open-sidebar open-button"><span>Open Sidebar</span></button>
-            </section>
             <nav class="nav-main" role="navigation">
                 <?php
                 if (has_nav_menu('primary_navigation')) :
@@ -90,7 +103,6 @@
                 endif;
                 ?>
             </nav>
-            <?php get_template_part('templates/searchform'); ?>
             <h1 class="header--blog-name">
                 <a href="<?php echo home_url(); ?>" title="<?php bloginfo('name'); ?>">
                     <div class="blog-name">
@@ -261,7 +273,7 @@
 	v3.997"/>
     <path class="building" d="M117.012,26.64v-3.49
 	"/>
-<path d="M65.377,103.887c0.89,0.036,1.781,0.055,2.672,0.072c0.003-0.252,0.021-0.503,0.008-0.755
+<path class="state" d="M65.377,103.887c0.89,0.036,1.781,0.055,2.672,0.072c0.003-0.252,0.021-0.503,0.008-0.755
 	c0.045,0.073,0.136,0.061,0.204,0.041c0.08-0.024,0.149,0.069,0.225,0.087c-0.018,0.044-0.007,0.091,0.005,0.134
 	c0.013,0.05,0.017,0.103,0.024,0.154c0.012,0.082,0.054,0.15,0.052,0.233c-0.001,0.024-0.015,0.108,0.015,0.107
 	c0.026-0.001,0.028,0.011,0.035,0.036c0.013,0.046,0.063,0.195,0.024,0.22c-0.003,0.002,0.003,0.065-0.003,0.077
@@ -356,6 +368,12 @@
     />
 </svg>
                 </a>
+            <span>A Premium WordPress Conference</span>
+            October 3-4, 2014
             </h1>
+            <a href="#tickets" class="button button_tickets">Register Now</a>
+            <section class="header--hosted-in">
+                Hosted in Downtown <strong>Minneapolis, Minnesota</strong> and <strong>streamed live</strong> wherever you are
+            </section>
         </div>
     </header>

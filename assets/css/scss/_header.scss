@@ -1,24 +1,47 @@
 .header-main {
 	margin-bottom: 2em;
+    background: url(assets/img/header-bg_mobile.jpg) no-repeat center top;
 }
 
-    .open-button-wrapper {
-        position: relative;
-        width: 100%;
-        margin-top: 1.5em;
+    .sponsors--menu-button_wrapper {
+        text-align: center;
+        padding: 1em 0;
+        border-bottom: 1px solid rgba(255,255,255,.2);
+
+        a {
+            display: inline-block;
+            height: 1em;
+            margin-right: .25em;
+
+            img {
+                max-height: 100%;
+            }
+        }
     }
 
+        .sponsors--presents {
+            display: inline-block;
+            text-transform: uppercase;
+            margin-right: 1em;
+            color: white;
+            font-size: .5em;
+            letter-spacing: 2px;
+            line-height: 2;
+            vertical-align: middle;
+        }
+
         .open-button {
-            position: absolute;
-            top: 0;
-            width: 2em;
-            height: 2em;
-            padding: .375em;
-            background: $springLightGrey;
+            //position: absolute;
+            //top: 3em;
+            width: 1.5em;
+            height: 1.5em;
+            padding: 0 .25em 0 0;
+            background: transparent;
             border: 0;
             @include rounded(0);
             overflow: hidden;
             font-size: 1em;
+            vertical-align: middle;
 
             &:active,
             &:focus {
@@ -33,16 +56,16 @@
         }
 
         .open-main-menu {
-            left: 0;
+            //right: 0;
 
             &:before {
                 content: ' ';
                 display: block;
-                height: 11px;
+                height: 9px;
                 width: 100%;
-                border-top: 4px solid white;
-                border-bottom: 4px solid white;
-                margin-bottom: 3px;
+                border-top: 2px solid white;
+                border-bottom: 2px solid white;
+                margin-bottom: 5px;
             }
 
             &:after {
@@ -50,37 +73,39 @@
                 display: block;
                 height: 0;
                 width: 100%;
-                border-top: 4px solid white;
+                border-top: 2px solid white;
             }
         }
 
-        .open-sidebar {
-            right: 0;
-
-
-            &:before {
-                content: ' ';
-                display: block;
-                height: 100%;
-                border-left: 10px solid white;
-                width: 19px;
-                border-right: 6px solid white;
-            }
-        }
+    .header--inner {
+        text-align: center;
+    }
 
     .header--blog-name {
         overflow: hidden;
         @include css3-calc('width', '100% - 2rem');
-        max-width: 7em;
-        margin: 1em auto 0 auto;
+        margin: 0 auto;
+        color: white;
+        font-size: 1.25em;
+        font-weight: lighter;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+
+        span {
+            display: block;
+            padding-bottom: .5em;
+            color: $sitePurple;
+            font-size: .75em;
+        }
 
         a {
             display: block;
             position: relative;
             overflow: hidden;
             height: 0;
-            @include rem-px(margin-bottom, 1rem);
-            padding-top: 81.1666666667%;
+            max-width: 15rem;
+            margin: 2rem auto;
+            padding-top: 12rem;
 
             svg {
                 position: absolute;
@@ -94,7 +119,7 @@
                 .building,
                 .underline {
                     fill: none;
-                    stroke: #404041;
+                    stroke: $siteScheduleDateBlue;
                     stroke-linejoin: round;
                     stroke-linecap: round;
                     stroke-miterlimit: 10;
@@ -105,7 +130,7 @@
 
                 .letter,
                 .state {
-                    fill: #404041;
+                    fill: white;
                 }
             }
         }
@@ -116,19 +141,73 @@
         }
     }
 
+    .button_tickets {
+        margin: 2em 0;
+        letter-spacing: 2px;
+    }
+
+    .header--hosted-in {
+        color: white;
+        font-size: .75em;
+        font-weight: lighter;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        padding: 0 1em .5em 1em;
+
+        span {
+            display: block;
+        }
+    }
+
 
 
 @media only screen and (min-width: #{$smallBreakpoint}) {
+    .sponsors--menu-button_wrapper {
+        a {
+            height: 1.5em;
+            margin-right: 1em;
+        }
+
+        button {
+            position: absolute;
+            right: 1em;
+            top: 1.25em;
+        }
+    }
+
+        .sponsors--presents {
+            font-size: .75em;
+            padding-top: .25em;
+        }
+
     .header--blog-name {
-        //width: 70%;
-        //max-width: 9em;
+        font-size: 1.75em;
+    }
+
+    .button_tickets {
+        margin: 4rem 0;
     }
 }
 
 
 
+
 @media only screen and (min-width: #{$midBreakpoint}) {
     .header-main {
+        background-image: url(assets/img/header-bg_1920.jpg);
+    }
+
+    .sponsors--menu-button_wrapper {
+        a {
+            height: 2em;
+            margin-right: 2rem;
+        }
+
+        button {
+            right: auto;
+            top: 1.375em;
+            @include css3-calc('left', '50% + 24em');
+        }
     }
 
         .header--inner {
@@ -136,27 +215,38 @@
             padding: 0 3em;
         }
 
-            .open-button-wrapper {
-                display: none;
+            .header--blog-name {
+                letter-spacing: 6px;
+
+                a {
+                    margin: 6rem auto 4rem;
+                }
             }
 
-            .header--blog-name {
-                float: left;
-                margin-top: -1rem;
-            }
+
+
+    .button_tickets {
+        margin: 6rem 0 8rem;
+    }
+
+    .header--hosted-in {
+        padding-bottom: 1em;
+    }
 }
 
 @media only screen and (min-width: #{$largeBreakpoint}) {
-    .header--blog-name {
-        margin-top: -3rem;
+    .sponsors--menu-button_wrapper {
+        a {
+            margin-right: 3em;
+        }
+
+        button {
+            @include css3-calc('left', '50% + 30em');
+        }
     }
 }
 
 
 
 @media only screen and (min-width: #{$widescreenBreakpoint}) {
-    .header--inner {
-        @include rem-px('max-width', 84.5rem);
-        @include center-block;
-    }
 }
