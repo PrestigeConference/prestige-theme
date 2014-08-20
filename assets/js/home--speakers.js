@@ -11,7 +11,6 @@ Element.prototype.listen = function(event, callback) {
 
     var speakers = document.querySelectorAll('.speaker');
     for(var i = 0, len = speakers.length; i < len; i++) {
-        console.log(speakers[i]);
         speakers[i].addEventListener('click', function() {
             doOnSpeakerClicked(event);
         }, false);
@@ -75,8 +74,6 @@ function displayNextSpeaker() {
 
     var speakersWrapper = document.querySelectorAll('.speakers--list_wrapper')[0];
 
-    console.log(presentlyActiveSpeaker);
-
     speakerScrollAnimate(speakersWrapper,  speakers[0].offsetWidth * (presentlyActiveSpeaker + 1), 'next');
 }
 
@@ -98,8 +95,6 @@ function displayPreviousSpeaker() {
     highlightSpecificSpeaker(speakers[presentlyActiveSpeaker - 1]);
 
     var speakersWrapper = document.querySelectorAll('.speakers--list_wrapper')[0];
-
-    console.log(presentlyActiveSpeaker);
 
     speakerScrollAnimate(speakersWrapper,  speakers[0].offsetWidth * (presentlyActiveSpeaker - 1), 'previous');
 }
