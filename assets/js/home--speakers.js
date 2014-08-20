@@ -77,10 +77,34 @@ function displayNextSpeaker() {
 
     console.log(presentlyActiveSpeaker);
 
-    speakerScrollAnimate(speakersWrapper,  speakers[0].offsetWidth * (presentlyActiveSpeaker + 1));
+    speakerScrollAnimate(speakersWrapper,  speakers[0].offsetWidth * (presentlyActiveSpeaker + 1), 'next');
 }
 
-function speakerScrollAnimate(speakerWrapper, totalDistance) {
+function displayPreviousSpeaker() {
+    var speakers = document.querySelectorAll('.speaker'),
+        presentlyActiveSpeaker = speakers.length;
+
+    for(var i = 0, len = speakers.length; i < len; i++) {
+        if(speakers[i].classList.contains('active')) {
+            presentlyActiveSpeaker = i;
+            speakers[i].classList.remove('active');
+        }
+
+        if(presentlyActiveSpeaker == 0) {
+            presentlyActiveSpeaker = speakers.length;
+        }
+    }
+
+    highlightSpecificSpeaker(speakers[presentlyActiveSpeaker - 1]);
+
+    var speakersWrapper = document.querySelectorAll('.speakers--list_wrapper')[0];
+
+    console.log(presentlyActiveSpeaker);
+
+    speakerScrollAnimate(speakersWrapper,  speakers[0].offsetWidth * (presentlyActiveSpeaker - 1), 'previous');
+}
+
+function speakerScrollAnimate(speakerWrapper, totalDistance, direction) {
     var totalFrames = 30,
         presentFrame = 1,
         presentScroll = speakerWrapper.scrollLeft,
@@ -89,7 +113,12 @@ function speakerScrollAnimate(speakerWrapper, totalDistance) {
 
     function animateNow() {
         if(presentFrame <= totalFrames) {
-            speakerWrapper.scrollLeft = distancePerFrame * presentFrame + presentScroll;
+            if (direction = 'next') {
+                speakerWrapper.scrollLeft = distancePerFrame * presentFrame + presentScroll;
+            } else {
+                speakerWrapper.scrollLeft = distancePerFrame * presentFrame - presentScroll;
+            }
+
             presentFrame++;
             setTimeout(function() {
                 animateNow();
