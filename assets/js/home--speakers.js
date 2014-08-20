@@ -17,31 +17,85 @@ Element.prototype.listen = function(event, callback) {
         }, false);
     }
 
-    var doOnSpeakerClicked = function(e) {
-        if(Modernizr.mq('(min-width: 48.5em)')) {
-            var speaker = e.target;
+document.getElementById('prevSpeaker').addEventListener('click', function() {
+    displayPreviousSpeaker();
+}, false);
 
-            //find the speaker node
-            while(speaker.classList.contains('speaker') == false) {
-                speaker = speaker.parentNode;
-            }
+document.getElementById('nextSpeaker').addEventListener('click', function() {
+    displayNextSpeaker();
+}, false);
 
-            if(speaker.classList.contains('active') ==  false) {
-                var speakers = document.querySelectorAll('.speaker');
+function doOnSpeakerClicked(e) {
+    if(Modernizr.mq('(min-width: 48.5em)')) {
+        var speaker = e.target;
 
-                for(var i = 0, len = speakers.length; i < len; i++) {
-                    speakers[i].classList.remove('active');
-                }
-
-                speaker.classList.add('active');
-            }
-
-
-
-            var biography = speaker.querySelectorAll('.speaker--biography')[0];
-
-            var headerDescription = document.querySelectorAll('.header--description')[0];
-
-            headerDescription.innerHTML = biography.innerHTML;
+        //find the speaker node
+        while(speaker.classList.contains('speaker') == false) {
+            speaker = speaker.parentNode;
         }
-    };
+
+        if(speaker.classList.contains('active') ==  false) {
+            var speakers = document.querySelectorAll('.speaker');
+
+            for(var i = 0, len = speakers.length; i < len; i++) {
+                speakers[i].classList.remove('active');
+            }
+
+            highlightSpecificSpeaker(speaker);
+        }
+    }
+};
+
+function highlightSpecificSpeaker(speaker) {
+    speaker.classList.add('active');
+
+    var biography = speaker.querySelectorAll('.speaker--biography')[0];
+
+    var headerDescription = document.querySelectorAll('.header--description')[0];
+
+    headerDescription.innerHTML = biography.innerHTML;
+}
+
+function displayNextSpeaker() {
+    var speakers = document.querySelectorAll('.speaker'),
+        presentlyActiveSpeaker = -1;
+
+    for(var i = 0, len = speakers.length; i < len; i++) {
+        if(speakers[i].classList.contains('active')) {
+            presentlyActiveSpeaker = i;
+            speakers[i].classList.remove('active');
+        }
+
+        if(presentlyActiveSpeaker == len - 1) {
+            presentlyActiveSpeaker = -1;
+        }
+    }
+
+    highlightSpecificSpeaker(speakers[presentlyActiveSpeaker + 1]);
+
+    var speakersWrapper = document.querySelectorAll('.speakers--list_wrapper')[0];
+
+    console.log(presentlyActiveSpeaker);
+
+    speakerScrollAnimate(speakersWrapper,  speakers[0].offsetWidth * (presentlyActiveSpeaker + 1));
+}
+
+function speakerScrollAnimate(speakerWrapper, totalDistance) {
+    var totalFrames = 30,
+        presentFrame = 1,
+        presentScroll = speakerWrapper.scrollLeft,
+        relativeDistance = totalDistance - presentScroll,
+        distancePerFrame = relativeDistance / totalFrames;
+
+    function animateNow() {
+        if(presentFrame <= totalFrames) {
+            speakerWrapper.scrollLeft = distancePerFrame * presentFrame + presentScroll;
+            presentFrame++;
+            setTimeout(function() {
+                animateNow();
+            }, 1);
+        }
+    }
+
+    animateNow();
+}

@@ -448,8 +448,15 @@ input[type="reset"] {
     }
 
     &:active,
-    &:focus {
+    &:focus,
+    &:hover {
+        color: $buttonColor;
+        border: $buttonBorderWidth $buttonBorderStyle $buttonBorderColor;
         outline-color: $buttonOutlineColor;
+    }
+
+    &:visited {
+        color: $buttonColor;
     }
 }
 

@@ -10,8 +10,8 @@
             <section class="header--biography_wrapper" id="headerBiography"></section>
         </section>
         <nav class="speakers--nav">
-            <a class="arrow-left icon-arrow-left"></a>
-            <a class="arrow-right icon-arrow-right"></a>
+            <a id="prevSpeaker" class="arrow-left icon-arrow-left"></a>
+            <a id="nextSpeaker" class="arrow-right icon-arrow-right"></a>
         </nav>
     </header>
     <section class="speakers--list_wrapper">

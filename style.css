@@ -103,22 +103,22 @@
 }
 @font-face {
   font-family: 'Brandon Grotesque';
-  src: url("brandon_reg-webfont.eot");
-  src: url("brandon_reg-webfont.eot?#iefix") format("embedded-opentype"), url("brandon_reg-webfont.woff") format("woff"), url("brandon_reg-webfont.ttf") format("truetype"), url("brandon_reg-webfont.svg#brandon_grotesque_regularRg") format("svg");
+  src: url("assets/fonts/brandon_reg-webfont.eot");
+  src: url("assets/fonts/brandon_reg-webfont.eot?#iefix") format("embedded-opentype"), url("assets/fonts/brandon_reg-webfont.woff") format("woff"), url("assets/fonts/brandon_reg-webfont.ttf") format("truetype"), url("assets/fonts/brandon_reg-webfont.svg#brandon_grotesque_regularRg") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'Brandon Grotesque';
-  src: url("brandon_light-webfont.eot");
-  src: url("brandon_light-webfont.eot?#iefix") format("embedded-opentype"), url("brandon_light-webfont.woff") format("woff"), url("brandon_light-webfont.ttf") format("truetype"), url("brandon_light-webfont.svg#brandon_grotesquelight") format("svg");
+  src: url("assets/fonts/brandon_light-webfont.eot");
+  src: url("assets/fonts/brandon_light-webfont.eot?#iefix") format("embedded-opentype"), url("assets/fonts/brandon_light-webfont.woff") format("woff"), url("assets/fonts/brandon_light-webfont.ttf") format("truetype"), url("assets/fonts/brandon_light-webfont.svg#brandon_grotesquelight") format("svg");
   font-weight: lighter;
   font-style: normal;
 }
 @font-face {
   font-family: 'Brandon Grotesque';
-  src: url("brandon_bld-webfont.eot");
-  src: url("brandon_bld-webfont.eot?#iefix") format("embedded-opentype"), url("brandon_bld-webfont.woff") format("woff"), url("brandon_bld-webfont.ttf") format("truetype"), url("brandon_bld-webfont.svg#brandon_grotesquebold") format("svg");
+  src: url("assets/fonts/brandon_bld-webfont.eot");
+  src: url("assets/fonts/brandon_bld-webfont.eot?#iefix") format("embedded-opentype"), url("assets/fonts/brandon_bld-webfont.woff") format("woff"), url("assets/fonts/brandon_bld-webfont.ttf") format("truetype"), url("assets/fonts/brandon_bld-webfont.svg#brandon_grotesquebold") format("svg");
   font-weight: bold;
   font-style: normal;
 }
@@ -630,16 +630,29 @@ input[type="reset"] {
   text-decoration: none;
   text-transform: uppercase;
 }
-button:active, button:focus,
+button:active, button:focus, button:hover,
 .button:active,
 .button:focus,
+.button:hover,
 input[type="button"]:active,
 input[type="button"]:focus,
+input[type="button"]:hover,
 input[type="submit"]:active,
 input[type="submit"]:focus,
+input[type="submit"]:hover,
 input[type="reset"]:active,
-input[type="reset"]:focus {
+input[type="reset"]:focus,
+input[type="reset"]:hover {
+  color: white;
+  border: 1px solid rgba(215, 148, 254, 0.86);
   outline-color: #404041;
+}
+button:visited,
+.button:visited,
+input[type="button"]:visited,
+input[type="submit"]:visited,
+input[type="reset"]:visited {
+  color: white;
 }
 
 input[type="hidden"] {
@@ -999,9 +1012,9 @@ body {
 }
 
 .open-button {
-  width: 1.5em;
+  width: 1.25em;
   height: 1.5em;
-  padding: 0 .25em 0 0;
+  padding: 0;
   background: transparent;
   border: 0;
   -webkit-border-radius: 0;
@@ -1012,8 +1025,9 @@ body {
   font-size: 1em;
   vertical-align: middle;
 }
-.open-button:active, .open-button:focus {
-  outline: 0;
+.open-button:active, .open-button:focus, .open-button:hover {
+  border: 0;
+  outline-color: 0;
 }
 .open-button span {
   position: absolute;
@@ -1151,9 +1165,9 @@ body {
   .sponsors--menu-button_wrapper button {
     right: auto;
     top: 1.375em;
-    left: -moz-calc(50% + 24em);
-    left: -webkit-calc(50% + 24em);
-    left: calc(50% + 24em);
+    left: -moz-calc(50% + 22em);
+    left: -webkit-calc(50% + 22em);
+    left: calc(50% + 22em);
   }
 
   .header--inner {
@@ -1612,7 +1626,7 @@ body {
     display: block;
     position: absolute;
     left: 4em;
-    bottom: 6em;
+    bottom: 2em;
   }
 
   .arrow-left,
@@ -1781,7 +1795,7 @@ body {
 
 @media only screen and (min-width: 48.5em) {
   .schedule--date {
-    width: 14em;
+    width: 16em;
     text-align: right;
   }
 
@@ -1809,7 +1823,7 @@ body {
   }
 
   .session--start-time {
-    width: 14em;
+    width: 16em;
     text-align: right;
   }
   .session--start-time:before {
@@ -1818,13 +1832,13 @@ body {
   }
 
   .session--content {
-    width: -moz-calc(100% - 18em);
-    width: -webkit-calc(100% - 18em);
-    width: calc(100% - 18em);
+    width: -moz-calc(100% - 20em);
+    width: -webkit-calc(100% - 20em);
+    width: calc(100% - 20em);
   }
 
   .schedule--progress-line {
-    left: 16em;
+    left: 18em;
   }
 }
 .post {

@@ -107,7 +107,7 @@
 
 @media only screen and (min-width: #{$midBreakpoint}) {
     .schedule--date {
-        width: 14em;
+        width: 16em;
         text-align: right;
     }
 
@@ -122,7 +122,7 @@
     }
 
         .session--start-time {
-            width: 14em;
+            width: 16em;
             text-align: right;
 
             &:before {
@@ -133,10 +133,10 @@
         }
 
         .session--content {
-            @include css3-calc('width', '100% - 18em');
+            @include css3-calc('width', '100% - 20em');
         }
 
     .schedule--progress-line {
-        left: 16em;
+        left: 18em;
     }
 }
