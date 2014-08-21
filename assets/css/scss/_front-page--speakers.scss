@@ -58,15 +58,21 @@
 
     .speakers--header {
         position: relative;
-        padding: 6em 4em;
-        width: 35em;
+        padding: 4em 2em;
+        width: 24em;
     }
+
+        .header--description {
+            max-height: 17.875em;
+            overflow: hidden;
+            overflow-y: auto;
+        }
 
         .speakers--nav {
             display: block;
             position: absolute;
-            left: 4em;
-            bottom: 2em;
+            left: 2em;
+            bottom: 1em;
         }
 
             .arrow-left,
@@ -86,7 +92,7 @@
             }
 
     .speakers--list_wrapper {
-        @include css3-calc('width', '100% - 35em');
+        @include css3-calc('width', '100% - 24em');
         overflow-x: auto;
     }
 
@@ -121,4 +127,26 @@
                         width: 24rem;
                     }
                 }
+}
+
+
+
+@media only screen and (min-width: #{$largeBreakpoint}) {
+    .speakers--header {
+        padding: 6em 4em;
+        width: 35em;
+    }
+
+        .header--description {
+            max-height: 15.125em;
+        }
+
+        .speakers--nav {
+            left: 4em;
+            bottom: 2em;
+        }
+
+    .speakers--list_wrapper {
+        @include css3-calc('width', '100% - 35em');
+    }
 }

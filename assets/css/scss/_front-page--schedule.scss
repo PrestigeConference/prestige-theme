@@ -86,7 +86,7 @@
         top: 1.75em;
         left: .625em;
         bottom: 0;
-        height: 100%;
+        @include css3-calc('height', '100% - 10rem');
         width: .125em;
         background: $siteLightGrey;
         overflow: hidden;
@@ -103,9 +103,50 @@
             background: $siteScheduleDateBlue;
         }
 
+.schedule--the-end {
+    display: block;
+    position: relative;
+    height: 0;
+    max-width: 15rem;
+    margin: 2rem auto;
+    padding-top: 8rem;
+
+    svg {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        width: 100%;
+
+        .schedule--building {
+            fill: none;
+            stroke: $siteLightPurple;
+            stroke-linejoin: round;
+            stroke-linecap: round;
+            stroke-miterlimit: 10;
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            webkit-transition: all 1s;
+        }
+    }
+}
+
+    .the-end--text {
+        margin-top: -1.2em;
+        color: $siteLightPurple;
+        font-weight: bold;
+        letter-spacing: 3px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
 
 
 @media only screen and (min-width: #{$midBreakpoint}) {
+    .home--schedule {
+        margin-bottom: 8em;
+    }
+
     .schedule--date {
         width: 16em;
         text-align: right;
@@ -138,5 +179,38 @@
 
     .schedule--progress-line {
         left: 18em;
+    }
+
+    .schedule--the-end {
+        background: white;
+        margin: 2em 0 0 0;
+        left: 10.125em;
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 50%;
+            top: -.5rem;
+            height: .875em;
+            width: .875em;
+            @include rounded(50%);
+            background-color: $siteLightGrey;
+            @include transition(background-color .3s ease);
+        }
+
+        svg {
+            top: 1em;
+        }
+
+        &.skrollable-after {
+            &:before {
+                background-color: $siteScheduleDateBlue;
+            }
+        }
+    }
+
+    .the-end--text {
+        margin-top: -.5em;
     }
 }
