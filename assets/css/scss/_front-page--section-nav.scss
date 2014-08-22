@@ -1,0 +1,79 @@
+.home--sections-nav {
+    position: relative;
+    height: 0;
+    max-width: 960px;
+    padding-top: 33.3333333333%;
+    @include center-block();
+}
+
+    .sections-nav_inner {
+        @include flexbox();
+        @include flexbox-align-items(stretch);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+.section-link {
+    @include flexbox();
+    @include flexbox-justify-content(space-around);
+    @include flexbox-align-items(center);
+    width: 33.3333333%;
+    color: $siteGrey;
+    font-family: $altFont;
+    font-size: .875em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: white;
+    @include transition(background-color .3s ease);
+
+    span {
+        display: block;
+        width: 100%;
+        background: no-repeat center top/ auto 45px;
+        padding-top: 53px;
+    }
+
+    &:hover {
+        color: $siteGrey;
+        text-decoration: underline;
+        background-color: $siteMidGrey;
+    }
+}
+
+    .speakers-link span {
+        background-image: url(assets/img/icon-speakers.png);
+    }
+
+    .schedule-link span {
+        background-image: url(assets/img/icon-schedule.png);
+    }
+
+    .tickets-link span {
+        background-image: url(assets/img/icon-tickets.png);
+    }
+
+
+
+@media only screen and (min-width: #{$smallBreakpoint}) {
+    .section-link {
+
+        span {
+            background-size: auto 90px;
+            padding-top: 98px;
+        }
+    }
+}
+
+
+
+@media only screen and (min-width: 960px) {
+    .home--sections-nav {
+        padding-top: 320px;
+    }
+}

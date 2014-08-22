@@ -1,3 +1,16 @@
+<nav class="home--sections-nav">
+    <section class="sections-nav_inner">
+        <a class="section-link speakers-link">
+            <span>Speakers</span>
+        </a>
+        <a class="section-link schedule-link">
+            <span>Schedule</span>
+        </a>
+        <a class="section-link tickets-link">
+            <span>Tickets</span>
+        </a>
+    </section>
+</nav>
 <!-- SPEAKERS -->
 <section class="home--speakers">
     <header class="speakers--header">
