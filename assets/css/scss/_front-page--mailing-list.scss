@@ -1,0 +1,37 @@
+.home--mailing-list {
+    padding: 4em 2em 3em;
+    background: $siteGrey;
+    text-align: center;
+
+    .header--description {
+        color: white;
+    }
+}
+
+    .mailing-list--title {
+        &:after {
+            margin: 1rem auto 0;
+        }
+    }
+
+    .mailing-list--form {
+        margin-top: 2em;
+        label {
+            display: none;
+        }
+
+        .email {
+            display: inline-block;
+            max-width: 300px;
+            padding: .5675em;
+            background: transparent;
+            border-color: #6a6969;
+            vertical-align: top;
+        }
+
+        .button {
+            margin-bottom: 1rem;
+            font-size: .875em;
+            vertical-align: top;
+        }
+    }

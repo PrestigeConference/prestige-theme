@@ -1,0 +1,22 @@
+.home--map a {
+    display: block;
+    height: 30.5em;
+    background: url(assets/img/map_mobile.jpg) no-repeat 50% 50%;
+    @include hide-text();
+}
+
+
+
+@media only screen and (min-width: #{$smallBreakpoint}) {
+    .home--map a {
+        background-image: url(assets/img/map.jpg);
+    }
+}
+
+
+
+@media only screen and (min-width: 1920px) {
+    .home--map a {
+        background-size: 100% auto;
+    }
+}

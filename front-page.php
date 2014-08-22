@@ -306,6 +306,25 @@
             </section>
         </header>
         <section class="sponsors--content">
+            <h3>Primary Sponsors</h3>
+            <ul class="sponsors--list">
+                <li class="sponsor">
+                    <a href="/sponsor/press75/">
+                        <img src="/link/to/sponsor/square/image.png" />
+                    </a>
+                </li>
+                <li class="sponsor">
+                    <a href="/sponsor/press75/">
+                        <img src="/link/to/sponsor/square/image.png" />
+                    </a>
+                </li>
+                <li class="sponsor">
+                    <a href="/sponsor/press75/">
+                        <img src="/link/to/sponsor/square/image.png" />
+                    </a>
+                </li>
+            </ul>
+            <h3>Gold Sponsors</h3>
             <ul class="sponsors--list">
                 <li class="sponsor">
                     <a href="/sponsor/press75/">
@@ -327,21 +346,9 @@
                         <img src="/link/to/sponsor/square/image.png" />
                     </a>
                 </li>
-                <li class="sponsor">
-                    <a href="/sponsor/press75/">
-                        <img src="/link/to/sponsor/square/image.png" />
-                    </a>
-                </li>
-                <li class="sponsor">
-                    <a href="/sponsor/press75/">
-                        <img src="/link/to/sponsor/square/image.png" />
-                    </a>
-                </li>
-                <li class="sponsor">
-                    <a href="/sponsor/press75/">
-                        <img src="/link/to/sponsor/square/image.png" />
-                    </a>
-                </li>
+            </ul>
+            <h3>Silver Sponsors</h3>
+            <ul class="sponsors--list">
                 <li class="sponsor">
                     <a href="/sponsor/press75/">
                         <img src="/link/to/sponsor/square/image.png" />
@@ -391,9 +398,105 @@
         </section>
     </div>
 </section>
+<section class="home--tickets">
+    <header class="tickets--header">
+        <h1 class="home--title tickets--title">
+            Tickets
+        </h1>
+        <section class="header--description">
+            $49 - $119 for a day learning from the very best speakers the WordPress business community has to offer.
+            <span>Tickets are transferrable but NOT refundable.</span>
+        </section>
+        <section class="tickets--button_wrapper">
+            <a class="button" href="/tickets/">Register Now</a><br>
+            <a href="/scholarships/">Apply for a scholarship</a>
+        </section>
+    </header>
+    <section class="tickets--list_wrapper">
+        <ul class="tickets--list">
+            <li class="ticket">
+                <h2 class="ticket--title">
+                    <span class="ticket--date">October 3rd</span>
+                    Friday Only Ticket
+                </h2>
+                <section class="ticket--description">
+                    Friday night pre-conference business panel. Drinks and food included in ticket price. FRIDAY ONLY! Only buy this ticket if you're not going to any other Prestige events.
+                </section>
+                <section class="ticket--price">
+                    $49
+                </section>
+            </li>
+            <li class="ticket">
+                <h2 class="ticket--title">
+                    <span class="ticket--date">October 4th</span>
+                    Saturday Conference
+                </h2>
+                <section class="ticket--description">
+                    Includes lunch, swag, Saturday ticket, and Saturday after party. Ticket includes access to stream all Saturday videos for 6 months on the Prestige Conference website.
+                </section>
+                <section class="ticket--price">
+                    $99
+                </section>
+            </li>
+            <li class="ticket">
+                <h2 class="ticket--title">
+                    <span class="ticket--date">October 3rd - 4th</span>
+                    Saturday Conference + Friday Night Panel
+                </h2>
+                <section class="ticket--description">
+                    Includes lunch, swag, Saturday ticket, Saturday after party, and the Friday night pre-conference business panel. Ticket includes access to stream all Saturday videos for 6 months on the Prestige Conference website.
+                </section>
+                <section class="ticket--price">
+                    $119
+                </section>
+            </li>
+            <li class="ticket">
+                <h2 class="ticket--title">
+                    <span class="ticket--date">October 4th</span>
+                    Prestige Streaming Ticket
+                </h2>
+                <section class="ticket--description">
+                    Streaming ticket to the Saturday event as well as access to stream all Saturday videos for 6 months on the Prestige Conference website.
+                </section>
+                <section class="ticket--price">
+                    $49
+                </section>
+            </li>
+        </ul>
+    </section>
+    <section class="tickets--button_wrapper">
+        <a class="button" href="/tickets/">Register Now</a><br>
+        <a href="/scholarships/">Apply for a scholarship</a>
+    </section>
+</section>
+<section class="home--map">
+    <a target="_blank" href="https://www.google.com/maps/preview?ie=UTF-8&fb=1&gl=us&cid=11125183430936972151&q=University+of+St.+Thomas+-+Minneapolis+Campus&ei=q6j2U8bDIs-cygTytIDgBQ&ved=0CIsBEPwSMAs">View St. Thomas on Google Maps</a>
+</section>
+<section class="home--mailing-list">
+    <header class="mailing-list--header">
+        <h1 class="home--title mailing-list--title">
+            <span>Join</span>
+            Our Email List
+        </h1>
+        <section class="header--description">
+            Subscribe to our mailing list to stay up-to-date on the event.
+        </section>
+    </header>
+    <section class="mailing-list--form">
+        <div id="mc_embed_signup">
+            <form action="http://3them.us3.list-manage1.com/subscribe/post?u=ff9b1b919f5610284e398ddbc&amp;id=cfae067c87" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <label for="mce-EMAIL">Subscribe to our mailing list</label>
+                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;"><input type="text" name="b_ff9b1b919f5610284e398ddbc_cfae067c87" tabindex="-1" value=""></div>
+            </form>
+        </div>
+    </section>
+</section>
 
 <script type="text/javascript">
     window.onload = function() {
-        var s = skrollr.init();
+        var s = skrollr.init({forceHeight: false});
     }
 </script>

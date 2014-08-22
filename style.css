@@ -165,7 +165,7 @@ h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, cite, cod
   font-weight: normal;
   font-style: normal;
   font-size: 100%;
-  line-height: 1.35em;
+  line-height: 1.35;
   font-family: inherit;
 }
 
@@ -218,9 +218,9 @@ html {
 
 body {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   background: transparent;
-  font-family: "Brandon Grotesque", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 100%;
   line-height: 1.35em;
   color: #333333;
@@ -621,14 +621,15 @@ input[type="reset"] {
   height: auto;
   padding: 0.5em 2em;
   background-color: rgba(144, 128, 184, 0.86);
-  border: 1px solid rgba(215, 148, 254, 0.86);
+  border: 0 solid rgba(215, 148, 254, 0.86);
   color: white;
   font-family: "Brandon Grotesque", sans-serif;
   font-size: 1em;
-  font-weight: 200;
+  font-weight: bold;
   cursor: pointer;
   text-decoration: none;
   text-transform: uppercase;
+  letter-spacing: 2px;
 }
 button:active, button:focus, button:hover,
 .button:active,
@@ -644,7 +645,7 @@ input[type="reset"]:active,
 input[type="reset"]:focus,
 input[type="reset"]:hover {
   color: white;
-  border: 1px solid rgba(215, 148, 254, 0.86);
+  border: 0 solid rgba(215, 148, 254, 0.86);
   outline-color: #404041;
 }
 button:visited,
@@ -1119,6 +1120,7 @@ body {
 
 .header--hosted-in {
   color: white;
+  font-family: "Brandon Grotesque", sans-serif;
   font-size: .75em;
   font-weight: lighter;
   letter-spacing: 2px;
@@ -1426,6 +1428,7 @@ body {
   width: 100%;
   padding: 1rem 1.75rem 0;
   color: white;
+  font-family: "Brandon Grotesque", sans-serif;
   font-size: 1.75em;
   font-weight: lighter;
   text-decoration: none;
@@ -1521,7 +1524,7 @@ body {
 }
 .home--title {
   color: #5293cb;
-  font-size: 2em;
+  font-size: 1.875em;
   letter-spacing: 10px;
   text-transform: uppercase;
 }
@@ -1549,6 +1552,13 @@ body {
   color: white;
 }
 
+.header--description,
+.header--description p {
+  font-weight: 300;
+  font-size: .875rem;
+  line-height: 1.75;
+}
+
 .speakers--nav {
   display: none;
 }
@@ -1573,6 +1583,10 @@ body {
   align-items: center;
   margin: 0;
   padding: 0;
+  font-family: "Brandon Grotesque", sans-serif;
+}
+.speaker a {
+  font-family: "Brandon Grotesque", sans-serif;
 }
 .speaker .speaker--biography {
   display: none;
@@ -1623,7 +1637,7 @@ body {
   }
 
   .header--description {
-    max-height: 17.875em;
+    max-height: 17.875rem;
     overflow: hidden;
     overflow-y: auto;
   }
@@ -1702,7 +1716,7 @@ body {
   }
 
   .header--description {
-    max-height: 15.125em;
+    max-height: 15.125rem;
   }
 
   .speakers--nav {
@@ -1742,6 +1756,7 @@ body {
   position: relative;
   margin-bottom: .25em;
   color: #85a0d7;
+  font-family: "Brandon Grotesque", sans-serif;
   text-transform: uppercase;
   z-index: 1;
 }
@@ -1792,6 +1807,7 @@ body {
   font-size: 1em;
   font-weight: bold;
   line-height: 1.35;
+  font-family: "Roboto", sans-serif;
 }
 
 .session--speaker {
@@ -1851,6 +1867,7 @@ body {
 .the-end--text {
   margin-top: -1.2em;
   color: #a775c9;
+  font-family: "Brandon Grotesque", sans-serif;
   font-weight: bold;
   letter-spacing: 3px;
   text-align: center;
@@ -2057,6 +2074,211 @@ body {
     margin-bottom: 3em;
   }
 }
+.home--tickets {
+  padding: 4em 2em;
+  background: #333333;
+}
+
+.tickets--header {
+  margin-bottom: 2rem;
+  color: white;
+  text-align: center;
+}
+.tickets--header .header--description {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.tickets--header .header--description span {
+  display: block;
+  color: #716e6e;
+  font-size: .75em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.tickets--title:after {
+  margin: 1rem auto 0;
+}
+
+.tickets--button_wrapper {
+  text-align: center;
+  margin-top: 2em;
+}
+.tickets--button_wrapper a:not(.button) {
+  color: white;
+  font-size: .875em;
+  font-weight: 200;
+  text-decoration: none;
+}
+.tickets--button_wrapper a:not(.button):hover {
+  text-decoration: underline;
+}
+
+.ticket {
+  background: #efefef;
+  -webkit-transition: background-color 0.3s ease;
+  -moz-transition: background-color 0.3s ease;
+  -ms-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+.ticket:hover {
+  background-color: white;
+}
+
+.tickets--list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ticket {
+  margin: 0 0 .0625em 0;
+  padding: 2em 1em;
+}
+
+.ticket--title {
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+.ticket--title:after {
+  content: '';
+  display: block;
+  width: 50%;
+  height: 2px;
+  margin: 1rem auto;
+  background: #29a1f3;
+}
+
+.ticket--date {
+  display: block;
+  padding-bottom: .25rem;
+  color: #29a1f3;
+  font-size: .875rem;
+}
+
+.ticket--description {
+  font-size: .875em;
+}
+
+.ticket--price {
+  margin-top: 2rem;
+  color: #796d97;
+  font-size: 5.5em;
+  font-weight: 300;
+  text-align: center;
+}
+
+@media only screen and (min-width: 30.5em) {
+  .tickets--list {
+    display: -ms-flexbox;
+    -ms-box-orient: horizontal;
+    display: -moz-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: stretch;
+    -moz-box-align: stretch;
+    -ms-flex-align: stretch;
+    -webkit-align-items: stretch;
+    align-items: stretch;
+    -webkit-box-pack: multiple;
+    -moz-box-pack: multiple;
+    -ms-flex-pack: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ticket {
+    position: relative;
+    width: 50%;
+    padding-bottom: 11em;
+  }
+  .ticket:nth-child(odd) {
+    border-right: 1px solid #333333;
+  }
+
+  .ticket--price {
+    position: absolute;
+    bottom: 2rem;
+    width: -moz-calc(100% - 2rem);
+    width: -webkit-calc(100% - 2rem);
+    width: calc(100% - 2rem);
+    margin-top: 0;
+  }
+}
+@media only screen and (min-width: 64em) {
+  .tickets--header .tickets--button_wrapper {
+    display: none;
+  }
+
+  .ticket {
+    width: 25%;
+    margin-bottom: 0;
+    border-right: 1px solid #333333;
+  }
+  .ticket:last-child {
+    border-right: none;
+  }
+}
+.home--map a {
+  display: block;
+  height: 30.5em;
+  background: url(assets/img/map_mobile.jpg) no-repeat 50% 50%;
+  text-shadow: none;
+  text-indent: 1000%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 30.5em) {
+  .home--map a {
+    background-image: url(assets/img/map.jpg);
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .home--map a {
+    background-size: 100% auto;
+  }
+}
+.home--mailing-list {
+  padding: 4em 2em 3em;
+  background: #333333;
+  text-align: center;
+}
+.home--mailing-list .header--description {
+  color: white;
+}
+
+.mailing-list--title:after {
+  margin: 1rem auto 0;
+}
+
+.mailing-list--form {
+  margin-top: 2em;
+}
+.mailing-list--form label {
+  display: none;
+}
+.mailing-list--form .email {
+  display: inline-block;
+  max-width: 300px;
+  padding: .5675em;
+  background: transparent;
+  border-color: #6a6969;
+  vertical-align: top;
+}
+.mailing-list--form .button {
+  margin-bottom: 1rem;
+  font-size: .875em;
+  vertical-align: top;
+}
+
 .post {
   *zoom: 1;
   margin-bottom: 5em;
