@@ -6,8 +6,6 @@
 
     span {
         display: block;
-        margin-bottom: .3755rem;
-        font-size: .625em;
     }
 
     &:after {
@@ -18,6 +16,17 @@
         margin-top: 1rem;
         background: $siteLightPurple;
     }
+}
+
+.title_centered {
+    span {
+        padding-left: 10px;
+    }
+}
+
+.title--small {
+    margin-bottom: .375rem;
+    font-size: .625em;
 }
 
 .home {

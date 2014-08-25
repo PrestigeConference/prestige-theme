@@ -66,8 +66,9 @@
 <!-- SCHEDULE -->
 <section class="home--schedule">
     <header class="schedule--header">
-        <h1 class="home--title schedule--title">
-            <span>The</span>Schedule
+        <h1 class="home--title schedule--title title_centered">
+            <span class="title--small">The</span>
+            <span>Schedule</span>
         </h1>
     </header>
     <section class="schedule--content">
@@ -311,7 +312,7 @@
     <div class="home--sponsors_inner">
         <header class="sponsors--header">
             <h1 class="home--title sponsors--title">
-                <span>Our</span>
+                <span class="title--small">Our</span>
                 Sponsors
             </h1>
             <section class="header--description">
@@ -411,10 +412,13 @@
         </section>
     </div>
 </section>
+
+
+<!-- TICKETS -->
 <section class="home--tickets">
     <header class="tickets--header">
-        <h1 class="home--title tickets--title">
-            Tickets
+        <h1 class="home--title tickets--title title_centered">
+            <span>Tickets</span>
         </h1>
         <section class="header--description">
             $49 - $119 for a day learning from the very best speakers the WordPress business community has to offer.
@@ -482,14 +486,20 @@
         <a href="/scholarships/">Apply for a scholarship</a>
     </section>
 </section>
+
+
+<!-- MAP -->
 <section class="home--map">
     <a target="_blank" href="https://www.google.com/maps/preview?ie=UTF-8&fb=1&gl=us&cid=11125183430936972151&q=University+of+St.+Thomas+-+Minneapolis+Campus&ei=q6j2U8bDIs-cygTytIDgBQ&ved=0CIsBEPwSMAs">View St. Thomas on Google Maps</a>
 </section>
+
+
+<!-- MAILING LIST -->
 <section class="home--mailing-list">
     <header class="mailing-list--header">
-        <h1 class="home--title mailing-list--title">
-            <span>Join</span>
-            Our Email List
+        <h1 class="home--title mailing-list--title title_centered">
+            <span class="title--small">Join Our</span>
+            <span>Email List</span>
         </h1>
         <section class="header--description">
             Subscribe to our mailing list to stay up-to-date on the event.

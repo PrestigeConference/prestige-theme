@@ -1342,8 +1342,6 @@ body {
 }
 .home--title span {
   display: block;
-  margin-bottom: .3755rem;
-  font-size: .625em;
 }
 .home--title:after {
   content: '';
@@ -1352,6 +1350,15 @@ body {
   width: 4rem;
   margin-top: 1rem;
   background: #a775c9;
+}
+
+.title_centered span {
+  padding-left: 10px;
+}
+
+.title--small {
+  margin-bottom: .375rem;
+  font-size: .625em;
 }
 
 .home .content--body {
@@ -2472,6 +2479,11 @@ body {
 }
 .widget:last-child {
   margin-bottom: 0;
+}
+
+.footer-main {
+  background: #333333;
+  padding-top: 4em;
 }
 
 .search {
