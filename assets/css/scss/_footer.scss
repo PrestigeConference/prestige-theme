@@ -1,4 +1,39 @@
 .footer-main {
-    background: $siteGrey;
-    padding-top: 4em;
+    position: relative;
+    padding: 1em;
+    background: $siteGrey url(assets/img/footer-building.png) no-repeat top right;
+    color: #909090;
+    font-family: $altFont;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    a {
+        color: #909090;
+        font-weight: bold;
+        text-decoration: none;
+    }
 }
+
+    .footer--menu {
+        font-size: .75em;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+            display: inline-block;
+            padding: 0;
+
+            &:not(:last-child):after {
+                content: ' / ';
+            }
+        }
+    }
+
+    .twitter-link {
+        display: block;
+        width: 70px;
+        height: 70px;
+        margin: 0 auto 1em auto;
+        background: url(assets/img/twitter.png) no-repeat left top;
+    }

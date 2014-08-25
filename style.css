@@ -1660,7 +1660,8 @@ body {
 
 .schedule--title {
   text-align: center;
-  margin: 4rem 0;
+  margin: 0 0 4rem 0;
+  padding-top: 4rem;
 }
 .schedule--title:after {
   margin-left: auto;
@@ -2482,8 +2483,40 @@ body {
 }
 
 .footer-main {
-  background: #333333;
-  padding-top: 4em;
+  position: relative;
+  padding: 1em;
+  background: #333333 url(assets/img/footer-building.png) no-repeat top right;
+  color: #909090;
+  font-family: "Brandon Grotesque", sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.footer-main a {
+  color: #909090;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.footer--menu {
+  font-size: .75em;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.footer--menu li {
+  display: inline-block;
+  padding: 0;
+}
+.footer--menu li:not(:last-child):after {
+  content: ' / ';
+}
+
+.twitter-link {
+  display: block;
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 1em auto;
+  background: url(assets/img/twitter.png) no-repeat left top;
 }
 
 .search {
