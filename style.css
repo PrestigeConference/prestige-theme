@@ -247,9 +247,11 @@ h6 {
   margin: 0;
   padding: 0;
   font-family: "Brandon Grotesque", sans-serif;
+  letter-spacing: 4px;
   line-height: 1.1;
   text-rendering: optimizeLegibility;
   text-shadow: none;
+  text-transform: uppercase;
 }
 h1 *,
 h2 *,
@@ -262,36 +264,36 @@ h6 * {
 
 h1,
 .h1 {
-  margin-bottom: 0.9em;
+  margin-bottom: 1rem;
   color: gray;
-  font-size: 36px;
-  font-size: 2.25rem;
-  font-weight: regular;
+  font-size: 28px;
+  font-size: 1.75rem;
+  font-weight: bold;
 }
 h1 a,
 .h1 a {
-  font-weight: regular;
+  font-weight: bold;
 }
 
 h2,
 .h2 {
-  margin-bottom: 0.9em;
+  margin-bottom: 1rem;
   color: #404041;
-  font-size: 28px;
-  font-size: 1.75rem;
-  font-weight: regular;
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-weight: bold;
 }
 h2 a,
 .h2 a {
-  font-weight: regular;
+  font-weight: bold;
 }
 
 h3,
 .h3 {
-  margin-bottom: 0.77143em;
+  margin-bottom: 1rem;
   color: #404041;
-  font-size: 24px;
-  font-size: 1.5rem;
+  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: regular;
 }
 h3 a,
@@ -301,7 +303,7 @@ h3 a,
 
 h4,
 .h4 {
-  margin-bottom: 0.77143em;
+  margin-bottom: 1rem;
   color: #404041;
   font-size: 16px;
   font-size: 1rem;
@@ -314,7 +316,7 @@ h4 a,
 
 h5,
 .h5 {
-  margin-bottom: 0.675em;
+  margin-bottom: 1rem;
   color: gray;
   font-size: 16px;
   font-size: 1rem;
@@ -327,7 +329,7 @@ h5 a,
 
 h6,
 .h6 {
-  margin-bottom: 0.675em;
+  margin-bottom: 1rem;
   color: 0.875em;
   font-size: 14px;
   font-size: 0.875rem;
@@ -346,7 +348,7 @@ dl {
 
 p,
 address {
-  margin-bottom: 0.675em;
+  margin-bottom: 1rem;
 }
 
 small {
@@ -837,6 +839,10 @@ body {
   font-size: 1rem;
 }
 
+.content {
+  padding: 1em;
+}
+
 .youtube {
   position: relative;
   height: 0;
@@ -1110,7 +1116,8 @@ body {
 }
 .header--blog-name .blog-name {
   position: absolute;
-  right: 100%;
+  right: 1000%;
+  top: 0;
 }
 
 .button_tickets {
@@ -1151,8 +1158,37 @@ body {
     font-size: 1.75em;
   }
 
-  .button_tickets {
-    margin: 4rem 0;
+  .page:not(.home) .header--blog-name {
+    display: -ms-flexbox;
+    -ms-box-orient: horizontal;
+    display: -moz-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
+  .page:not(.home) .header--blog-name a {
+    width: 11rem;
+    margin: 2rem 0;
+    padding-top: 9.5rem;
+  }
+  .page:not(.home) .header--subtitle {
+    width: 14.5rem;
+    padding-left: 1rem;
+    font-size: 1.25rem;
+    text-align: left;
+  }
+  .page:not(.home) .button_tickets {
+    margin: 0 0 2rem 0;
   }
 }
 @media only screen and (min-width: 48.5em) {
@@ -1198,6 +1234,14 @@ body {
   .header--hosted-in {
     padding-bottom: 1em;
   }
+
+  .page:not(.home) .header--blog-name a {
+    width: 13rem;
+    padding-top: 10.5rem;
+  }
+  .page:not(.home) .header--subtitle {
+    width: 19.5rem;
+  }
 }
 @media only screen and (min-width: 64em) {
   .sponsors--menu-button_wrapper a {
@@ -1207,6 +1251,10 @@ body {
     left: -moz-calc(50% + 30em);
     left: -webkit-calc(50% + 30em);
     left: calc(50% + 30em);
+  }
+
+  .page:not(.home) .header--subtitle {
+    width: auto;
   }
 }
 .nav-main {
@@ -1361,6 +1409,9 @@ body {
   font-size: .625em;
 }
 
+.home .content {
+  padding: 0;
+}
 .home .content--body {
   width: 100%;
 }

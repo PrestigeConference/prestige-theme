@@ -139,7 +139,8 @@
 
         .blog-name {
             position: absolute;
-            right: 100%;
+            right: 1000%;
+            top: 0;
         }
     }
 
@@ -187,8 +188,29 @@
         font-size: 1.75em;
     }
 
-    .button_tickets {
-        margin: 4rem 0;
+    .page:not(.home) {
+        .header--blog-name {
+            @include flexbox();
+            @include flexbox-align-items(center);
+            @include flexbox-justify-content(center);
+
+            a {
+                width: 11rem;
+                margin: 2rem 0;
+                padding-top: 9.5rem;
+            }
+        }
+
+        .header--subtitle {
+            width: 14.5rem;
+            padding-left: 1rem;
+            font-size: 1.25rem;
+            text-align: left;
+        }
+
+        .button_tickets {
+            margin: 0 0 2rem 0;
+        }
     }
 }
 
@@ -235,6 +257,19 @@
     .header--hosted-in {
         padding-bottom: 1em;
     }
+
+    .page:not(.home) {
+        .header--blog-name {
+            a {
+                width: 13rem;
+                padding-top: 10.5rem;
+            }
+        }
+
+        .header--subtitle {
+            width: 19.5rem;
+        }
+    }
 }
 
 @media only screen and (min-width: #{$largeBreakpoint}) {
@@ -245,6 +280,12 @@
 
         button {
             @include css3-calc('left', '50% + 30em');
+        }
+    }
+
+    .page:not(.home) {
+        .header--subtitle {
+            width: auto;
         }
     }
 }

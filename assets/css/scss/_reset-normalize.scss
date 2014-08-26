@@ -92,9 +92,11 @@ h6 {
     margin: 0;
     padding: 0;
     font-family: $headingFont;
+    letter-spacing: 4px;
     line-height: $headingLineHeight;
     text-rendering:  optimizeLegibility;
     text-shadow: $headingTextShadow;
+    text-transform: uppercase;
 
     * {
         line-height: $headingLineHeight;
@@ -103,7 +105,7 @@ h6 {
 
 h1,
 .h1 {
-    margin-bottom: $baselineHeight / 1.5;
+    margin-bottom: 1rem;
     color: $h1Color;
     @include rem-px('font-size', $h1Size);
     font-weight: $h1FontWeight;
@@ -115,7 +117,7 @@ h1,
 
 h2,
 .h2 {
-    margin-bottom: $baselineHeight / 1.5;
+    margin-bottom: 1rem;
     color: $h2Color;
     @include rem-px('font-size', $h2Size);
     font-weight: $h2FontWeight;
@@ -127,7 +129,7 @@ h2,
 
 h3,
 .h3 {
-    margin-bottom: $baselineHeight / 1.75;
+    margin-bottom: 1rem;
     color: $h3Color;
     @include rem-px('font-size', $h3Size);
     font-weight: $h3FontWeight;
@@ -139,7 +141,7 @@ h3,
 
 h4,
 .h4 {
-    margin-bottom: $baselineHeight / 1.75;
+    margin-bottom: 1rem;
     color: $h4Color;
     @include rem-px('font-size', $h4Size);
     font-weight: $h4FontWeight;
@@ -151,7 +153,7 @@ h4,
 
 h5,
 .h5 {
-    margin-bottom: $baselineHeight / 2;
+    margin-bottom: 1rem;
     color: $h5Color;
     @include rem-px('font-size', $h5Size);
     font-weight: $h5FontWeight;
@@ -163,7 +165,7 @@ h5,
 
 h6,
 .h6 {
-    margin-bottom: $baselineHeight / 2;
+    margin-bottom: 1rem;
     color: $h6Size;
     @include rem-px('font-size', $h6Size);
 
@@ -181,7 +183,7 @@ dl {
 
 p,
 address {
-    margin-bottom: $baselineHeight / 2;
+    margin-bottom: 1rem;
 }
 
 small {
