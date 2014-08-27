@@ -1,6 +1,7 @@
 .home--title {
     color: $siteTitleBlue;
     font-size: 1.875em;
+    font-weight: normal;
     letter-spacing: 10px;
     text-transform: uppercase;
 
@@ -12,9 +13,16 @@
         content: '';
         display: block;
         height: 2px;
-        width: 4rem;
+        width: 0;
         margin-top: 1rem;
         background: $siteLightPurple;
+        @include transition(width 1s ease);
+    }
+
+    &.skrollable-after {
+        &:after {
+            width: 4rem;
+        }
     }
 }
 
@@ -32,6 +40,7 @@
 .home {
     .content {
         padding: 0;
+        max-width: inherit;
     }
 
     .content--body {

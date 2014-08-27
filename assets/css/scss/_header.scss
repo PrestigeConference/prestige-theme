@@ -188,7 +188,11 @@
         font-size: 1.75em;
     }
 
-    .page:not(.home) {
+    .page:not(.home),
+    .blog,
+    .single-post,
+    .archive,
+    .single {
         .header--blog-name {
             @include flexbox();
             @include flexbox-align-items(center);
@@ -258,7 +262,11 @@
         padding-bottom: 1em;
     }
 
-    .page:not(.home) {
+    .page:not(.home),
+    .blog,
+    .single-post,
+    .archive,
+    .single  {
         .header--blog-name {
             a {
                 width: 13rem;
@@ -283,7 +291,11 @@
         }
     }
 
-    .page:not(.home) {
+    .page:not(.home),
+    .blog,
+    .single-post,
+    .archive,
+    .single  {
         .header--subtitle {
             width: auto;
         }

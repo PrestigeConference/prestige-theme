@@ -15,6 +15,8 @@ body {
 
 .content {
     padding: 1em;
+    max-width: 50em;
+    @include center-block();
 }
 
 .youtube {
@@ -106,54 +108,11 @@ body {
 }
 
 @media only screen and (min-width: #{$midBreakpoint}) {
-    .content {
-        //padding: 0 3em;
-    }
 
-    .open-the-menu {
-        .wrapper {
-            width: 100%;
-            margin-left: 0;
-            margin-right: 0;
-        }
-    }
-
-    .open-the-sidebar {
-        .wrapper {
-            margin-left: 0;
-            margin-right: 0;
-        }
-    }
 }
 
 @media only screen and (min-width: #{$largeBreakpoint}) {
     //approximate min-width: 992px
-    .content {
-        @include flexbox();
-        @include flexbox-justify-content(space-between);
-        @include flexbox-align-items(flex-start);
-    }
-
-
-        .content--body {
-            width: 64.666666667%;
-            @include css3-calc('width','66.6666666667 - 2.5em');
-        }
-
-    //Fallback for no-flexbox browsers
-    //Flexbox mixins include code for every browser but IE <= 9.
-    .no-flexbox {
-        .content {
-            display: block;
-            @include grid-row();
-        }
-
-        .content--body {
-            float: left;
-            padding-right: 1em;
-            @include grid-column(8, 100%, 12);
-        }
-    }
 }
 
 @media only screen and (min-width: #{$widescreenBreakpoint}) {

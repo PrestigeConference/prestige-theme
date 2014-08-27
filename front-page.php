@@ -14,8 +14,8 @@
 <!-- SPEAKERS -->
 <section class="home--speakers" id="speakers">
     <header class="speakers--header">
-        <h1 class="home--title speakers--title">
-            <span>The Best</span>
+        <h1 class="home--title speakers--title" data-30p-center-top="">
+            <span class="title--small">The Best</span>
             Speakers Around
         </h1>
         <section class="header--description">
@@ -66,7 +66,7 @@
 <!-- SCHEDULE -->
 <section class="home--schedule" id="schedule">
     <header class="schedule--header">
-        <h1 class="home--title schedule--title title_centered">
+        <h1 class="home--title schedule--title title_centered" data-30p-center-top="">
             <span class="title--small">The</span>
             <span>Schedule</span>
         </h1>
@@ -311,7 +311,7 @@
 <section class="home--sponsors" id="sponsors">
     <div class="home--sponsors_inner">
         <header class="sponsors--header">
-            <h1 class="home--title sponsors--title">
+            <h1 class="home--title sponsors--title" data-30p-center-top="">
                 <span class="title--small">Our</span>
                 Sponsors
             </h1>
@@ -417,7 +417,7 @@
 <!-- TICKETS -->
 <section class="home--tickets" id="tickets">
     <header class="tickets--header">
-        <h1 class="home--title tickets--title title_centered">
+        <h1 class="home--title tickets--title title_centered" data-30p-center-top="">
             <span>Tickets</span>
         </h1>
         <section class="header--description">
@@ -497,7 +497,7 @@
 <!-- MAILING LIST -->
 <section class="home--mailing-list">
     <header class="mailing-list--header">
-        <h1 class="home--title mailing-list--title title_centered">
+        <h1 class="home--title mailing-list--title title_centered" data-30p-center-top="">
             <span class="title--small">Join Our</span>
             <span>Email List</span>
         </h1>
@@ -517,36 +517,3 @@
         </div>
     </section>
 </section>
-
-<script type="text/javascript">
-    window.onload = function() {
-        var s = skrollr.init({forceHeight: false});
-
-        //The options (second parameter) are all optional. The values shown are the default values.
-        skrollr.menu.init(s, {
-            //skrollr will smoothly animate to the new position using `animateTo`.
-            animate: true,
-
-            //The easing function to use.
-            easing: 'sqrt',
-
-            //Multiply your data-[offset] values so they match those set in skrollr.init
-            scale: 2,
-
-            //How long the animation should take in ms.
-            duration: function(currentTop, targetTop) {
-                //By default, the duration is hardcoded at 500ms.
-                return 500;
-
-                //But you could calculate a value based on the current scroll position (`currentTop`) and the target scroll position (`targetTop`).
-                //return Math.abs(currentTop - targetTop) * 10;
-            },
-
-            //If you pass a handleLink function you'll disable `data-menu-top` and `data-menu-offset`.
-            //You are in control where skrollr will scroll to. You get the clicked link as a parameter and are expected to return a number.
-            /*handleLink: function(link) {
-                return 400;//Hardcoding 400 doesn't make much sense.
-            }*/
-        });
-    }
-</script>

@@ -367,7 +367,7 @@
                 </div>
 
             </h1>
-            <a href="#tickets" class="button button_tickets">Register Now</a>
+            <a href="<?php if(is_front_page()) : echo '#tickets'; else : echo "/tickets/"; endif; ?>" class="button button_tickets">Register Now</a>
             <section class="header--hosted-in">
                 Hosted in Downtown <strong>Minneapolis, Minnesota</strong> and <strong>streamed live</strong> wherever you are
             </section>

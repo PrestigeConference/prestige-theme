@@ -23,6 +23,7 @@
         display: block;
         position: relative;
         margin-bottom: .25em;
+        padding-left: 2em;
         color: $siteScheduleDateBlue;
         font-family: $altFont;
         text-transform: uppercase;
@@ -73,6 +74,8 @@
                 font-weight: bold;
                 line-height: 1.35;
                 font-family: $baseFont;
+                letter-spacing: 0;
+                text-transform: none;
             }
 
             .session--speaker {
@@ -120,19 +123,27 @@
         right: 0;
         top: 0;
         width: 100%;
-
-        .schedule--building {
-            fill: none;
-            stroke: $siteLightPurple;
-            stroke-linejoin: round;
-            stroke-linecap: round;
-            stroke-miterlimit: 10;
-            fill-rule: evenodd;
-            clip-rule: evenodd;
-            webkit-transition: all 1s;
-        }
     }
 }
+
+    .schedule--building {
+        fill: none;
+        stroke: $siteLightPurple;
+        stroke-linejoin: round;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-dasharray: 178px;
+        stroke-dashoffset: 178px;
+        fill-rule: evenodd;
+        clip-rule: evenodd;
+        @include transition(all 2s);
+    }
+
+    .skrollable-after {
+        .schedule--building {
+            stroke-dashoffset: 356px;
+        }
+    }
 
     .the-end--text {
         margin-top: -1.2em;
@@ -142,6 +153,18 @@
         letter-spacing: 3px;
         text-align: center;
         text-transform: uppercase;
+        opacity: 0;
+        @include transform-translate(0, 20px);
+        @include filter-blur(4px);
+        @include transition(all 2s);
+    }
+
+    .skrollable-after {
+        .the-end--text {
+            opacity: 1;
+            @include transform-translate(0, 0);
+            @include filter-blur(0);
+        }
     }
 
 
@@ -153,6 +176,7 @@
 
     .schedule--date {
         width: 16em;
+        padding-left: 0;
         text-align: right;
     }
 
@@ -216,5 +240,6 @@
 
     .the-end--text {
         margin-top: -.5em;
+        padding-left: 3px;
     }
 }
