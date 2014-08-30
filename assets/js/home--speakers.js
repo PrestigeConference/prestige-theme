@@ -29,12 +29,12 @@ function doOnSpeakerClicked(e) {
         var speaker = e.target;
 
         //find the speaker node
-        while(speaker.classList.contains('speaker') == false) {
+        while(speaker.classList.contains('home--speaker') == false) {
             speaker = speaker.parentNode;
         }
 
         if(speaker.classList.contains('active') ==  false) {
-            var speakers = document.querySelectorAll('.speaker');
+            var speakers = document.querySelectorAll('.home--speaker');
 
             for(var i = 0, len = speakers.length; i < len; i++) {
                 speakers[i].classList.remove('active');
@@ -48,7 +48,7 @@ function doOnSpeakerClicked(e) {
 function highlightSpecificSpeaker(speaker) {
     speaker.classList.add('active');
 
-    var biography = speaker.querySelectorAll('.speaker--biography')[0];
+    var biography = speaker.querySelectorAll('.home--speaker--biography')[0];
 
     var headerDescription = document.querySelectorAll('.header--description')[0];
 
@@ -56,7 +56,7 @@ function highlightSpecificSpeaker(speaker) {
 }
 
 function displayNextSpeaker() {
-    var speakers = document.querySelectorAll('.speaker'),
+    var speakers = document.querySelectorAll('.home--speaker'),
         presentlyActiveSpeaker = -1;
 
     for(var i = 0, len = speakers.length; i < len; i++) {
@@ -72,13 +72,13 @@ function displayNextSpeaker() {
 
     highlightSpecificSpeaker(speakers[presentlyActiveSpeaker + 1]);
 
-    var speakersWrapper = document.querySelectorAll('.speakers--list_wrapper')[0];
+    var speakersWrapper = document.querySelectorAll('.home--speakers--list_wrapper')[0];
 
     speakerScrollAnimate(speakersWrapper,  speakers[0].offsetWidth * (presentlyActiveSpeaker + 1), 'next');
 }
 
 function displayPreviousSpeaker() {
-    var speakers = document.querySelectorAll('.speaker'),
+    var speakers = document.querySelectorAll('.home--speaker'),
         presentlyActiveSpeaker = speakers.length;
 
     for(var i = 0, len = speakers.length; i < len; i++) {
@@ -94,7 +94,7 @@ function displayPreviousSpeaker() {
 
     highlightSpecificSpeaker(speakers[presentlyActiveSpeaker - 1]);
 
-    var speakersWrapper = document.querySelectorAll('.speakers--list_wrapper')[0];
+    var speakersWrapper = document.querySelectorAll('.home--speakers--list_wrapper')[0];
 
     speakerScrollAnimate(speakersWrapper,  speakers[0].offsetWidth * (presentlyActiveSpeaker - 1), 'previous');
 }

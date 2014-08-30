@@ -13,8 +13,8 @@
 </nav>
 <!-- SPEAKERS -->
 <section class="home--speakers" id="speakers">
-    <header class="speakers--header">
-        <h1 class="home--title speakers--title" data-30p-center-top="">
+    <header class="home--speakers--header">
+        <h1 class="home--title home--speakers--title" data-30p-center-top="">
             <span class="title--small">The Best</span>
             Speakers Around
         </h1>
@@ -22,34 +22,34 @@
             Instead of many tracks filled with volunteer speakers, we've scoured the WordPress community for some fo the very best speakers and are paying for their travel to come and speak in Minneapolis. What does that mean for you? You'll have a day full of great sessions on managing a business and your career.
             <section class="header--biography_wrapper" id="headerBiography"></section>
         </section>
-        <nav class="speakers--nav">
+        <nav class="home--speakers--nav">
             <a id="prevSpeaker" class="arrow-left icon-arrow-left"></a>
             <a id="nextSpeaker" class="arrow-right icon-arrow-right"></a>
         </nav>
     </header>
-    <section class="speakers--list_wrapper">
-        <ul class="speakers--list">
+    <section class="home--speakers--list_wrapper">
+        <ul class="home--speakers--list">
             <?php
             $speakerQueryArgs = array('post_type' => 'Speaker',
                 'posts_per_page' => '100');
             $speakerQuery = new WP_Query( $speakerQueryArgs );
 
             while($speakerQuery->have_posts()) : $speakerQuery->the_post(); ?>
-                <li class="speaker">
+                <li class="home--speaker">
                     <?php if ( has_post_thumbnail() ) : ?>
-                        <figure class="speaker--picture">
+                        <figure class="home--speaker--picture">
                             <?php the_post_thumbnail(); ?>
                         </figure>
                     <?php endif; ?>
-                    <section class="speaker--content">
-                        <h3 class="speaker--name">
+                    <section class="home--speaker--content">
+                        <h3 class="home--speaker--name">
                             <?php the_title(); ?>
                         </h3>
-                        <section class="speaker--biography_wrapper">
-                            <section class="speaker--biography">
+                        <section class="home--speaker--biography_wrapper">
+                            <section class="home--speaker--biography">
                                 <?php the_field('biography'); ?>
                             </section>
-                            <div class="speaker--links">
+                            <div class="home--speaker--links">
                                 <a href="http://www.twitter.com/<?php the_field('twitter'); ?>">@<?php the_field('twitter'); ?></a>
                                 | <a href="<?php the_field('url'); ?>">website</a>
                             </div>
@@ -84,10 +84,12 @@
                     <h3 class="session--title">
                         Honest Answers from WordPress Business Experts
                     </h3>
+                    <section class="session--speaker">
+                        Carl Hancock, Reid Peifer, Travis Totz, Matt Medeiros (moderator)
+                    </section>
                     <section class="session--description">
-                        We’ll be coming together for food, drinks, and alcohol-fueled honest answers from some successful WordPress business owners.<br>
-                        <br>
-                        This will be the only session of the entire weekend that is neither live-streamed nor recorded for later rebroadcast. Admission is limited to the first 50 tickets sold due to space limitations. This event replaces the typical speakers’ dinner.
+                        <p>We’ll be coming together for food, drinks, and alcohol-fueled honest answers from some successful WordPress business owners.</p>
+                        <p>This will be the only session of the entire weekend that is neither live-streamed nor recorded for later rebroadcast. Admission is limited to the first 50 tickets sold due to space limitations. This event replaces the typical speakers’ dinner.</p>
                     </section>
                 </section>
             </li>
@@ -98,7 +100,7 @@
         <ul class="schedule--day-list">
             <li class="schedule--session">
                 <time data-center-center="" class="session--start-time">
-                    8:00-8:45 am
+                    9:00-9:45 am
                 </time>
                 <section class="session--content">
                     <h3 class="session--title">
@@ -108,7 +110,7 @@
             </li>
             <li class="schedule--session">
                 <time data-center-center="" class="session--start-time">
-                    8:45-9:00 am
+                    9:45-10:00 am
                 </time>
                 <section class="session--content">
                     <h3 class="session--title">
@@ -118,127 +120,143 @@
             </li>
             <li class="schedule--session">
                 <time data-center-center="" class="session--start-time">
-                    9:00-10:00 am
+                    10:00-10:45 am
                 </time>
                 <section class="session--content">
                     <h3 class="session--title">
-                        Satisfy the Want, Deliver the Need
+                        Traits of Success: From Car Sales to Software Sales
                     </h3>
                     <section class="session--speaker">
-                        Jennifer Bourn, Founder Bourn Creative
+                        Matt Medeiros, Host of The Matt Report, Co-founder Slocum Studios
                     </section>
                     <section class="session--description">
-                        Design infuses every part of our world. It stirs emotions, creates experiences, shapes memories, and persuades actions. Design showcases exceptional code, supports compelling content, and drives consumers to make the decision to buy -- to invest in hiring you, buying from you, or learning from you.<br>
-                        <br>
-                        In its 10th year, Bourn Creative satisfies what clients want most with a design first approach, and delivers what they need with clean, flexible code and a conversion-based strategy centered around WordPress -- and we take A LOT of vacation. But getting there wasn't easy, wasn't a straight path, and was sometimes really ugly.<br>
-                        <br>
-                        In this talk, you'll get candid and honest insights on the hurdles, the successes, the mindset shifts we had to make, and the lessons learned along the way.
+                        <p>"They told me to build it and they would come. Now I'm standing here with this pile of code and I'm thinking of getting a day job." We'll uncover the traits Matt fine-tuned over the years in his family owned auto dealership and how he implements them in his current WordPress agency startup.</p>
                     </section>
                 </section>
             </li>
             <li class="schedule--session">
                 <time data-center-center="" class="session--start-time">
-                    9:00-10:00 am
+                    11:00-11:45 am
                 </time>
                 <section class="session--content">
                     <h3 class="session--title">
-                        Satisfy the Want, Deliver the Need
+                        You Should Charge More
                     </h3>
                     <section class="session--speaker">
-                        Jennifer Bourn, Founder Bourn Creative
+                        Lisa Sabin-Wilson, Owner WebDevStudios and AppPresser, Author
                     </section>
                     <section class="session--description">
-                        Design infuses every part of our world. It stirs emotions, creates experiences, shapes memories, and persuades actions. Design showcases exceptional code, supports compelling content, and drives consumers to make the decision to buy -- to invest in hiring you, buying from you, or learning from you.<br>
-                        <br>
-                        In its 10th year, Bourn Creative satisfies what clients want most with a design first approach, and delivers what they need with clean, flexible code and a conversion-based strategy centered around WordPress -- and we take A LOT of vacation. But getting there wasn't easy, wasn't a straight path, and was sometimes really ugly.<br>
-                        <br>
-                        In this talk, you'll get candid and honest insights on the hurdles, the successes, the mindset shifts we had to make, and the lessons learned along the way.
+                        <p>As freelancers and entrepreneurs, we are in charge of assigning value to the work that we do. In 2004, as a freelancer, Lisa sold her first WordPress project for $75. Ten years later, as a partner in a thriving web design and development agency, she is frequently involved in projects 1000 times that much, often more.</p>
+                        <p>There are different considerations in pricing as a freelancer, and pricing as an agency. Lisa explores these considerations and shares her insight into common mistakes she made in her career as a freelancer, as well as pricing lessons, strategies and advice she is using today.</p>
+                        <p>This session will explore different pricing models, help you identify signs that your rates might be too low and some similarities and differences between freelancing vs. agency pricing strategies. You'll find out how she gradually increased her pricing as a freelancer because one of her (paying) clients encouraged her to do so, and you should be prepared for Lisa to encourage you to do the same!</p>
                     </section>
                 </section>
             </li>
             <li class="schedule--session">
                 <time data-center-center="" class="session--start-time">
-                    9:00-10:00 am
+                    11:45-1:00 pm
                 </time>
                 <section class="session--content">
                     <h3 class="session--title">
-                        Satisfy the Want, Deliver the Need
+                        Lunch Break
                     </h3>
-                    <section class="session--speaker">
-                        Jennifer Bourn, Founder Bourn Creative
-                    </section>
                     <section class="session--description">
-                        Design infuses every part of our world. It stirs emotions, creates experiences, shapes memories, and persuades actions. Design showcases exceptional code, supports compelling content, and drives consumers to make the decision to buy -- to invest in hiring you, buying from you, or learning from you.<br>
-                        <br>
-                        In its 10th year, Bourn Creative satisfies what clients want most with a design first approach, and delivers what they need with clean, flexible code and a conversion-based strategy centered around WordPress -- and we take A LOT of vacation. But getting there wasn't easy, wasn't a straight path, and was sometimes really ugly.<br>
-                        <br>
-                        In this talk, you'll get candid and honest insights on the hurdles, the successes, the mindset shifts we had to make, and the lessons learned along the way.
+                        Supplied at the venue.
                     </section>
                 </section>
             </li>
             <li class="schedule--session">
                 <time data-center-center="" class="session--start-time">
-                    9:00-10:00 am
+                    1:00-1:45 pm
                 </time>
                 <section class="session--content">
                     <h3 class="session--title">
-                        Satisfy the Want, Deliver the Need
+                        What the Hell Are We Doing?
                     </h3>
                     <section class="session--speaker">
-                        Jennifer Bourn, Founder Bourn Creative
+                        Reid Peifer, Co-owner Modern Tribe
                     </section>
                     <section class="session--description">
-                        Design infuses every part of our world. It stirs emotions, creates experiences, shapes memories, and persuades actions. Design showcases exceptional code, supports compelling content, and drives consumers to make the decision to buy -- to invest in hiring you, buying from you, or learning from you.<br>
-                        <br>
-                        In its 10th year, Bourn Creative satisfies what clients want most with a design first approach, and delivers what they need with clean, flexible code and a conversion-based strategy centered around WordPress -- and we take A LOT of vacation. But getting there wasn't easy, wasn't a straight path, and was sometimes really ugly.<br>
-                        <br>
-                        In this talk, you'll get candid and honest insights on the hurdles, the successes, the mindset shifts we had to make, and the lessons learned along the way.
+                        <p>An honest no bullshit look at the advantages and challenges of running a product based business in the WordPress ecosystem. I’ll share comparisons to our agency business (Modern Tribe) both in workflow and in cost/profit analysis, and talk through why we love/hate both client services and products. I’ll tell you a harrowing story of how we almost sank the ship, and how that informs our ongoing product development strategies. I’ll squeeze in some of the marketing things that we’ve done that work, and I’d bee an idiot to not mention the role that support plays in our success.</p>
+                        <p>This will be the story of how we took this funny little thing we had to build for a client, and turned it into a $1million dollar a year ‘side business' complete with as many of the stupid mistakes as I can remember.</p>
                     </section>
                 </section>
             </li>
             <li class="schedule--session">
                 <time data-center-center="" class="session--start-time">
-                    9:00-10:00 am
+                    2:00-2:45 pm
                 </time>
                 <section class="session--content">
                     <h3 class="session--title">
-                        Satisfy the Want, Deliver the Need
+                        Satisfy the Want, Deliver the Need: A Design First Approach to Building a Sustainable Business Using WordPress
                     </h3>
                     <section class="session--speaker">
                         Jennifer Bourn, Founder Bourn Creative
                     </section>
                     <section class="session--description">
-                        Design infuses every part of our world. It stirs emotions, creates experiences, shapes memories, and persuades actions. Design showcases exceptional code, supports compelling content, and drives consumers to make the decision to buy -- to invest in hiring you, buying from you, or learning from you.<br>
-                        <br>
-                        In its 10th year, Bourn Creative satisfies what clients want most with a design first approach, and delivers what they need with clean, flexible code and a conversion-based strategy centered around WordPress -- and we take A LOT of vacation. But getting there wasn't easy, wasn't a straight path, and was sometimes really ugly.<br>
-                        <br>
-                        In this talk, you'll get candid and honest insights on the hurdles, the successes, the mindset shifts we had to make, and the lessons learned along the way.
+                        <p>Design infuses every part of our world. It stirs emotions, creates experiences, shapes memories, and persuades actions. Design showcases exceptional code, supports compelling content, and drives consumers to make the decision to buy -- to invest in hiring you, buying from you, or learning from you.</p>
+                        <p>In its 10th year, Bourn Creative satisfies what clients want most with a design first approach, and delivers what they need with clean, flexible code and a conversion-based strategy centered around WordPress -- and we take A LOT of vacation. But getting there wasn't easy, wasn't a straight path, and was sometimes really ugly.</p>
+                        <p>In this talk, you'll get candid and honest insights on the hurdles, the successes, the mindset shifts we had to make, and the lessons learned along the way.</p>
                     </section>
                 </section>
             </li>
             <li class="schedule--session">
                 <time data-center-center="" class="session--start-time">
-                    9:00-10:00 am
+                    2:45-3:00 pm
                 </time>
                 <section class="session--content">
                     <h3 class="session--title">
-                        Satisfy the Want, Deliver the Need
+                        Afternoon Snacks
+                    </h3>
+                </section>
+            </li>
+            <li class="schedule--session">
+                <time data-center-center="" class="session--start-time">
+                    3:00-3:45 pm
+                </time>
+                <section class="session--content">
+                    <h3 class="session--title">
+                        WordPress Moneyball: How a Little Web Shop Can Continually Out-muscle the Big Dogs by Exploiting <strong>Over</strong>valued Things
                     </h3>
                     <section class="session--speaker">
-                        Jennifer Bourn, Founder Bourn Creative
+                        Toby Cryns, Founder The Mighty Mo! Design Co
                     </section>
                     <section class="session--description">
-                        Design infuses every part of our world. It stirs emotions, creates experiences, shapes memories, and persuades actions. Design showcases exceptional code, supports compelling content, and drives consumers to make the decision to buy -- to invest in hiring you, buying from you, or learning from you.<br>
-                        <br>
-                        In its 10th year, Bourn Creative satisfies what clients want most with a design first approach, and delivers what they need with clean, flexible code and a conversion-based strategy centered around WordPress -- and we take A LOT of vacation. But getting there wasn't easy, wasn't a straight path, and was sometimes really ugly.<br>
-                        <br>
-                        In this talk, you'll get candid and honest insights on the hurdles, the successes, the mindset shifts we had to make, and the lessons learned along the way.
+                        <p>You are small, scared, suck at writing code, don’t know what you are doing most of the time, and you work out of your basement office.  They are shiny, confident, and possess some of the best talent this side of the Atlantic Ocean.  But that doesn’t mean you can’t compete with and beat them.  I have seen it done countless times, and you can do it too!</p>
+                        <p>In this session, Toby Cryns will share some of the unorthodox business strategies he and his friends use to outmuscle the bigger, better, and badder competition in a hyper-competitive marketplace.</p>
                     </section>
                 </section>
             </li>
             <li class="schedule--session">
                 <time data-center-center="" class="session--start-time">
-                    6:00-10:00 pm
+                    4:00-4:45 pm
+                </time>
+                <section class="session--content">
+                    <h3 class="session--title">
+                        Upping 10up: Rewards and Scars from Bootstrapping 1 to 70 in 3.5 years
+                    </h3>
+                    <section class="session--speaker">
+                        Jake Goldman, Founder 10up
+                    </section>
+                    <section class="session--description">
+                        <p>Jake once told the community that he’d be happy to talk about the business of WordPress, but that a WordCamp wasn’t the right place for that talk: and we’re holding his feet to the fire. Mario Andretti once said, “If everything seems under control, you’re not going fast enough.” Nothing better captures 10up’s rise, and Jake’s journey.</p>
+                        <p>In a wide ranging interview, Josh Broton will press Jake on the process of building 10up from 1 man in an office to a 70+ person brand in the WordPress space in less than 3.5 years. From watershed moments, to painful scars and mistakes, from risks that paid off, to decisions he regrets, we’ll open up new insights into the philosophies and business that happens behind the scenes at 10up.</p>
+                    </section>
+                </section>
+            </li>
+            <li class="schedule--session">
+                <time data-center-center="" class="session--start-time">
+                    4:45-5:00 pm
+                </time>
+                <section class="session--content">
+                    <h3 class="session--title">
+                        Closing Remarks
+                    </h3>
+                </section>
+            </li>
+            <li class="schedule--session">
+                <time data-center-center="" class="session--start-time">
+                    5:00-10:00 pm
                 </time>
                 <section class="session--content">
                     <h3 class="session--title">
@@ -316,98 +334,86 @@
                 Sponsors
             </h1>
             <section class="header--description">
-                These awesome community members make Prestige Conference possible.
+                These awesome community members make Prestige Conference possible. <a href="/become-a-sponsor">Become a Sponsor</a>
             </section>
         </header>
         <section class="sponsors--content">
             <h3>Primary Sponsors</h3>
             <ul class="sponsors--list">
+                <?php
+                $sponsorQueryArgs = array('post_type' => 'Sponsor',
+                    'posts_per_page' => '100');
+                $sponsorQuery = new WP_Query( $sponsorQueryArgs );
+
+                while($sponsorQuery->have_posts()) : $sponsorQuery->the_post(); ?>
+                <?php $sponsorshipLevel = get_field('sponsorship_level');
+                    if($sponsorshipLevel == 'Primary') : ?>
                 <li class="sponsor">
-                    <a href="/sponsor/press75/">
-                        <img src="/link/to/sponsor/square/image.png" />
+                    <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
+                        <img src="<?php the_field('square_image_for_homepage') ?>" alt="<?php the_title(); ?>" />
                     </a>
                 </li>
-                <li class="sponsor">
-                    <a href="/sponsor/press75/">
-                        <img src="/link/to/sponsor/square/image.png" />
-                    </a>
-                </li>
-                <li class="sponsor">
-                    <a href="/sponsor/press75/">
-                        <img src="/link/to/sponsor/square/image.png" />
-                    </a>
-                </li>
+                <?php endif; endwhile; ?>
             </ul>
             <h3>Gold Sponsors</h3>
             <ul class="sponsors--list">
-                <li class="sponsor">
-                    <a href="/sponsor/press75/">
-                        <img src="/link/to/sponsor/square/image.png" />
-                    </a>
-                </li>
-                <li class="sponsor">
-                    <a href="/sponsor/press75/">
-                        <img src="/link/to/sponsor/square/image.png" />
-                    </a>
-                </li>
-                <li class="sponsor">
-                    <a href="/sponsor/press75/">
-                        <img src="/link/to/sponsor/square/image.png" />
-                    </a>
-                </li>
-                <li class="sponsor">
-                    <a href="/sponsor/press75/">
-                        <img src="/link/to/sponsor/square/image.png" />
-                    </a>
-                </li>
+                <?php  while($sponsorQuery->have_posts()) : $sponsorQuery->the_post(); ?>
+                    <?php $sponsorshipLevel = get_field('sponsorship_level');
+                    if($sponsorshipLevel == 'Gold') : ?>
+                        <li class="sponsor">
+                            <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
+                                <img src="<?php the_field('square_image_for_homepage') ?>" alt="<?php the_title(); ?>" />
+                            </a>
+                        </li>
+                    <?php endif; endwhile; ?>
             </ul>
             <h3>Silver Sponsors</h3>
             <ul class="sponsors--list">
-                <li class="sponsor">
-                    <a href="/sponsor/press75/">
-                        <img src="/link/to/sponsor/square/image.png" />
-                    </a>
-                </li>
-                <li class="sponsor">
-                    <a href="/sponsor/press75/">
-                        <img src="/link/to/sponsor/square/image.png" />
-                    </a>
-                </li>
-                <li class="sponsor">
-                    <a href="/sponsor/press75/">
-                        <img src="/link/to/sponsor/square/image.png" />
-                    </a>
-                </li>
-                <li class="sponsor">
-                    <a href="/sponsor/press75/">
-                        <img src="/link/to/sponsor/square/image.png" />
-                    </a>
-                </li>
-                <li class="sponsor">
-                    <a href="/sponsor/press75/">
-                        <img src="/link/to/sponsor/square/image.png" />
-                    </a>
-                </li>
-                <li class="sponsor">
-                    <a href="/sponsor/press75/">
-                        <img src="/link/to/sponsor/square/image.png" />
-                    </a>
-                </li>
-                <li class="sponsor">
-                    <a href="/sponsor/press75/">
-                        <img src="/link/to/sponsor/square/image.png" />
-                    </a>
-                </li>
-                <li class="sponsor">
-                    <a href="/sponsor/press75/">
-                        <img src="/link/to/sponsor/square/image.png" />
-                    </a>
-                </li>
-                <li class="sponsor">
-                    <a href="/sponsor/press75/">
-                        <img src="/link/to/sponsor/square/image.png" />
-                    </a>
-                </li>
+                <?php  while($sponsorQuery->have_posts()) : $sponsorQuery->the_post(); ?>
+                    <?php $sponsorshipLevel = get_field('sponsorship_level');
+                    if($sponsorshipLevel == 'Silver') : ?>
+                        <li class="sponsor">
+                            <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
+                                <img src="<?php the_field('square_image_for_homepage') ?>" alt="<?php the_title(); ?>" />
+                            </a>
+                        </li>
+                    <?php endif; endwhile; ?>
+            </ul>
+            <h3>Bronze Sponsors</h3>
+            <ul class="sponsors--list">
+                <?php  while($sponsorQuery->have_posts()) : $sponsorQuery->the_post(); ?>
+                    <?php $sponsorshipLevel = get_field('sponsorship_level');
+                    if($sponsorshipLevel == 'Bronze') : ?>
+                        <li class="sponsor">
+                            <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
+                                <img src="<?php the_field('square_image_for_homepage') ?>" alt="<?php the_title(); ?>" />
+                            </a>
+                        </li>
+                    <?php endif; endwhile; ?>
+            </ul>
+            <h3>Afterparty Sponsors</h3>
+            <ul class="sponsors--list">
+                <?php  while($sponsorQuery->have_posts()) : $sponsorQuery->the_post(); ?>
+                    <?php $sponsorshipLevel = get_field('sponsorship_level');
+                    if($sponsorshipLevel == 'Afterparty') : ?>
+                        <li class="sponsor">
+                            <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
+                                <img src="<?php the_field('square_image_for_homepage') ?>" alt="<?php the_title(); ?>" />
+                            </a>
+                        </li>
+                    <?php endif; endwhile; ?>
+            </ul>
+            <h3>Lanyard Sponsor</h3>
+            <ul class="sponsors--list">
+                <?php  while($sponsorQuery->have_posts()) : $sponsorQuery->the_post(); ?>
+                    <?php $sponsorshipLevel = get_field('sponsorship_level');
+                    if($sponsorshipLevel == 'Lanyard') : ?>
+                        <li class="sponsor">
+                            <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
+                                <img src="<?php the_field('square_image_for_homepage') ?>" alt="<?php the_title(); ?>" />
+                            </a>
+                        </li>
+                    <?php endif; endwhile; ?>
             </ul>
         </section>
     </div>

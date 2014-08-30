@@ -1,6 +1,6 @@
 
 
-.speakers--header {
+.home--speakers--header {
     padding: 4em 2em;
     background: $siteGrey;
     color: white;
@@ -13,17 +13,17 @@
         line-height: 1.75;
     }
 
-    .speakers--nav {
+    .home--speakers--nav {
         display: none;
     }
 
-.speakers--list {
+.home--speakers--list {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-    .speaker {
+    .home--speaker {
         @include flexbox();
         @include flexbox-align-items(center);
         margin: 0;
@@ -34,26 +34,26 @@
             font-family: $altFont;
         }
 
-        .speaker--biography {
+        .home--speaker--biography {
             display: none;
         }
     }
 
-        .speaker--picture {
+        .home--speaker--picture {
             margin: 0;
             padding: 0;
             width: 8em;
             height: 8em;
         }
 
-        .speaker--content {
+        .home--speaker--content {
             @include css3-calc('width', '100% - 8em');
             padding: 1em 0;
             text-align: center;
             text-transform: uppercase;
         }
 
-            .speaker--name {
+            .home--speaker--name {
                 margin-bottom: 0;
                 font-weight: bold;
             }
@@ -62,13 +62,13 @@
 
 @media only screen and (min-width: #{$midBreakpoint}) {
     .home--speakers,
-    .speakers--list {
+    .home--speakers--list {
         @include flexbox();
         @include flexbox-align-items(stretch);
         height: 35em;
     }
 
-    .speakers--header {
+    .home--speakers--header {
         position: relative;
         padding: 4em 2em;
         width: 24em;
@@ -80,7 +80,7 @@
             overflow-y: auto;
         }
 
-        .speakers--nav {
+        .home--speakers--nav {
             display: block;
             position: absolute;
             left: 2em;
@@ -103,16 +103,16 @@
                 margin-left: 1.5em;
             }
 
-    .speakers--list_wrapper {
+    .home--speakers--list_wrapper {
         @include css3-calc('width', '100% - 24em');
         overflow-x: auto;
     }
 
-        .speakers--list {
+        .home--speakers--list {
             width: 216rem;
         }
 
-            .speaker {
+            .home--speaker {
                 display: block;
                 width: 24rem;
                 opacity: .5;
@@ -125,13 +125,13 @@
                 }
             }
 
-                .speaker--content {
+                .home--speaker--content {
                     padding: 4em;
                     height: 11em;
                     width: 24rem;
                 }
 
-                .speaker--picture {
+                .home--speaker--picture {
                     width: 24rem;
                     height: 24rem;
 
@@ -144,7 +144,7 @@
 
 
 @media only screen and (min-width: #{$largeBreakpoint}) {
-    .speakers--header {
+    .home--speakers--header {
         padding: 6em 4em;
         width: 35em;
     }
@@ -153,12 +153,12 @@
             max-height: 15.125rem;
         }
 
-        .speakers--nav {
+        .home--speakers--nav {
             left: 4em;
             bottom: 2em;
         }
 
-    .speakers--list_wrapper {
+    .home--speakers--list_wrapper {
         @include css3-calc('width', '100% - 35em');
     }
 }
