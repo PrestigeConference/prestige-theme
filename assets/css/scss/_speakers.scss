@@ -1,75 +1,86 @@
-.speaker {
-    margin-bottom: 2em;
-    padding-bottom: 2em;
-    border-bottom: 1px solid $springGrey;
 
-    &:last-child {
-        margin-bottom: 0;
-        padding-bottom: 0;
-        border-bottom: 0;
+
+.speaker--info {
+    @include flexbox();
+    @include flexbox-align-items(center);
+}
+
+.speaker--picture {
+    margin: 0;
+    width: 8em;
+    height: 8em;
+}
+
+.speaker--metadata {
+    @include css3-calc('width', '100% - 8em');
+    padding: 1em 0;
+    text-align: center;
+
+    a {
+        font-family: $altFont;
+        text-transform: uppercase;
     }
 }
 
     .speaker--name {
         font-weight: bold;
-    }
+        margin-bottom: 0;
 
-    .speaker--picture {
-        text-align: center;
-        margin: 0;
-        padding: 0;
-
-        img {
-            max-width: 260px;
-            @include rounded(50%);
-            border: 2px solid $springGrey;
+        a {
+            padding-left: 8px;
+            color: $siteGrey;
+            font-weight: bold;
+            text-decoration: none;
         }
     }
 
-    .speaker--name {
-        margin: .5rem 0;
+    .speaker--bio {
+        padding: 1em 0;
     }
-
-    .speaker--links {
-        margin-top: .25rem;
-        padding-top: .25rem;
-        border-top: 1px solid $lightGrey;
-    }
-
 
 
 
 @media only screen and (min-width: #{$midBreakpoint}) {
     .speaker {
         @include flexbox();
+        @include flexbox-align-items(flex-start);
         @include flexbox-justify-content(space-between);
-        @incldue flexbox-align-items(flex-start);
+    }
+
+    .speaker--info {
+        display: block;
+        width: 17em;
     }
 
         .speaker--picture {
-            text-align: left;
-            width: 260px;
-        }
+            width: 17em;
+            height: 17em;
 
-        .speaker--content {
-            @include css3-calc('width', '100% - 292px');
-        }
-
-        .speaker--name {
-            margin-top: 0;
-        }
-
-    .no-flexbox.no-flexboxlegacy {
-        .speaker {
-            @include clearfix();
-        }
-
-            .speaker--picture {
-                float: left;
+            img {
+                width: 100%;
             }
+        }
 
-            .speaker--content {
-                float: right;
+        .speaker--bio {
+            @include css3-calc('width', '100% - 18rem');
+            height: auto;
+            padding: 0;
+            font-size: .875em;
+        }
+
+        .speaker--metadata {
+            width: 100%;
+            background: $siteGrey;
+            color: white;
+
+            a {
+                color: white;
             }
+        }
+
+    .single-speaker {
+        .speaker--bio {
+            font-size: 1em;
+        }
     }
 }

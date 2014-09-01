@@ -1,15 +1,12 @@
-<?php while (have_posts()) : the_post(); ?>
-    <section class="session">
-        <section class="session--content">
-            <header class="session--header">
-                <h1 class="session--name">
-                    <?php the_title(); ?>
-                    <?php if(get_field('session_subtitle')) : ?>
-                        <div class="session--subtitle">
-                            <?php the_field('session_subtitle'); ?>
-                        </div>
-                    <?php endif; ?>
-                </h1>
+<h1>
+    <?php the_title(); ?><?php if(get_field('session_subtitle')) : ?>: <?php the_field('session_subtitle'); ?>
+        <?php endif; ?>
+</h1>
+    <?php while (have_posts()) : the_post(); ?>
+    <ul class="schedule--day-list session-list">
+        <li class="schedule--session">
+            <section class="session--content">
+
                 <?php
                 $post_object = get_field('session_speaker');
                 if($post_object) :
@@ -25,11 +22,10 @@
                     wp_reset_postdata();
                 endif;
                 ?>
-            </header>
-
-            <section class="session--description">
-                <?php the_field('session_description'); ?>
+                <section class="session--description">
+                    <?php the_field('session_description'); ?>
+                </section>
             </section>
-        </section>
-    </section>
-<?php endwhile; ?>
+        </li>
+    </ul>
+    <?php endwhile; ?>

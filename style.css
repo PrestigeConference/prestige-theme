@@ -1106,11 +1106,7 @@ body {
     font-size: 1.75em;
   }
 
-  .page:not(.home) .header--blog-name,
-  .blog .header--blog-name,
-  .single-post .header--blog-name,
-  .archive .header--blog-name,
-  .single .header--blog-name {
+  body:not(.home) .header--blog-name {
     display: -ms-flexbox;
     -ms-box-orient: horizontal;
     display: -moz-box;
@@ -1128,30 +1124,18 @@ body {
     -webkit-justify-content: center;
     justify-content: center;
   }
-  .page:not(.home) .header--blog-name a,
-  .blog .header--blog-name a,
-  .single-post .header--blog-name a,
-  .archive .header--blog-name a,
-  .single .header--blog-name a {
+  body:not(.home) .header--blog-name a {
     width: 11rem;
     margin: 2rem 0;
     padding-top: 9.5rem;
   }
-  .page:not(.home) .header--subtitle,
-  .blog .header--subtitle,
-  .single-post .header--subtitle,
-  .archive .header--subtitle,
-  .single .header--subtitle {
+  body:not(.home) .header--subtitle {
     width: 14.5rem;
     padding-left: 1rem;
     font-size: 1.25rem;
     text-align: left;
   }
-  .page:not(.home) .button_tickets,
-  .blog .button_tickets,
-  .single-post .button_tickets,
-  .archive .button_tickets,
-  .single .button_tickets {
+  body:not(.home) .button_tickets {
     margin: 0 0 2rem 0;
   }
 }
@@ -1199,19 +1183,11 @@ body {
     padding-bottom: 1em;
   }
 
-  .page:not(.home) .header--blog-name a,
-  .blog .header--blog-name a,
-  .single-post .header--blog-name a,
-  .archive .header--blog-name a,
-  .single .header--blog-name a {
+  body:not(.home) .header--blog-name a {
     width: 13rem;
     padding-top: 10.5rem;
   }
-  .page:not(.home) .header--subtitle,
-  .blog .header--subtitle,
-  .single-post .header--subtitle,
-  .archive .header--subtitle,
-  .single .header--subtitle {
+  body:not(.home) .header--subtitle {
     width: 19.5rem;
   }
 }
@@ -1225,11 +1201,7 @@ body {
     left: calc(50% + 30em);
   }
 
-  .page:not(.home) .header--subtitle,
-  .blog .header--subtitle,
-  .single-post .header--subtitle,
-  .archive .header--subtitle,
-  .single .header--subtitle {
+  body:not(.home) .header--subtitle {
     width: auto;
   }
 }
@@ -1252,14 +1224,10 @@ body {
   pointer-events: none;
 }
 
-.open-the-menu .nav-main {
-  opacity: 1;
-  pointer-events: auto;
-}
-.open-the-menu .nav-main li {
+.nav-main li {
   text-align: right;
 }
-.open-the-menu .nav-main a {
+.nav-main a {
   display: block;
   width: 100%;
   padding: 1rem 1.75rem 0;
@@ -1275,17 +1243,26 @@ body {
   -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
-.open-the-menu .nav-main a:visited {
+.nav-main a:visited {
   color: white;
 }
-.open-the-menu .nav-main a:hover, .open-the-menu .nav-main a:active, .open-the-menu .nav-main a:focus {
+.nav-main a:hover, .nav-main a:active, .nav-main a:focus {
   color: #a775c9;
 }
-.open-the-menu .nav-main .close-menu-button {
+.nav-main .close-menu-button {
   width: auto;
   color: white;
   text-align: right;
   padding-bottom: 2rem;
+}
+
+.open-the-menu .nav-main {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+body:not(.home) .nav-main .close-menu-button {
+  padding-bottom: 0;
 }
 
 @media only screen and (min-width: 30.5em) {
@@ -1563,7 +1540,9 @@ body {
 
 .home--speaker--name {
   margin-bottom: 0;
+  padding-left: 8px;
   font-weight: bold;
+  color: #333333;
 }
 
 @media only screen and (min-width: 48.5em) {
@@ -2651,6 +2630,176 @@ body {
     margin-right: 1.375em;
   }
 }
+.speaker--info {
+  display: -ms-flexbox;
+  -ms-box-orient: horizontal;
+  display: -moz-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.speaker--picture {
+  margin: 0;
+  width: 8em;
+  height: 8em;
+}
+
+.speaker--metadata {
+  width: -moz-calc(100% - 8em);
+  width: -webkit-calc(100% - 8em);
+  width: calc(100% - 8em);
+  padding: 1em 0;
+  text-align: center;
+}
+.speaker--metadata a {
+  font-family: "Brandon Grotesque", sans-serif;
+  text-transform: uppercase;
+}
+
+.speaker--name {
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.speaker--name a {
+  padding-left: 8px;
+  color: #333333;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.speaker--bio {
+  padding: 1em 0;
+}
+
+@media only screen and (min-width: 48.5em) {
+  .speaker {
+    display: -ms-flexbox;
+    -ms-box-orient: horizontal;
+    display: -moz-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+  }
+
+  .speaker--info {
+    display: block;
+    width: 17em;
+  }
+
+  .speaker--picture {
+    width: 17em;
+    height: 17em;
+  }
+  .speaker--picture img {
+    width: 100%;
+  }
+
+  .speaker--bio {
+    width: -moz-calc(100% - 18rem);
+    width: -webkit-calc(100% - 18rem);
+    width: calc(100% - 18rem);
+    height: auto;
+    padding: 0;
+    font-size: .875em;
+  }
+
+  .speaker--metadata {
+    width: 100%;
+    background: #333333;
+    color: white;
+  }
+  .speaker--metadata a {
+    color: white;
+  }
+
+  .single-speaker .speaker--bio {
+    font-size: 1em;
+  }
+}
+.single-session .session--content,
+.post-type-archive-session .session--content {
+  width: 100%;
+}
+
+.single-session .session-list {
+  margin-left: 0;
+  padding-left: 0;
+  border-left: 0;
+}
+.single-session .session-list .schedule--session:before {
+  display: none;
+}
+
+.session-list {
+  margin-left: .5em;
+  padding-left: 1em;
+  border-left: 2px solid #85a0d7;
+}
+.session-list .schedule--session {
+  position: relative;
+}
+.session-list .schedule--session:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: -1.5em;
+  top: 0;
+  height: .875em;
+  width: .875em;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background-clip: padding-box;
+  background: #85a0d7;
+}
+.session-list .session--title {
+  margin-top: -.25em;
+}
+
+.session--title a {
+  font-weight: bold;
+}
+
+.session--speaker {
+  line-height: 1.5em;
+}
+.session--speaker img {
+  height: 1.5em;
+  width: 1.5em;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background-clip: padding-box;
+}
+.session--speaker a {
+  display: inline-block;
+  line-height: 1.5em;
+  vertical-align: middle;
+}
+
+.sponsor--title {
+  line-height: 6rem;
+}
+.sponsor--title img {
+  height: 6rem;
+}
+
 /*
  * Temporary fix for https://core.trac.wordpress.org/ticket/26609
  */

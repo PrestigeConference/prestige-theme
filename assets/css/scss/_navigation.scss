@@ -13,43 +13,53 @@
     pointer-events: none;
 }
 
+.nav-main {
+    li {
+        text-align: right;
+    }
+
+    a {
+        display: block;
+        width: 100%;
+        padding: 1rem 1.75rem 0;
+        color: white;
+        font-family: $altFont;
+        font-size: 1.75em;
+        font-weight: lighter;
+        text-decoration: none;
+        text-transform: uppercase;
+        @include transition(color .3s ease);
+
+        &:visited {
+            color: white;
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: $siteLightPurple;
+        }
+    }
+
+    .close-menu-button {
+        width: auto;
+        color: white;
+        text-align: right;
+        padding-bottom: 2rem;
+    }
+}
+
 .open-the-menu {
     .nav-main {
-        opacity: 1;
         pointer-events: auto;
+        opacity: 1;
+    }
+}
 
-        li {
-            text-align: right;
-        }
-
-        a {
-            display: block;
-            width: 100%;
-            padding: 1rem 1.75rem 0;
-            color: white;
-            font-family: $altFont;
-            font-size: 1.75em;
-            font-weight: lighter;
-            text-decoration: none;
-            text-transform: uppercase;
-            @include transition(color .3s ease);
-
-            &:visited {
-                color: white;
-            }
-
-            &:hover,
-            &:active,
-            &:focus {
-                color: $siteLightPurple;
-            }
-        }
-
+body:not(.home) {
+    .nav-main {
         .close-menu-button {
-            width: auto;
-            color: white;
-            text-align: right;
-            padding-bottom: 2rem;
+            padding-bottom: 0;
         }
     }
 }
