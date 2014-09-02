@@ -1023,12 +1023,6 @@ body {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
-.header--blog-name span {
-  display: block;
-  padding-bottom: .5em;
-  color: #d794fe;
-  font-size: .75em;
-}
 .header--blog-name a {
   display: block;
   position: relative;
@@ -1039,6 +1033,13 @@ body {
   position: absolute;
   right: 10000%;
   top: 0;
+}
+
+.subtitle--tagline {
+  display: block;
+  padding-bottom: .5em;
+  color: #d794fe;
+  font-size: .75em;
 }
 
 .button_tickets {
@@ -1079,6 +1080,17 @@ body {
     font-size: 1.75em;
   }
 
+  .subtitle--tagline {
+    display: block;
+    padding-bottom: .5em;
+    color: #d794fe;
+    font-size: .75em;
+  }
+
+  .home .subtitle--tagline span {
+    display: block;
+  }
+
   body:not(.home) .header--blog-name {
     display: -ms-flexbox;
     -ms-box-orient: horizontal;
@@ -1100,7 +1112,6 @@ body {
   body:not(.home) .header--blog-name a {
     width: 11rem;
     margin: 2rem 0;
-    padding-top: 9.5rem;
   }
   body:not(.home) .header--subtitle {
     width: 14.5rem;
@@ -1148,6 +1159,10 @@ body {
     margin: 6rem auto 4rem;
   }
 
+  .subtitle--tagline span {
+    display: block;
+  }
+
   .button_tickets {
     margin: 6rem 0 8rem;
   }
@@ -1158,10 +1173,9 @@ body {
 
   body:not(.home) .header--blog-name a {
     width: 13rem;
-    padding-top: 10.5rem;
   }
   body:not(.home) .header--subtitle {
-    width: 19.5rem;
+    width: 20rem;
   }
 }
 @media only screen and (min-width: 64em) {
@@ -1194,9 +1208,7 @@ body {
   -ms-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
-  pointer-events: none;
 }
-
 .nav-main li {
   text-align: right;
 }
@@ -1228,28 +1240,34 @@ body {
   text-align: right;
   padding-bottom: 2rem;
 }
+.nav-main.closed {
+  display: none;
+}
 
 .open-the-menu .nav-main {
-  pointer-events: auto;
   opacity: 1;
 }
 
 body:not(.home) .nav-main .close-menu-button {
   padding-bottom: 0;
 }
+body:not(.home) .nav-main a {
+  font-size: 1.25em;
+  padding-top: .75rem;
+}
 
 @media only screen and (min-width: 30.5em) {
-  .open-the-menu .nav-main a {
+  .nav-main a {
     padding-right: 1rem;
   }
 }
 @media only screen and (min-width: 48.5em) {
-  .open-the-menu .nav-main a {
+  .nav-main a {
     padding-right: 3rem;
   }
 }
 @media only screen and (min-width: 64em) {
-  .open-the-menu .nav-main a {
+  .nav-main a {
     padding-right: -moz-calc(50% - 31.5rem);
     padding-right: -webkit-calc(50% - 31.5rem);
     padding-right: calc(50% - 31.5rem);

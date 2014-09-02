@@ -10,10 +10,7 @@
     background: rgba(51,51,51,.95);
     opacity: 0;
     @include transition(opacity .3s ease);
-    pointer-events: none;
-}
 
-.nav-main {
     li {
         text-align: right;
     }
@@ -47,11 +44,14 @@
         text-align: right;
         padding-bottom: 2rem;
     }
+
+    &.closed {
+        display: none;
+    }
 }
 
 .open-the-menu {
     .nav-main {
-        pointer-events: auto;
         opacity: 1;
     }
 }
@@ -61,17 +61,20 @@ body:not(.home) {
         .close-menu-button {
             padding-bottom: 0;
         }
+
+        a {
+            font-size: 1.25em;
+            padding-top: .75rem;
+        }
     }
 }
 
 
 
 @media only screen and (min-width: #{$smallBreakpoint}) {
-    .open-the-menu {
-        .nav-main {
-            a {
-                padding-right: 1rem;
-            }
+    .nav-main {
+        a {
+            padding-right: 1rem;
         }
     }
 }
@@ -79,11 +82,9 @@ body:not(.home) {
 
 
 @media only screen and (min-width: #{$midBreakpoint}) {
-    .open-the-menu {
-        .nav-main {
-            a {
-                padding-right: 3rem;
-            }
+    .nav-main {
+        a {
+            padding-right: 3rem;
         }
     }
 }
@@ -91,11 +92,9 @@ body:not(.home) {
 
 
 @media only screen and (min-width: #{$largeBreakpoint}) {
-    .open-the-menu {
-        .nav-main {
-            a {
-                @include css3-calc('padding-right', '50% - 31.5rem');
-            }
+    .nav-main {
+        a {
+            @include css3-calc('padding-right', '50% - 31.5rem');
         }
     }
 }

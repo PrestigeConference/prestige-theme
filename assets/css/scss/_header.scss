@@ -93,13 +93,6 @@
         letter-spacing: 2px;
         text-transform: uppercase;
 
-        span {
-            display: block;
-            padding-bottom: .5em;
-            color: $sitePurple;
-            font-size: .75em;
-        }
-
         a {
             display: block;
             position: relative;
@@ -113,6 +106,13 @@
             top: 0;
         }
     }
+
+        .subtitle--tagline {
+            display: block;
+            padding-bottom: .5em;
+            color: $sitePurple;
+            font-size: .75em;
+        }
 
     .button_tickets {
         margin: 2em 0;
@@ -158,6 +158,21 @@
         font-size: 1.75em;
     }
 
+    .subtitle--tagline {
+        display: block;
+        padding-bottom: .5em;
+        color: $sitePurple;
+        font-size: .75em;
+    }
+
+    .home {
+        .subtitle--tagline {
+            span {
+                display: block;
+            }
+        }
+    }
+
     body:not(.home) {
         .header--blog-name {
             @include flexbox();
@@ -167,7 +182,6 @@
             a {
                 width: 11rem;
                 margin: 2rem 0;
-                padding-top: 9.5rem;
             }
         }
 
@@ -218,7 +232,11 @@
                 }
             }
 
-
+                .subtitle--tagline {
+                    span {
+                        display: block;
+                    }
+                }
 
     .button_tickets {
         margin: 6rem 0 8rem;
@@ -232,12 +250,11 @@
         .header--blog-name {
             a {
                 width: 13rem;
-                padding-top: 10.5rem;
             }
         }
 
         .header--subtitle {
-            width: 19.5rem;
+            width: 20rem;
         }
     }
 }

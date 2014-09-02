@@ -1,4 +1,35 @@
-;(function($){
+Element.prototype.listen = function(event, callback) {
+    if(this.attachEvent) {
+        this.attachEvent("on" + event, function() {callback.call(this);});
+    } else if(this.addEventListener) {
+        this.addEventListener(event, callback, false);
+    }
+};
+
+Element.prototype.hasAClass = function(className) {
+    var rx = new RegExp('(\\s|^)' + className + '(\\s|$)');
+
+    if(this.className.match(rx)) {
+        return true;
+    }
+
+    return false;
+}
+
+Element.prototype.addAClass = function(className) {
+    if(this.hasAClass(className) == false) {
+        this.className += ' ' + className;
+    }
+}
+
+Element.prototype.removeAClass = function(className) {
+    if(this.hasAClass(className)) {
+        var rx = new RegExp('(\\s|^)' + className + '(\\s|$)', 'g');
+        this.className = this.className.replace(rx, ' ');
+    }
+}
+
+;(function(){
     //Add event listeners to buttons
     var menuBtn = document.getElementById('openMainMenu');
     var sidebarBtn = document.getElementById('openSidebar');
@@ -22,19 +53,25 @@
     }
 
     function openCloseMenu() {
-        var htmlEl = document.querySelectorAll('html')[0];
-        var htmlElClasses = htmlEl.className;
+        var htmlEl = document.querySelectorAll('html')[0],
+            navEl = document.querySelectorAll('.nav-main')[0];
+
 
         // Add or remove the open-menu class
-        if (htmlElClasses.indexOf('open-the-menu') === -1) {
-            htmlEl.className = htmlElClasses + ' open-the-menu';
+        if (htmlEl.hasAClass('open-the-menu') == false) {
+            navEl.removeAClass('closed');
+            setTimeout(function() {
+                htmlEl.addAClass('open-the-menu');
+            }, 10);
         } else {
-            htmlEl.className = htmlElClasses.replace(' open-the-menu', '');
+            htmlEl.removeAClass('open-the-menu');
+            setTimeout(function() {
+                navEl.addAClass('closed');
+            }, 500);
         }
     }
 
     function openSidebar() {
-        console.log('here');
         var htmlEl = document.querySelectorAll('html')[0];
         var htmlElClasses = htmlEl.className;
         var sidebar = document.querySelectorAll('.content--sidebar')[0];
@@ -80,7 +117,7 @@
 
         })(buildings[i]);
     }
-})(jQuery);
+})();
 
 window.onload = function() {
     var s = skrollr.init({forceHeight: false});

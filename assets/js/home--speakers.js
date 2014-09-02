@@ -1,43 +1,9 @@
-
-
-Element.prototype.listen = function(event, callback) {
-    if(this.attachEvent) {
-        this.attachEvent("on" + event, function() {callback.call(this);});
-    } else if(this.addEventListener) {
-        this.addEventListener(event, callback, false);
-    }
-};
-
-Element.prototype.hasClass = function(className) {
-    var rx = new RegExp('(\\s|^)' + className + '(\\s|$)');
-
-    if(this.className.match(rx)) {
-        return true;
-    }
-
-    return false;
+var speakers = document.querySelectorAll('.home--speaker');
+for(var i = 0, len = speakers.length; i < len; i++) {
+    speakers[i].addEventListener('click', function() {
+        doOnSpeakerClicked(event);
+    }, false);
 }
-
-Element.prototype.addClass = function(className) {
-    if(this.hasClass(className) == false) {
-        this.className += ' ' + className;
-    }
-}
-
-Element.prototype.removeClass = function(className) {
-    if(this.hasClass(className)) {
-        var rx = new RegExp('(\\s|^)' + className + '(\\s|$)', 'g');
-        this.className = this.className.replace(rx, ' ');
-    }
-}
-
-
-    var speakers = document.querySelectorAll('.home--speaker');
-    for(var i = 0, len = speakers.length; i < len; i++) {
-        speakers[i].addEventListener('click', function() {
-            doOnSpeakerClicked(event);
-        }, false);
-    }
 
 document.getElementById('prevSpeaker').addEventListener('click', function() {
     displayPreviousSpeaker();
@@ -51,16 +17,16 @@ function doOnSpeakerClicked(e) {
     var speaker = e.target ? e.target : e.srcElement;
 
     //find the speaker node
-    while(speaker.hasClass('home--speaker') == false) {
+    while(speaker.hasAClass('home--speaker') == false) {
         speaker = speaker.parentNode;
     }
 
     if(Modernizr.mq('(min-width: 48.5em)')) {
-        if(speaker.hasClass('active') == false) {
+        if(speaker.hasAClass('active') == false) {
             var speakers = document.querySelectorAll('.home--speaker');
 
             for(var i = 0, len = speakers.length; i < len; i++) {
-                speakers[i].removeClass('active');
+                speakers[i].removeAClass('active');
             }
 
             highlightSpecificSpeaker(speaker);
@@ -73,7 +39,7 @@ function doOnSpeakerClicked(e) {
 }
 
 function highlightSpecificSpeaker(speaker) {
-    speaker.addClass('active');
+    speaker.addAClass('active');
 
 
     var biography = speaker.querySelectorAll('.home--speaker--biography')[0];
@@ -88,9 +54,9 @@ function displayNextSpeaker() {
         presentlyActiveSpeaker = -1;
 
     for(var i = 0, len = speakers.length; i < len; i++) {
-        if(speakers[i].hasClass('active')) {
+        if(speakers[i].hasAClass('active')) {
             presentlyActiveSpeaker = i;
-            speakers[i].removeClass('active');
+            speakers[i].removeAClass('active');
         }
 
         if(presentlyActiveSpeaker == len - 1) {
@@ -110,9 +76,9 @@ function displayPreviousSpeaker() {
         presentlyActiveSpeaker = speakers.length;
 
     for(var i = 0, len = speakers.length; i < len; i++) {
-        if(speakers[i].hasClass('active')) {
+        if(speakers[i].hasAClass('active')) {
             presentlyActiveSpeaker = i;
-            speakers[i].removeClass('active');
+            speakers[i].removeAClass('active');
         }
 
         if(presentlyActiveSpeaker == 0) {

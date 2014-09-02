@@ -104,17 +104,17 @@
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/prestige-logo.png" alt="<?php bloginfo('name'); ?>" />
                 </a>
                 <div class="header--subtitle">
-                    <span>A Premium WordPress Conference</span>
+                    <span class="subtitle--tagline">A Premium Interactive Business and <span>Career Development Conference</span></span>
                     October 3-4, 2014
                 </div>
 
             </h1>
             <a href="/tickets/" class="button button_tickets">Register Now</a>
             <section class="header--hosted-in">
-                Hosted in Downtown <strong>Minneapolis, Minnesota</strong> and <strong>streamed live</strong> wherever you are
+                St. Thomas University in Downtown <strong>Minneapolis, Minnesota</strong> and <strong>streamed live</strong> wherever you are
             </section>
         </div>
-        <nav class="nav-main" role="navigation">
+        <nav class="nav-main closed" role="navigation">
             <a class="close-menu-button" id="closeMainMenu">X</a>
             <?php
             if (has_nav_menu('primary_navigation')) :
