@@ -58,7 +58,7 @@
     <link rel="alternate" type="application/rss+xml" title="<?php echo get_bloginfo('name'); ?> Feed" href="<?php echo home_url(); ?>/feed/">
 </head>
 <body <?php body_class(); ?>>
-<div class="wrapper" role="document">
+<div class="wrapper" role="document" id="skrollr-body">
     <header class="header-main"
         data-top-top="background-position: 50% 0px;"
         data-top-bottom="background-position: 50% 200px;">

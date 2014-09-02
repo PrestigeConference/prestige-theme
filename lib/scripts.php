@@ -28,7 +28,7 @@ function spring_scripts() {
         wp_enqueue_script('comment-reply');
     }
 
-    wp_register_script('modernizr', get_template_directory_uri() . '/assets/js/vendor/modernizr-2.7.0.min.js', false, null, false);
+    wp_register_script('modernizr', get_template_directory_uri() . '/assets/js/vendor/modernizr.js', false, null, false);
     wp_enqueue_script('modernizr');
     wp_enqueue_script('jquery');
     wp_enqueue_script('spring_scripts');

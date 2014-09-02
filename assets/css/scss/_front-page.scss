@@ -26,6 +26,15 @@
     }
 }
 
+.no-flexbox,
+.no-csstransitions {
+    .home--title {
+        &:after {
+            width: 4rem;
+        }
+    }
+}
+
 .title_centered {
     span {
         padding-left: 10px;

@@ -8,8 +8,31 @@ Element.prototype.listen = function(event, callback) {
     }
 };
 
+Element.prototype.hasClass = function(className) {
+    var rx = new RegExp('(\\s|^)' + className + '(\\s|$)');
 
-    var speakers = document.querySelectorAll('.speaker');
+    if(this.className.match(rx)) {
+        return true;
+    }
+
+    return false;
+}
+
+Element.prototype.addClass = function(className) {
+    if(this.hasClass(className) == false) {
+        this.className += ' ' + className;
+    }
+}
+
+Element.prototype.removeClass = function(className) {
+    if(this.hasClass(className)) {
+        var rx = new RegExp('(\\s|^)' + className + '(\\s|$)', 'g');
+        this.className = this.className.replace(rx, ' ');
+    }
+}
+
+
+    var speakers = document.querySelectorAll('.home--speaker');
     for(var i = 0, len = speakers.length; i < len; i++) {
         speakers[i].addEventListener('click', function() {
             doOnSpeakerClicked(event);
@@ -26,18 +49,18 @@ document.getElementById('nextSpeaker').addEventListener('click', function() {
 
 function doOnSpeakerClicked(e) {
     if(Modernizr.mq('(min-width: 48.5em)')) {
-        var speaker = e.target;
+        var speaker = e.target ? e.target : e.srcElement;
 
         //find the speaker node
-        while(speaker.classList.contains('home--speaker') == false) {
+        while(speaker.hasClass('home--speaker') == false) {
             speaker = speaker.parentNode;
         }
 
-        if(speaker.classList.contains('active') ==  false) {
+        if(speaker.hasClass('active') == false) {
             var speakers = document.querySelectorAll('.home--speaker');
 
             for(var i = 0, len = speakers.length; i < len; i++) {
-                speakers[i].classList.remove('active');
+                speakers[i].removeClass('active');
             }
 
             highlightSpecificSpeaker(speaker);
@@ -46,7 +69,8 @@ function doOnSpeakerClicked(e) {
 };
 
 function highlightSpecificSpeaker(speaker) {
-    speaker.classList.add('active');
+    speaker.addClass('active');
+
 
     var biography = speaker.querySelectorAll('.home--speaker--biography')[0];
 
@@ -60,9 +84,9 @@ function displayNextSpeaker() {
         presentlyActiveSpeaker = -1;
 
     for(var i = 0, len = speakers.length; i < len; i++) {
-        if(speakers[i].classList.contains('active')) {
+        if(speakers[i].hasClass('active')) {
             presentlyActiveSpeaker = i;
-            speakers[i].classList.remove('active');
+            speakers[i].removeClass('active');
         }
 
         if(presentlyActiveSpeaker == len - 1) {
@@ -82,9 +106,9 @@ function displayPreviousSpeaker() {
         presentlyActiveSpeaker = speakers.length;
 
     for(var i = 0, len = speakers.length; i < len; i++) {
-        if(speakers[i].classList.contains('active')) {
+        if(speakers[i].hasClass('active')) {
             presentlyActiveSpeaker = i;
-            speakers[i].classList.remove('active');
+            speakers[i].removeClass('active');
         }
 
         if(presentlyActiveSpeaker == 0) {

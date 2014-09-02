@@ -39,6 +39,18 @@
         }
     }
 
+    .no-csscalc {
+        .home--speaker--content {
+            text-align: left;
+            padding-left: .5em;
+            font-size: .875em;
+        }
+
+        .home--speaker--name {
+            padding-left: 0;
+        }
+    }
+
         .home--speaker--picture {
             margin: 0;
             padding: 0;
@@ -68,6 +80,26 @@
         @include flexbox();
         @include flexbox-align-items(stretch);
         height: 35em;
+    }
+
+    .no-flexbox.no-flexboxlegacy {
+        .home--speakers,
+        .home--speakers--list {
+            display: block;
+            @include clearfix();
+        }
+
+        .home--speakers--header {
+            float: left;
+        }
+
+        .home--speakers--list_wrapper {
+            float: left;
+        }
+
+        .home--speaker {
+            float: left;
+        }
     }
 
     .home--speakers--header {
@@ -139,6 +171,7 @@
 
                     img {
                         width: 24rem;
+                        height: 24rem;
                     }
                 }
 }

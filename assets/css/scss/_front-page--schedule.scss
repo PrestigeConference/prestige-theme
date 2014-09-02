@@ -68,6 +68,15 @@
                 }
             }
 
+            .no-flexbox,
+            .no-csstransitions {
+                .session--start-time {
+                    &:before {
+                        background-color: $siteScheduleDateBlue;
+                    }
+                }
+            }
+
             .session--title {
                 margin-bottom: 0;
                 font-size: 1em;
@@ -155,7 +164,6 @@
         text-transform: uppercase;
         opacity: 0;
         @include transform-translate(0, 20px);
-        @include filter-blur(4px);
         @include transition(all 2s);
     }
 
@@ -163,6 +171,17 @@
         .the-end--text {
             opacity: 1;
             @include transform-translate(0, 0);
+        }
+    }
+
+    .no-flexbox,
+    .no-csstransitions {
+        .schedule--building {
+            stroke-dashoffset: 356px;
+        }
+
+        .the-end--text {
+            opacity: 1;
             @include filter-blur(0);
         }
     }
@@ -188,6 +207,21 @@
         @include flexbox();
         @include flexbox-align-items(flex-start);
         @include flexbox-justify-content(space-between);
+    }
+
+    .no-flexbox.no-flexboxlegacy {
+        .schedule--session {
+            display: block;
+            @include clearfix();
+        }
+
+        .session--start-time {
+            float: left;
+        }
+
+        .session--content {
+            float: right;
+        }
     }
 
         .session--start-time {
@@ -238,8 +272,17 @@
         }
     }
 
+    .no-flexbox,
+    .no-csstransitions {
+        .schedule--the-end {
+            &:before {
+                background-color: $siteScheduleDateBlue;
+            }
+        }
+    }
+
     .the-end--text {
-        margin-top: -.5em;
+        margin-top: -.25em;
         padding-left: 3px;
     }
 }

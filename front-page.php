@@ -37,9 +37,9 @@
             while($speakerQuery->have_posts()) : $speakerQuery->the_post(); ?>
                 <li class="home--speaker">
                     <?php if ( has_post_thumbnail() ) : ?>
-                        <figure class="home--speaker--picture">
+                        <section class="home--speaker--picture">
                             <?php the_post_thumbnail(); ?>
-                        </figure>
+                        </section>
                     <?php endif; ?>
                     <section class="home--speaker--content">
                         <h3 class="home--speaker--name">

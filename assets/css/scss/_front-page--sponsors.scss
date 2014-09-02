@@ -23,27 +23,70 @@
             .sponsor {
                 position: relative;
                 @include css3-calc('width', '50% - 1em');
-                height: 0;
-                @include css3-calc('padding-top', '50% - 1em');
                 background: $siteGrey;
                 margin-bottom: 2em;
+            }
 
-                a {
-                    display: block;
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-                    height: 100%;
-                    width: 100%;
+        .no-flexbox {
+            .sponsors--list {
+                display: block;
+                @include clearfix();
+            }
+
+            .sponsor {
+                float: left;
+
+                &:nth-child(odd) {
+                    margin-right: 1em;
                 }
             }
+        }
+
+        .no-csscalc {
+            .sponsor {
+                width: 45%;
+
+                &:nth-child(odd) {
+                    margin-right: 10%;
+                }
+            }
+        }
 
 
 
 @media only screen and (min-width: #{$smallBreakpoint}) {
     .sponsor {
         @include css3-calc('width', '33.33333333% - 1.3333333333333em');
-        @include css3-calc('padding-top', '33.33333333% - 1.3333333333333em');
+    }
+
+    .no-flexbox {
+
+        .sponsor {
+            margin-right: 2em;
+
+            &:nth-child(odd) {
+                margin-right: 2em;
+            }
+
+            &:nth-child(3n+3) {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .no-csscalc {
+        .sponsor {
+            width: 30%;
+            margin-right: 5%;
+
+            &:nth-child(odd) {
+                margin-right: 5%;
+            }
+
+            &:nth-child(3n+3) {
+                margin-right: 0;
+            }
+        }
     }
 }
 
@@ -69,7 +112,37 @@
 
     .sponsor {
         @include css3-calc('width', '33.33333333% - 2em');
-        @include css3-calc('padding-top', '33.33333333% - 2em');
         margin-bottom: 3em;
+    }
+
+    .no-flexbox {
+        .sponsor {
+            margin-right: 3em;
+
+            &:nth-child(odd) {
+                margin-right: 3em;
+            }
+
+            &:nth-child(3n+3) {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .no-flexbox.no-flexboxlegacy {
+        .home--sponsors_inner {
+            display: block;
+            @include clearfix();
+        }
+
+            .sponsors--header {
+                float: left;
+                width: 33.33333333%;
+            }
+
+            .sponsors--content {
+                float: right;
+                width: 60%;
+            }
     }
 }

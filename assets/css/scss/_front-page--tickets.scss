@@ -112,6 +112,20 @@
         margin-right: auto;
     }
 
+    .no-flexbox.no-flexboxlegacy {
+        .tickets--list {
+            display: block;
+        }
+
+        .ticket {
+            width: 100%;
+
+            &:nth-child(odd) {
+                border: 0;
+            }
+        }
+    }
+
         .ticket {
             position: relative;
             width: 50%;
