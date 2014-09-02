@@ -35,7 +35,7 @@
             $speakerQuery = new WP_Query( $speakerQueryArgs );
 
             while($speakerQuery->have_posts()) : $speakerQuery->the_post(); ?>
-                <li class="home--speaker">
+                <li class="home--speaker" data-url="<?php the_permalink(); ?>">
                     <?php if ( has_post_thumbnail() ) : ?>
                         <section class="home--speaker--picture">
                             <?php the_post_thumbnail(); ?>

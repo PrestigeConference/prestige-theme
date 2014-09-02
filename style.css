@@ -840,7 +840,7 @@ body {
 }
 
 .content {
-  padding: 1em;
+  padding: 4em 1em;
   max-width: 50em;
   display: block;
   margin-left: auto;
@@ -2947,11 +2947,19 @@ body:not(.home) .nav-main .close-menu-button {
   vertical-align: middle;
 }
 
-.sponsor--title {
-  line-height: 6rem;
+.sponsor--title.no-featured {
+  line-height: 6em;
 }
 .sponsor--title img {
-  height: 6rem;
+  max-height: 6rem;
+}
+
+.sponsor--level {
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+.sponsor--level em {
+  font-weight: bold;
 }
 
 /*

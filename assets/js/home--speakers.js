@@ -48,14 +48,14 @@ document.getElementById('nextSpeaker').addEventListener('click', function() {
 }, false);
 
 function doOnSpeakerClicked(e) {
+    var speaker = e.target ? e.target : e.srcElement;
+
+    //find the speaker node
+    while(speaker.hasClass('home--speaker') == false) {
+        speaker = speaker.parentNode;
+    }
+
     if(Modernizr.mq('(min-width: 48.5em)')) {
-        var speaker = e.target ? e.target : e.srcElement;
-
-        //find the speaker node
-        while(speaker.hasClass('home--speaker') == false) {
-            speaker = speaker.parentNode;
-        }
-
         if(speaker.hasClass('active') == false) {
             var speakers = document.querySelectorAll('.home--speaker');
 
@@ -65,8 +65,12 @@ function doOnSpeakerClicked(e) {
 
             highlightSpecificSpeaker(speaker);
         }
+    } else {
+        var newUrl = speaker.getAttribute('data-url');
+
+        window.location.href = newUrl;
     }
-};
+}
 
 function highlightSpecificSpeaker(speaker) {
     speaker.addClass('active');
