@@ -103,43 +103,13 @@
         a {
             display: block;
             position: relative;
-            overflow: hidden;
-            height: 0;
             max-width: 15rem;
             margin: 2rem auto;
-            padding-top: 12rem;
-
-            svg {
-                position: absolute;
-                left: 0;
-                right: 0;
-                top: 0;
-                bottom: 0;
-                height: 100%;
-                width: 100%;
-
-                .building,
-                .underline {
-                    fill: none;
-                    stroke: $siteScheduleDateBlue;
-                    stroke-linejoin: round;
-                    stroke-linecap: round;
-                    stroke-miterlimit: 10;
-                    fill-rule: evenodd;
-                    clip-rule: evenodd;
-                    webkit-transition: all 1s;
-                }
-
-                .letter,
-                .state {
-                    fill: white;
-                }
-            }
         }
 
         .blog-name {
             position: absolute;
-            right: 1000%;
+            right: 10000%;
             top: 0;
         }
     }

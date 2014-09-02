@@ -1032,39 +1032,12 @@ body {
 .header--blog-name a {
   display: block;
   position: relative;
-  overflow: hidden;
-  height: 0;
   max-width: 15rem;
   margin: 2rem auto;
-  padding-top: 12rem;
-}
-.header--blog-name a svg {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
-}
-.header--blog-name a svg .building,
-.header--blog-name a svg .underline {
-  fill: none;
-  stroke: #85a0d7;
-  stroke-linejoin: round;
-  stroke-linecap: round;
-  stroke-miterlimit: 10;
-  fill-rule: evenodd;
-  clip-rule: evenodd;
-  webkit-transition: all 1s;
-}
-.header--blog-name a svg .letter,
-.header--blog-name a svg .state {
-  fill: white;
 }
 .header--blog-name .blog-name {
   position: absolute;
-  right: 1000%;
+  right: 10000%;
   top: 0;
 }
 
