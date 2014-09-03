@@ -355,6 +355,7 @@
                 </li>
                 <?php endif; endwhile; ?>
                 <li class="sponsor empty"></li>
+                <li class="sponsor empty"></li>
             </ul>
             <h3>Gold Sponsors</h3>
             <ul class="sponsors--list">
@@ -367,6 +368,11 @@
                             </a>
                         </li>
                     <?php endif; endwhile; ?>
+                <li class="sponsor become-a-sponsor-link">
+                    <a href="/become-a-sponsor">
+                        <span>Become a<br>Sponsor</span>
+                    </a>
+                </li>
                 <li class="sponsor empty"></li>
             </ul>
             <h3>Silver Sponsors</h3>
@@ -381,6 +387,7 @@
                         </li>
                     <?php endif; endwhile; ?>
                 <li class="sponsor empty"></li>
+                <li class="sponsor empty"></li>
             </ul>
             <h3>Bronze Sponsors</h3>
             <ul class="sponsors--list">
@@ -393,6 +400,7 @@
                             </a>
                         </li>
                     <?php endif; endwhile; ?>
+                <li class="sponsor empty"></li>
                 <li class="sponsor empty"></li>
             </ul>
             <h3>Afterparty Sponsors</h3>
@@ -407,6 +415,7 @@
                         </li>
                     <?php endif; endwhile; ?>
                 <li class="sponsor empty"></li>
+                <li class="sponsor empty"></li>
             </ul>
             <h3>Lanyard Sponsor</h3>
             <ul class="sponsors--list">
@@ -419,6 +428,7 @@
                             </a>
                         </li>
                     <?php endif; endwhile; ?>
+                <li class="sponsor empty"></li>
                 <li class="sponsor empty"></li>
             </ul>
         </section>

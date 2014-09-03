@@ -12,7 +12,7 @@
 
         .sponsors--list {
             @include flexbox();
-            @include flexbox-align-items(flex-start);
+            @include flexbox-align-items(stretch);
             @include flexbox-justify-content(space-between);
             @include flexbox-flex-wrap(wrap);
             margin: 0;
@@ -25,6 +25,34 @@
                 @include css3-calc('width', '50% - 1em');
                 background: $siteGrey;
                 margin-bottom: 2em;
+
+                &.empty {
+                    height: 0;
+                    background: transparent;
+                }
+
+                &.become-a-sponsor-link {
+                    a {
+                        position: absolute;
+                        display: block;
+                        top: 0;
+                        bottom: 0;
+                        width: 100%;
+                        text-align: center;
+                        text-transform: uppercase;
+                        color: white;
+                        text-decoration: none;
+                        font-family: $altFont;
+
+                        span {
+                            display: block;
+                            position: absolute;
+                            top: 50%;
+                            width: 100%;
+                            @include transform-translate(0, -50%);
+                        }
+                    }
+                }
             }
 
         .no-flexbox {

@@ -2030,11 +2030,11 @@ body:not(.home) .nav-main a {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
-  -webkit-box-align: start;
-  -moz-box-align: start;
-  -ms-flex-align: start;
-  -webkit-align-items: flex-start;
-  align-items: flex-start;
+  -webkit-box-align: stretch;
+  -moz-box-align: stretch;
+  -ms-flex-align: stretch;
+  -webkit-align-items: stretch;
+  align-items: stretch;
   -webkit-box-pack: justify;
   -moz-box-pack: justify;
   -ms-flex-pack: justify;
@@ -2057,6 +2057,33 @@ body:not(.home) .nav-main a {
   width: calc(50% - 1em);
   background: #333333;
   margin-bottom: 2em;
+}
+.sponsor.empty {
+  height: 0;
+  background: transparent;
+}
+.sponsor.become-a-sponsor-link a {
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  font-family: "Brandon Grotesque", sans-serif;
+}
+.sponsor.become-a-sponsor-link a span {
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  transform: translate(0, -50%);
 }
 
 .no-flexbox .sponsors--list {
