@@ -52,6 +52,38 @@
         &:hover {
             background-color: white;
         }
+
+        &.sold-out {
+            position: relative;
+            background: rgba(255,255,255,.7);
+
+            .ticket--title,
+            .ticket--description,
+            .ticket--price {
+                opacity: .4;
+            }
+
+            &:before {
+                content: 'Sold Out!';
+                display: block;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                -webkit-transform: translate(-50%, -50%) rotate(-60deg);
+                -moz-transform: translate(-50%, -50%) rotate(-60deg);
+                -ms-transform: translate(-50%, -50%) rotate(-60deg);
+                -o-transform: translate(-50%, -50%) rotate(-60deg);
+                transform: translate(-50%, -50%) rotate(-60deg);
+                @include transform-origin(50%, 50%);
+                color: red;
+                font-family: $altFont;
+                font-size: 3em;
+                text-transform: uppercase;
+                font-weight: 700;
+                white-space: nowrap;
+                z-index: 3;
+            }
+        }
     }
 
         .tickets--list {

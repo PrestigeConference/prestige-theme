@@ -453,7 +453,7 @@
     </header>
     <section class="tickets--list_wrapper">
         <ul class="tickets--list">
-            <li class="ticket">
+            <li class="ticket sold-out">
                 <h2 class="ticket--title">
                     <span class="ticket--date">October 3rd</span>
                     Friday Only Ticket
