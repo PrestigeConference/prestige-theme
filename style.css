@@ -1238,7 +1238,6 @@ body {
   width: auto;
   color: white;
   text-align: right;
-  padding-bottom: 2rem;
 }
 .nav-main.closed {
   display: none;
@@ -1248,9 +1247,6 @@ body {
   opacity: 1;
 }
 
-body:not(.home) .nav-main .close-menu-button {
-  padding-bottom: 0;
-}
 body:not(.home) .nav-main a {
   font-size: 1.25em;
   padding-top: .75rem;
