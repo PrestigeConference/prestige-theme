@@ -10,12 +10,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
     <!-- ICONS -->
-    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico">
+    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/assets/img/favicon.ico">
     <!-- FIRST FOUR ARE FOR IOS7 -->
-    <link href="<?php echo get_template_directory_uri(); ?>/images/apple-touch-icon.png" rel="apple-touch-icon" />
-    <link href="<?php echo get_template_directory_uri(); ?>/images/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" />
-    <link href="<?php echo get_template_directory_uri(); ?>/images/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" />
-    <link href="<?php echo get_template_directory_uri(); ?>/images/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" />
+    <!--<link href="<?php /*echo get_template_directory_uri(); */?>/assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+    <link href="<?php /*echo get_template_directory_uri(); */?>/images/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" />
+    <link href="<?php /*echo get_template_directory_uri(); */?>/images/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" />
+    <link href="<?php /*echo get_template_directory_uri(); */?>/images/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" />-->
 
     <!-- STARTUP IMAGES -->
     <!-- iPhone 3GS, pre-2011 iPod Touch -->
