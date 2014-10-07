@@ -1197,9 +1197,8 @@ body {
   left: 0;
   right: 0;
   top: 0;
-  bottom: 0;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   padding-top: 1em;
   background: rgba(51, 51, 51, 0.95);
   opacity: 0;
@@ -1208,6 +1207,7 @@ body {
   -ms-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
+  z-index: 2;
 }
 .nav-main li {
   text-align: right;
@@ -1647,7 +1647,7 @@ body:not(.home) .nav-main a {
   }
 
   .home--speakers--list {
-    width: 216rem;
+    width: 243rem;
   }
 
   .home--speaker {
@@ -3008,6 +3008,130 @@ body:not(.home) .nav-main a {
   font-weight: bold;
 }
 
+.video .youtube {
+  margin-bottom: 1em;
+  margin-top: 3em;
+}
+
+.video--title_link {
+  text-decoration: none;
+}
+
+.video--title {
+  margin-bottom: 0;
+}
+
+.video--subtitle {
+  text-transform: none;
+  letter-spacing: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  font-size: 1.125em;
+}
+
+.video--description {
+  font-size: .875em;
+}
+
+.video--speaker {
+  display: -ms-flexbox;
+  -ms-box-orient: horizontal;
+  display: -moz-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  margin-top: 3em;
+  background: #efefef;
+}
+
+.video--speaker--picture {
+  width: 6em;
+  height: 6em;
+  margin: 0;
+  padding: 0;
+}
+
+.video--speaker--content {
+  width: -moz-calc(100% - 8em);
+  width: -webkit-calc(100% - 8em);
+  width: calc(100% - 8em);
+  text-align: center;
+}
+
+.video--speaker--name {
+  margin-bottom: 0;
+  padding-left: 8px;
+  font-weight: bold;
+}
+
+.video--speaker--links {
+  text-transform: uppercase;
+  font-family: "Brandon Grotesque", sans-serif;
+}
+
+.past-videos .video:not(:last-child) {
+  margin-bottom: 4em;
+}
+
+.past-videos--title_link {
+  font-size: 1.125rem;
+  text-decoration: none;
+}
+
+.past-videos--speaker a {
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 30.5em) {
+  .video--speaker--content {
+    padding-left: 1em;
+    text-align: left;
+  }
+
+  .video--speaker--name {
+    padding-left: 0;
+  }
+
+  .past-video--content {
+    display: -ms-flexbox;
+    -ms-box-orient: horizontal;
+    display: -moz-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+  }
+  .past-video--content .video--description {
+    width: -moz-calc(100% - 8em);
+    width: -webkit-calc(100% - 8em);
+    width: calc(100% - 8em);
+    padding-left: 1em;
+  }
+
+  .video--thumbnail {
+    width: 8em;
+  }
+}
+@media only screen and (min-width: 48.5em) {
+  .past-video--content .video--description {
+    width: -moz-calc(100% - 12em);
+    width: -webkit-calc(100% - 12em);
+    width: calc(100% - 12em);
+  }
+
+  .video--thumbnail {
+    width: 12em;
+  }
+}
 /*
  * Temporary fix for https://core.trac.wordpress.org/ticket/26609
  */

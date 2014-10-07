@@ -1,0 +1,112 @@
+.video {
+    .youtube {
+        margin-bottom: 1em;
+        margin-top: 3em;
+    }
+}
+
+.video--title_link {
+    text-decoration: none;
+}
+
+.video--title {
+    margin-bottom: 0;
+}
+
+.video--subtitle {
+    text-transform: none;
+    letter-spacing: 0;
+    font-family: $baseFont;
+    font-weight: normal;
+    font-size: 1.125em;
+}
+
+.video--description {
+    font-size: .875em;
+}
+
+.video--speaker {
+    @include flexbox();
+    @include flexbox-align-items(center);
+    margin-top: 3em;
+    background: $siteMidGrey;
+}
+
+    .video--speaker--picture {
+        width: 6em;
+        height: 6em;
+        margin: 0;
+        padding: 0;
+    }
+
+    .video--speaker--content {
+        @include css3-calc('width', '100% - 8em');
+        text-align: center;
+    }
+
+    .video--speaker--name {
+        margin-bottom: 0;
+        padding-left: 8px;
+        font-weight: bold;
+    }
+
+    .video--speaker--links {
+        text-transform: uppercase;
+        font-family: $headingFont;
+    }
+
+.past-videos {
+    .video:not(:last-child) {
+        margin-bottom: 4em;
+    }
+}
+
+.past-videos--title_link {
+    font-size: 1.125rem;
+    text-decoration: none;
+}
+
+.past-videos--speaker {
+    a {
+        text-decoration: none;
+    }
+}
+
+
+
+@media only screen and (min-width: #{$smallBreakpoint}) {
+    .video--speaker--content {
+        padding-left: 1em;
+        text-align: left;
+    }
+
+    .video--speaker--name {
+        padding-left: 0;
+    }
+
+    .past-video--content {
+        @include flexbox();
+        @include flexbox-align-items(flex-start);
+
+        .video--description {
+            @include css3-calc('width', '100% - 8em');
+            padding-left: 1em;
+        }
+    }
+
+    .video--thumbnail {
+        width: 8em;
+    }
+}
+
+@media only screen and (min-width: #{$midBreakpoint}) {
+    .past-video--content {
+        .video--description {
+            @include css3-calc('width', '100% - 12em');
+        }
+    }
+
+    .video--thumbnail {
+        width: 12em;
+    }
+}

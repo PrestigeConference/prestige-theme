@@ -90,6 +90,7 @@
                     <section class="session--description">
                         <p>We’ll be coming together for food, drinks, and alcohol-fueled honest answers from some successful WordPress business owners.</p>
                         <p>This will be the only session of the entire weekend that is neither live-streamed nor recorded for later rebroadcast. Admission is limited to the first 50 tickets sold due to space limitations. This event replaces the typical speakers’ dinner.</p>
+                        <p>Location: <a href="https://www.google.com/maps/place/Westwerk/@44.9916507,-93.2289806,17z/data=!3m1!4b1!4m2!3m1!1s0x52b32d07598d4bb9:0x76f2d9926484dd59">WerkPress/Press75</a></p>
                     </section>
                 </section>
             </li>
@@ -263,7 +264,8 @@
                         After Party
                     </h3>
                     <section class="session--description">
-                        Attendees will be joining the organizers, speakers, and sponsors at WerkPress for appetizers, drinks, conversation, and plenty of foosball.
+                        <p>Attendees will be joining the organizers, speakers, and sponsors at WerkPress for appetizers, drinks, conversation, and plenty of foosball.</p>
+                        <p>Location: <a href="https://www.google.com/maps/place/Westwerk/@44.9916507,-93.2289806,17z/data=!3m1!4b1!4m2!3m1!1s0x52b32d07598d4bb9:0x76f2d9926484dd59">WerkPress/Press75</a></p>
                     </section>
                 </section>
             </li>
@@ -323,6 +325,40 @@
 
 </section>
 
+
+
+<!-- PRESS -->
+<section class="home--press">
+    <header class="press--header">
+        <span class="title--small">Kind</span>
+        Words
+    </header>
+    <section class="press--content">
+        <section class="press--quote">
+            <section class="quote--image">
+
+            </section>
+            <section class="quote--text">
+                "All of these people that are talking... hearing just one of them speak is worth the ticket cost." - Pippen Williamson on Apply Filters
+            </section>
+        </section>
+        <section class="press--quote">
+            <section class="quote--image">
+
+            </section>
+            <section class="quote--text">
+                "
+            </section>
+        </section>
+        <section class="press--quote">
+            <section class="quote--image">
+
+            </section>
+            <section class="quote--text">
+
+            </section>
+    </section>
+</section>
 
 
 <!-- SPONSORS -->
@@ -478,7 +514,7 @@
                 </section>
             </li>
             <li class="ticket">
-                <h2 class="ticket--title">
+                <h2 class="ticket--title sold-out">
                     <span class="ticket--date">October 3rd - 4th</span>
                     Saturday Conference + Friday Night Panel
                 </h2>
