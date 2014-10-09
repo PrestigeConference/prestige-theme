@@ -1,0 +1,92 @@
+.pmpro_checkout {
+    tr.odd td {
+        background: white;
+    }
+
+    tr:last-child td {
+        border-bottom: 1px solid $lightGrey;
+    }
+}
+
+.pmpro_btn, .pmpro_btn:link, .pmpro_content_message a, .pmpro_content_message a:link {
+    @extend .button;
+    padding: .5em 2em;
+    @include rounded(0);
+    width: auto;
+
+    &:hover,
+    &:active,
+    &:visited {
+        @extend .button;
+    }
+}
+
+form.pmpro_form {
+    label {
+        white-space: nowrap;
+        width: 160px;
+        font-size: .875em;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="time"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="url"],
+    input[type="email"],
+    input[type="number"],
+    input[type="search"],
+    input[type="file"],
+    input[type="password"],
+    select,
+    textarea,
+    .textbox {
+        display: inline-block;
+        width: auto;
+    }
+}
+
+//STYLES FOR THE LEVELS AS DIVS PLUGIN
+#pmpro_levels {
+    .navigation {
+        font-size: .875em;
+    }
+}
+.pmpro_level {
+    border-top: 1px solid $lightGrey;
+    padding: 1em;
+
+    &:nth-last-child(2) {
+        border-bottom: 1px solid $lightGrey;
+        margin-bottom: .5em;
+    }
+}
+
+.pmpro_level--title {
+    font-size: .875em;
+    font-family: $baseFont;
+    text-transform: none;
+    letter-spacing: 1px;
+}
+
+.pmpro_level-price {
+    font-size: .875em;
+}
+
+.pmpro_level--description {
+    font-size: .875em;
+
+    p {
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (min-width: #{$smallBreakpoint}) {
+    .pmpro_level_inner {
+        @include flexbox();
+        @include flexbox-justify-content(space-between);
+        @include flexbox-align-items(center);
+    }
+}
+
