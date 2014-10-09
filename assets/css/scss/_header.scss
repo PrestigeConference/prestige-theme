@@ -173,7 +173,7 @@
         }
     }
 
-    body:not(.home) {
+    body/*:not(.home)*/ {
         .header--blog-name {
             @include flexbox();
             @include flexbox-align-items(center);
@@ -246,7 +246,7 @@
         padding-bottom: 1em;
     }
 
-    body:not(.home)  {
+    body/*:not(.home)*/  {
         .header--blog-name {
             a {
                 width: 13rem;
@@ -270,7 +270,7 @@
         }
     }
 
-    body:not(.home)  {
+    body/*:not(.home)*/  {
         .header--subtitle {
             width: auto;
         }

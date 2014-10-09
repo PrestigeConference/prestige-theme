@@ -105,11 +105,13 @@
                 </a>
                 <div class="header--subtitle">
                     <span class="subtitle--tagline">A Premium Interactive Business and <span>Career Development Conference</span></span>
-                    October 3-4, 2014
+                    <!--October 3-4, 2014-->
+                    Next Event Announced Soon
                 </div>
 
             </h1>
-            <a href="/tickets/" class="button button_tickets">Register Now</a>
+            <!--<a href="/tickets/" class="button button_tickets">Register Now</a>-->
+            <a href="/tickets/" class="button button_tickets">Purchase Videos</a>
             <section class="header--hosted-in">
                 St. Thomas University in Downtown <strong>Minneapolis, Minnesota</strong> and <strong>streamed live</strong> wherever you are
             </section>

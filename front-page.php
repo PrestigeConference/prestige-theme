@@ -15,6 +15,8 @@
 <section class="home--speakers" id="speakers">
     <header class="home--speakers--header">
         <h1 class="home--title home--speakers--title" data-30p-center-top="">
+            <!--<span class="title--small">The Best</span>
+            Speakers Around-->
             <span class="title--small">The Best</span>
             Speakers Around
         </h1>
@@ -67,8 +69,10 @@
 <section class="home--schedule" id="schedule">
     <header class="schedule--header">
         <h1 class="home--title schedule--title title_centered" data-30p-center-top="">
-            <span class="title--small">The</span>
-            <span>Schedule</span>
+            <!--<span class="title--small">The</span>
+            <span>Schedule</span>-->
+            <span class="title--small">Purchase These</span>
+            <span>Videos</span>
         </h1>
     </header>
     <section class="schedule--content">
@@ -328,7 +332,7 @@
 
 
 <!-- PRESS -->
-<section class="home--press">
+<!--<section class="home--press">
     <header class="press--header">
         <span class="title--small">Kind</span>
         Words
@@ -358,11 +362,11 @@
 
             </section>
     </section>
-</section>
+</section>-->
 
 
 <!-- SPONSORS -->
-<section class="home--sponsors" id="sponsors">
+<!--<section class="home--sponsors" id="sponsors">
     <div class="home--sponsors_inner">
         <header class="sponsors--header">
             <h1 class="home--title sponsors--title" data-30p-center-top="">
@@ -377,33 +381,33 @@
             <h3>Primary Sponsors</h3>
             <ul class="sponsors--list">
                 <?php
-                $sponsorQueryArgs = array('post_type' => 'Sponsor',
+/*                $sponsorQueryArgs = array('post_type' => 'Sponsor',
                     'posts_per_page' => '100');
                 $sponsorQuery = new WP_Query( $sponsorQueryArgs );
 
-                while($sponsorQuery->have_posts()) : $sponsorQuery->the_post(); ?>
-                <?php $sponsorshipLevel = get_field('sponsorship_level');
-                    if($sponsorshipLevel == 'Primary') : ?>
+                while($sponsorQuery->have_posts()) : $sponsorQuery->the_post(); */?>
+                <?php /*$sponsorshipLevel = get_field('sponsorship_level');
+                    if($sponsorshipLevel == 'Primary') : */?>
                 <li class="sponsor">
-                    <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
-                        <img src="<?php the_field('square_image_for_homepage') ?>" alt="<?php the_title(); ?>" />
+                    <a href="<?php /*the_permalink() */?>" title="<?php /*the_title(); */?>">
+                        <img src="<?php /*the_field('square_image_for_homepage') */?>" alt="<?php /*the_title(); */?>" />
                     </a>
                 </li>
-                <?php endif; endwhile; ?>
+                <?php /*endif; endwhile; */?>
                 <li class="sponsor empty"></li>
                 <li class="sponsor empty"></li>
             </ul>
             <h3>Gold Sponsors</h3>
             <ul class="sponsors--list">
-                <?php  while($sponsorQuery->have_posts()) : $sponsorQuery->the_post(); ?>
-                    <?php $sponsorshipLevel = get_field('sponsorship_level');
-                    if($sponsorshipLevel == 'Gold') : ?>
+                <?php /* while($sponsorQuery->have_posts()) : $sponsorQuery->the_post(); */?>
+                    <?php /*$sponsorshipLevel = get_field('sponsorship_level');
+                    if($sponsorshipLevel == 'Gold') : */?>
                         <li class="sponsor">
-                            <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
-                                <img src="<?php the_field('square_image_for_homepage') ?>" alt="<?php the_title(); ?>" />
+                            <a href="<?php /*the_permalink() */?>" title="<?php /*the_title(); */?>">
+                                <img src="<?php /*the_field('square_image_for_homepage') */?>" alt="<?php /*the_title(); */?>" />
                             </a>
                         </li>
-                    <?php endif; endwhile; ?>
+                    <?php /*endif; endwhile; */?>
                 <li class="sponsor become-a-sponsor-link">
                     <a href="/become-a-sponsor">
                         <span>Become a<br>Sponsor</span>
@@ -413,63 +417,63 @@
             </ul>
             <h3>Silver Sponsors</h3>
             <ul class="sponsors--list">
-                <?php  while($sponsorQuery->have_posts()) : $sponsorQuery->the_post(); ?>
-                    <?php $sponsorshipLevel = get_field('sponsorship_level');
-                    if($sponsorshipLevel == 'Silver') : ?>
+                <?php /* while($sponsorQuery->have_posts()) : $sponsorQuery->the_post(); */?>
+                    <?php /*$sponsorshipLevel = get_field('sponsorship_level');
+                    if($sponsorshipLevel == 'Silver') : */?>
                         <li class="sponsor">
-                            <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
-                                <img src="<?php the_field('square_image_for_homepage') ?>" alt="<?php the_title(); ?>" />
+                            <a href="<?php /*the_permalink() */?>" title="<?php /*the_title(); */?>">
+                                <img src="<?php /*the_field('square_image_for_homepage') */?>" alt="<?php /*the_title(); */?>" />
                             </a>
                         </li>
-                    <?php endif; endwhile; ?>
+                    <?php /*endif; endwhile; */?>
                 <li class="sponsor empty"></li>
                 <li class="sponsor empty"></li>
             </ul>
             <h3>Bronze Sponsors</h3>
             <ul class="sponsors--list">
-                <?php  while($sponsorQuery->have_posts()) : $sponsorQuery->the_post(); ?>
-                    <?php $sponsorshipLevel = get_field('sponsorship_level');
-                    if($sponsorshipLevel == 'Bronze') : ?>
+                <?php /* while($sponsorQuery->have_posts()) : $sponsorQuery->the_post(); */?>
+                    <?php /*$sponsorshipLevel = get_field('sponsorship_level');
+                    if($sponsorshipLevel == 'Bronze') : */?>
                         <li class="sponsor">
-                            <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
-                                <img src="<?php the_field('square_image_for_homepage') ?>" alt="<?php the_title(); ?>" />
+                            <a href="<?php /*the_permalink() */?>" title="<?php /*the_title(); */?>">
+                                <img src="<?php /*the_field('square_image_for_homepage') */?>" alt="<?php /*the_title(); */?>" />
                             </a>
                         </li>
-                    <?php endif; endwhile; ?>
+                    <?php /*endif; endwhile; */?>
                 <li class="sponsor empty"></li>
                 <li class="sponsor empty"></li>
             </ul>
             <h3>Afterparty Sponsors</h3>
             <ul class="sponsors--list">
-                <?php  while($sponsorQuery->have_posts()) : $sponsorQuery->the_post(); ?>
-                    <?php $sponsorshipLevel = get_field('sponsorship_level');
-                    if($sponsorshipLevel == 'Afterparty') : ?>
+                <?php /* while($sponsorQuery->have_posts()) : $sponsorQuery->the_post(); */?>
+                    <?php /*$sponsorshipLevel = get_field('sponsorship_level');
+                    if($sponsorshipLevel == 'Afterparty') : */?>
                         <li class="sponsor">
-                            <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
-                                <img src="<?php the_field('square_image_for_homepage') ?>" alt="<?php the_title(); ?>" />
+                            <a href="<?php /*the_permalink() */?>" title="<?php /*the_title(); */?>">
+                                <img src="<?php /*the_field('square_image_for_homepage') */?>" alt="<?php /*the_title(); */?>" />
                             </a>
                         </li>
-                    <?php endif; endwhile; ?>
+                    <?php /*endif; endwhile; */?>
                 <li class="sponsor empty"></li>
                 <li class="sponsor empty"></li>
             </ul>
             <h3>Lanyard Sponsor</h3>
             <ul class="sponsors--list">
-                <?php  while($sponsorQuery->have_posts()) : $sponsorQuery->the_post(); ?>
-                    <?php $sponsorshipLevel = get_field('sponsorship_level');
-                    if($sponsorshipLevel == 'Lanyard') : ?>
+                <?php /* while($sponsorQuery->have_posts()) : $sponsorQuery->the_post(); */?>
+                    <?php /*$sponsorshipLevel = get_field('sponsorship_level');
+                    if($sponsorshipLevel == 'Lanyard') : */?>
                         <li class="sponsor">
-                            <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
-                                <img src="<?php the_field('square_image_for_homepage') ?>" alt="<?php the_title(); ?>" />
+                            <a href="<?php /*the_permalink() */?>" title="<?php /*the_title(); */?>">
+                                <img src="<?php /*the_field('square_image_for_homepage') */?>" alt="<?php /*the_title(); */?>" />
                             </a>
                         </li>
-                    <?php endif; endwhile; ?>
+                    <?php /*endif; endwhile; */?>
                 <li class="sponsor empty"></li>
                 <li class="sponsor empty"></li>
             </ul>
         </section>
     </div>
-</section>
+</section>-->
 
 
 <!-- TICKETS -->
@@ -479,17 +483,19 @@
             <span>Tickets</span>
         </h1>
         <section class="header--description">
-            $49 - $119 for a day learning from the very best speakers the WordPress business community has to offer.
-            <span>Tickets are transferrable but NOT refundable.</span>
+            <!--$49 - $119 for a day learning from the very best speakers the WordPress business community has to offer.
+            <span>Tickets are transferrable but NOT refundable.</span>-->
+            We're busy planning the next Prestige Conference. Until then, you can purchase access to all the past videos.
         </section>
         <section class="tickets--button_wrapper">
-            <a class="button" href="/tickets/">Register Now</a><br>
-            <a href="/scholarships/">Apply for a scholarship</a>
+            <a class="button" href="/tickets/">Purchase Videos</a>
+            <!--<a class="button" href="/tickets/">Register Now</a><br>
+            <a href="/scholarships/">Apply for a scholarship</a>-->
         </section>
     </header>
     <section class="tickets--list_wrapper">
         <ul class="tickets--list">
-            <li class="ticket sold-out">
+            <li class="ticket coming-soon">
                 <h2 class="ticket--title">
                     <span class="ticket--date">October 3rd</span>
                     Friday Only Ticket
@@ -501,7 +507,7 @@
                     $49
                 </section>
             </li>
-            <li class="ticket">
+            <li class="ticket coming-soon">
                 <h2 class="ticket--title">
                     <span class="ticket--date">October 4th</span>
                     Saturday Conference
@@ -513,7 +519,7 @@
                     $99
                 </section>
             </li>
-            <li class="ticket">
+            <li class="ticket coming-soon">
                 <h2 class="ticket--title sold-out">
                     <span class="ticket--date">October 3rd - 4th</span>
                     Saturday Conference + Friday Night Panel
@@ -525,7 +531,7 @@
                     $119
                 </section>
             </li>
-            <li class="ticket">
+            <li class="ticket coming-soon">
                 <h2 class="ticket--title">
                     <span class="ticket--date">October 4th</span>
                     Prestige Streaming Ticket
@@ -540,8 +546,9 @@
         </ul>
     </section>
     <section class="tickets--button_wrapper">
-        <a class="button" href="/tickets/">Register Now</a><br>
-        <a href="/scholarships/">Apply for a scholarship</a>
+        <a class="button" href="/tickets/">Purchase Videos</a>
+        <!--<a class="button" href="/tickets/">Register Now</a><br>
+        <a href="/scholarships/">Apply for a scholarship</a>-->
     </section>
 </section>
 
