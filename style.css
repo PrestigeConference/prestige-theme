@@ -1,5 +1,5 @@
 /*--
-    Theme Name:  Prestige Theme
+    Theme Name:  Prestige Las Vegas Theme
     Theme URI:  http: //www.github.com/PrestigeConference/prestige-theme
     Description:  Theme for Prestige Conference
     Author:  Prestige Conference Team
@@ -108,6 +108,7 @@
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Brandon Grotesque';
   src: url("assets/fonts/brandon_light-webfont.eot");
@@ -115,6 +116,7 @@
   font-weight: lighter;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Brandon Grotesque';
   src: url("assets/fonts/brandon_bld-webfont.eot");
@@ -122,6 +124,7 @@
   font-weight: bold;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'icomoon';
   src: url("assets/fonts/icomoon.eot?njtygp");
@@ -129,6 +132,7 @@
   font-weight: normal;
   font-style: normal;
 }
+
 [class^="icon-"], [class*=" icon-"] {
   font-family: 'icomoon';
   speak: none;
@@ -195,18 +199,23 @@ audio[controls], canvas, video {
 @-webkit-viewport {
   width: device-width;
 }
+
 @-moz-viewport {
   width: device-width;
 }
+
 @-ms-viewport {
   width: device-width;
 }
+
 @-o-viewport {
   width: device-width;
 }
+
 @viewport {
   width: device-width;
 }
+
 html {
   width: 100%;
   height: 100%;
@@ -1098,8 +1107,9 @@ body {
   text-transform: uppercase;
   padding: 0 1em .5em 1em;
 }
-.header--hosted-in span {
-  display: block;
+.header--hosted-in img {
+  height: 13px;
+  vertical-align: baseline;
 }
 
 @media only screen and (min-width: 30.5em) {
@@ -1133,7 +1143,7 @@ body {
     display: block;
   }
 
-  body .header--blog-name {
+  body:not(.home) .header--blog-name {
     display: -ms-flexbox;
     -ms-box-orient: horizontal;
     display: -moz-box;
@@ -1151,17 +1161,17 @@ body {
     -webkit-justify-content: center;
     justify-content: center;
   }
-  body .header--blog-name a {
+  body:not(.home) .header--blog-name a {
     width: 11rem;
     margin: 2rem 0;
   }
-  body .header--subtitle {
+  body:not(.home) .header--subtitle {
     width: 14.5rem;
     padding-left: 1rem;
     font-size: 1.25rem;
     text-align: left;
   }
-  body .button_tickets {
+  body:not(.home) .button_tickets {
     margin: 0 0 2rem 0;
   }
 }
@@ -1213,10 +1223,10 @@ body {
     padding-bottom: 1em;
   }
 
-  body .header--blog-name a {
+  body:not(.home) .header--blog-name a {
     width: 13rem;
   }
-  body .header--subtitle {
+  body:not(.home) .header--subtitle {
     width: 20rem;
   }
 }
@@ -1230,7 +1240,7 @@ body {
     left: calc(50% + 30em);
   }
 
-  body .header--subtitle {
+  body:not(.home) .header--subtitle {
     width: auto;
   }
 }
@@ -1686,15 +1696,17 @@ body:not(.home) .nav-main a {
     width: -webkit-calc(100% - 24em);
     width: calc(100% - 24em);
     overflow-x: auto;
+    overflow-y: hidden;
   }
 
   .home--speakers--list {
-    width: 243rem;
+    width: 288rem;
   }
 
   .home--speaker {
     display: block;
     width: 24rem;
+    height: 24rem;
     opacity: .5;
     -webkit-transition: opacity .3s ease, background-color .3s ease;
     -moz-transition: opacity .3s ease, background-color .3s ease;
@@ -1708,8 +1720,8 @@ body:not(.home) .nav-main a {
   }
 
   .home--speaker--content {
-    padding: 4em;
-    height: 11em;
+    padding: 4em 0;
+    height: 11rem;
     width: 24rem;
   }
 
@@ -1720,6 +1732,10 @@ body:not(.home) .nav-main a {
   .home--speaker--picture img {
     width: 24rem;
     height: 24rem;
+  }
+
+  .home--speaker--name {
+    white-space: nowrap;
   }
 }
 @media only screen and (min-width: 64em) {
@@ -2049,6 +2065,56 @@ body:not(.home) .nav-main a {
     padding-left: 3px;
   }
 }
+.press--header {
+  padding: 4em 2em 2em 2em;
+}
+
+.home--press--title {
+  text-align: center;
+}
+.home--press--title:after {
+  margin: 1rem auto 0;
+}
+
+.press--content {
+  padding: 0 0 4em 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.press--quote {
+  *zoom: 1;
+  padding: 1em 0;
+}
+.press--quote:before, .press--quote:after {
+  display: table;
+  content: "";
+}
+.press--quote:after {
+  clear: both;
+}
+.press--quote:not(:first-child) {
+  border-top: 1px solid #f2f2f2;
+}
+
+.quote--image {
+  float: left;
+  width: 128px;
+  height: 128px;
+}
+
+.quote--text {
+  float: left;
+  width: -moz-calc(100% - 128px);
+  width: -webkit-calc(100% - 128px);
+  width: calc(100% - 128px);
+  padding: 0 1em;
+}
+
+.quote--name {
+  font-size: .875em;
+}
+
 .home--sponsors {
   background: #efefef;
 }
@@ -2099,6 +2165,7 @@ body:not(.home) .nav-main a {
 .sponsor.empty {
   height: 0;
   background: transparent;
+  margin-bottom: 0;
 }
 .sponsor.become-a-sponsor-link a {
   position: absolute;
@@ -3059,6 +3126,14 @@ body:not(.home) .nav-main a {
 .video .youtube {
   margin-bottom: 1em;
   margin-top: 3em;
+}
+.video .youtube.preview {
+  margin-top: 0;
+}
+
+.signup.preview {
+  margin-top: 2em;
+  margin-bottom: .25em;
 }
 
 .video--title_link {

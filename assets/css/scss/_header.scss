@@ -128,8 +128,9 @@
         text-transform: uppercase;
         padding: 0 1em .5em 1em;
 
-        span {
-            display: block;
+        img {
+            height: 13px;
+            vertical-align: baseline;
         }
     }
 
@@ -173,7 +174,7 @@
         }
     }
 
-    body/*:not(.home)*/ {
+    body:not(.home) {
         .header--blog-name {
             @include flexbox();
             @include flexbox-align-items(center);
@@ -246,7 +247,7 @@
         padding-bottom: 1em;
     }
 
-    body/*:not(.home)*/  {
+    body:not(.home)  {
         .header--blog-name {
             a {
                 width: 13rem;
@@ -270,7 +271,7 @@
         }
     }
 
-    body/*:not(.home)*/  {
+    body:not(.home)  {
         .header--subtitle {
             width: auto;
         }

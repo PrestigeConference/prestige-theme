@@ -138,15 +138,17 @@
     .home--speakers--list_wrapper {
         @include css3-calc('width', '100% - 24em');
         overflow-x: auto;
+        overflow-y: hidden;
     }
 
         .home--speakers--list {
-            width: 243rem;
+            width: 288rem;
         }
 
             .home--speaker {
                 display: block;
                 width: 24rem;
+                height: 24rem;
                 opacity: .5;
                 @include multi-transition('opacity .3s ease, background-color .3s ease');
 
@@ -158,8 +160,8 @@
             }
 
                 .home--speaker--content {
-                    padding: 4em;
-                    height: 11em;
+                    padding: 4em 0;
+                    height: 11rem;
                     width: 24rem;
                 }
 
@@ -171,6 +173,10 @@
                         width: 24rem;
                         height: 24rem;
                     }
+                }
+
+                .home--speaker--name {
+                    white-space: nowrap;
                 }
 }
 

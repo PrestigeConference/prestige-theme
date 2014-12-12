@@ -1,3 +1,5 @@
+<?php $activeConference = 'feb15'; ?>
+
 <nav class="home--sections-nav">
     <section class="sections-nav_inner">
         <a href="#speakers" class="section-link speakers-link">
@@ -15,13 +17,11 @@
 <section class="home--speakers" id="speakers">
     <header class="home--speakers--header">
         <h1 class="home--title home--speakers--title" data-30p-center-top="">
-            <!--<span class="title--small">The Best</span>
-            Speakers Around-->
             <span class="title--small">The Best</span>
             Speakers Around
         </h1>
         <section class="header--description">
-            Instead of many tracks filled with volunteer speakers, we've scoured the WordPress community for some fo the very best speakers and are paying for their travel to come and speak in Minneapolis. What does that mean for you? You'll have a day full of great sessions on managing a business and your career.
+            Instead of many tracks filled with volunteer speakers, we've scoured the WordPress community for some of the very best speakers and are paying for their travel to come and speak in Las Vegas. What does that mean for you? You'll have a day full of great sessions on managing a business and your career.
             <section class="header--biography_wrapper" id="headerBiography"></section>
         </section>
         <nav class="home--speakers--nav">
@@ -33,7 +33,8 @@
         <ul class="home--speakers--list">
             <?php
             $speakerQueryArgs = array('post_type' => 'Speaker',
-                'posts_per_page' => '100');
+                'posts_per_page' => '100',
+                'category_name' => $activeConference);
             $speakerQuery = new WP_Query( $speakerQueryArgs );
 
             while($speakerQuery->have_posts()) : $speakerQuery->the_post(); ?>
@@ -66,11 +67,11 @@
 
 
 <!-- SCHEDULE -->
-<section class="home--schedule" id="schedule">
+<!--<section class="home--schedule" id="schedule">
     <header class="schedule--header">
         <h1 class="home--title schedule--title title_centered" data-30p-center-top="">
             <!--<span class="title--small">The</span>
-            <span>Schedule</span>-->
+            <span>Schedule</span>
             <span class="title--small">Purchase These</span>
             <span>Videos</span>
         </h1>
@@ -327,46 +328,11 @@
         </section>
     </section>
 
-</section>
-
-
-
-<!-- PRESS -->
-<!--<section class="home--press">
-    <header class="press--header">
-        <span class="title--small">Kind</span>
-        Words
-    </header>
-    <section class="press--content">
-        <section class="press--quote">
-            <section class="quote--image">
-
-            </section>
-            <section class="quote--text">
-                "All of these people that are talking... hearing just one of them speak is worth the ticket cost." - Pippen Williamson on Apply Filters
-            </section>
-        </section>
-        <section class="press--quote">
-            <section class="quote--image">
-
-            </section>
-            <section class="quote--text">
-                "
-            </section>
-        </section>
-        <section class="press--quote">
-            <section class="quote--image">
-
-            </section>
-            <section class="quote--text">
-
-            </section>
-    </section>
 </section>-->
 
 
 <!-- SPONSORS -->
-<!--<section class="home--sponsors" id="sponsors">
+<section class="home--sponsors" id="sponsors">
     <div class="home--sponsors_inner">
         <header class="sponsors--header">
             <h1 class="home--title sponsors--title" data-30p-center-top="">
@@ -378,36 +344,68 @@
             </section>
         </header>
         <section class="sponsors--content">
+            <?php
+            $sponsorQueryArgs = array('post_type' => 'Sponsor',
+                'posts_per_page' => '100',
+                'category_name' => $activeConference);
+            $sponsorQuery = new WP_Query( $sponsorQueryArgs );
+            $primary = 0;
+            $gold = 0;
+            $silver = 0;
+            $bronze = 0;
+            $design = 0;
+            $afterparty = 0;
+            $lanyard = 0;
+            $localhost = 0;
+            while($sponsorQuery->have_posts()) : $sponsorQuery->the_post();
+                $sponsorshipLevel = get_field('sponsorship_level');
+
+                if($sponsorshipLevel == 'Primary') {
+                    $primary++;
+                } elseif ($sponsorshipLevel == 'Gold') {
+                    $gold++;
+                } elseif ($sponsorshipLevel == 'Silver') {
+                    $silver++;
+                } elseif ($sponsorshipLevel == 'Bronze') {
+                    $bronze++;
+                } elseif ($sponsorshipLevel == 'Afterparty') {
+                    $afterparty++;
+                } elseif ($sponsorshipLevel == 'Design') {
+                    $design++;
+                } elseif ($sponsorshipLevel == 'Lanyard') {
+                    $lanyard++;
+                } elseif ($sponsorshipLevel == 'Localhost') {
+                    $localhost++;
+                }
+            endwhile;
+            if($primary > 0) : ?>
             <h3>Primary Sponsors</h3>
             <ul class="sponsors--list">
-                <?php
-/*                $sponsorQueryArgs = array('post_type' => 'Sponsor',
-                    'posts_per_page' => '100');
-                $sponsorQuery = new WP_Query( $sponsorQueryArgs );
-
-                while($sponsorQuery->have_posts()) : $sponsorQuery->the_post(); */?>
-                <?php /*$sponsorshipLevel = get_field('sponsorship_level');
-                    if($sponsorshipLevel == 'Primary') : */?>
+                <?php while($sponsorQuery->have_posts()) : $sponsorQuery->the_post(); ?>
+                <?php $sponsorshipLevel = get_field('sponsorship_level');
+                    if($sponsorshipLevel == 'Primary') : ?>
                 <li class="sponsor">
-                    <a href="<?php /*the_permalink() */?>" title="<?php /*the_title(); */?>">
-                        <img src="<?php /*the_field('square_image_for_homepage') */?>" alt="<?php /*the_title(); */?>" />
+                    <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
+                        <img src="<?php the_field('square_image_for_homepage') ?>" alt="<?php the_title(); ?>" />
                     </a>
                 </li>
-                <?php /*endif; endwhile; */?>
+                <?php endif; endwhile; ?>
                 <li class="sponsor empty"></li>
                 <li class="sponsor empty"></li>
             </ul>
+            <?php endif;
+            if($gold > 0) : ?>
             <h3>Gold Sponsors</h3>
             <ul class="sponsors--list">
-                <?php /* while($sponsorQuery->have_posts()) : $sponsorQuery->the_post(); */?>
-                    <?php /*$sponsorshipLevel = get_field('sponsorship_level');
-                    if($sponsorshipLevel == 'Gold') : */?>
+                <?php  while($sponsorQuery->have_posts()) : $sponsorQuery->the_post(); ?>
+                    <?php $sponsorshipLevel = get_field('sponsorship_level');
+                    if($sponsorshipLevel == 'Gold') : ?>
                         <li class="sponsor">
-                            <a href="<?php /*the_permalink() */?>" title="<?php /*the_title(); */?>">
-                                <img src="<?php /*the_field('square_image_for_homepage') */?>" alt="<?php /*the_title(); */?>" />
+                            <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
+                                <img src="<?php the_field('square_image_for_homepage') ?>" alt="<?php the_title(); ?>" />
                             </a>
                         </li>
-                    <?php /*endif; endwhile; */?>
+                    <?php endif; endwhile; ?>
                 <li class="sponsor become-a-sponsor-link">
                     <a href="/become-a-sponsor">
                         <span>Become a<br>Sponsor</span>
@@ -415,65 +413,104 @@
                 </li>
                 <li class="sponsor empty"></li>
             </ul>
+            <?php endif;
+            if($silver > 0) : ?>
             <h3>Silver Sponsors</h3>
             <ul class="sponsors--list">
-                <?php /* while($sponsorQuery->have_posts()) : $sponsorQuery->the_post(); */?>
-                    <?php /*$sponsorshipLevel = get_field('sponsorship_level');
-                    if($sponsorshipLevel == 'Silver') : */?>
+                <?php  while($sponsorQuery->have_posts()) : $sponsorQuery->the_post(); ?>
+                    <?php $sponsorshipLevel = get_field('sponsorship_level');
+                    if($sponsorshipLevel == 'Silver') : ?>
                         <li class="sponsor">
-                            <a href="<?php /*the_permalink() */?>" title="<?php /*the_title(); */?>">
-                                <img src="<?php /*the_field('square_image_for_homepage') */?>" alt="<?php /*the_title(); */?>" />
+                            <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
+                                <img src="<?php the_field('square_image_for_homepage') ?>" alt="<?php the_title(); ?>" />
                             </a>
                         </li>
-                    <?php /*endif; endwhile; */?>
+                    <?php endif; endwhile; ?>
                 <li class="sponsor empty"></li>
                 <li class="sponsor empty"></li>
             </ul>
+            <?php endif;
+            if($bronze  > 0) : ?>
             <h3>Bronze Sponsors</h3>
             <ul class="sponsors--list">
-                <?php /* while($sponsorQuery->have_posts()) : $sponsorQuery->the_post(); */?>
-                    <?php /*$sponsorshipLevel = get_field('sponsorship_level');
-                    if($sponsorshipLevel == 'Bronze') : */?>
+                <?php  while($sponsorQuery->have_posts()) : $sponsorQuery->the_post(); ?>
+                    <?php $sponsorshipLevel = get_field('sponsorship_level');
+                    if($sponsorshipLevel == 'Bronze') : ?>
                         <li class="sponsor">
-                            <a href="<?php /*the_permalink() */?>" title="<?php /*the_title(); */?>">
-                                <img src="<?php /*the_field('square_image_for_homepage') */?>" alt="<?php /*the_title(); */?>" />
-                            </a>
+                            <img src="<?php the_field('square_image_for_homepage') ?>" alt="<?php the_title(); ?>" />
                         </li>
-                    <?php /*endif; endwhile; */?>
+                    <?php endif; endwhile; ?>
                 <li class="sponsor empty"></li>
                 <li class="sponsor empty"></li>
             </ul>
+            <?php endif;
+            if($afterparty > 0) : ?>
             <h3>Afterparty Sponsors</h3>
             <ul class="sponsors--list">
-                <?php /* while($sponsorQuery->have_posts()) : $sponsorQuery->the_post(); */?>
-                    <?php /*$sponsorshipLevel = get_field('sponsorship_level');
-                    if($sponsorshipLevel == 'Afterparty') : */?>
+                <?php  while($sponsorQuery->have_posts()) : $sponsorQuery->the_post(); ?>
+                    <?php $sponsorshipLevel = get_field('sponsorship_level');
+                    if($sponsorshipLevel == 'Afterparty') : ?>
                         <li class="sponsor">
-                            <a href="<?php /*the_permalink() */?>" title="<?php /*the_title(); */?>">
-                                <img src="<?php /*the_field('square_image_for_homepage') */?>" alt="<?php /*the_title(); */?>" />
+                            <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
+                                <img src="<?php the_field('square_image_for_homepage') ?>" alt="<?php the_title(); ?>" />
                             </a>
                         </li>
-                    <?php /*endif; endwhile; */?>
+                    <?php endif; endwhile; ?>
                 <li class="sponsor empty"></li>
                 <li class="sponsor empty"></li>
             </ul>
+            <?php endif;
+            if($design > 0) : ?>
+                <h3>Design Sponsor</h3>
+                <ul class="sponsors--list">
+                    <?php  while($sponsorQuery->have_posts()) : $sponsorQuery->the_post(); ?>
+                        <?php $sponsorshipLevel = get_field('sponsorship_level');
+                        if($sponsorshipLevel == 'Design') : ?>
+                            <li class="sponsor">
+                                <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
+                                    <img src="<?php the_field('square_image_for_homepage') ?>" alt="<?php the_title(); ?>" />
+                                </a>
+                            </li>
+                        <?php endif; endwhile; ?>
+                    <li class="sponsor empty"></li>
+                    <li class="sponsor empty"></li>
+                </ul>
+            <?php endif;
+            if($lanyard > 0) : ?>
             <h3>Lanyard Sponsor</h3>
             <ul class="sponsors--list">
-                <?php /* while($sponsorQuery->have_posts()) : $sponsorQuery->the_post(); */?>
-                    <?php /*$sponsorshipLevel = get_field('sponsorship_level');
-                    if($sponsorshipLevel == 'Lanyard') : */?>
+                <?php  while($sponsorQuery->have_posts()) : $sponsorQuery->the_post(); ?>
+                    <?php $sponsorshipLevel = get_field('sponsorship_level');
+                    if($sponsorshipLevel == 'Lanyard') : ?>
                         <li class="sponsor">
-                            <a href="<?php /*the_permalink() */?>" title="<?php /*the_title(); */?>">
-                                <img src="<?php /*the_field('square_image_for_homepage') */?>" alt="<?php /*the_title(); */?>" />
+                            <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
+                                <img src="<?php the_field('square_image_for_homepage') ?>" alt="<?php the_title(); ?>" />
                             </a>
                         </li>
-                    <?php /*endif; endwhile; */?>
+                    <?php endif; endwhile; ?>
                 <li class="sponsor empty"></li>
                 <li class="sponsor empty"></li>
             </ul>
+            <?php endif;
+            if($localhost > 0) : ?>
+            <h3>Localhost Sponsors</h3>
+            <ul class="sponsors--list">
+                <?php  while($sponsorQuery->have_posts()) : $sponsorQuery->the_post(); ?>
+                    <?php $sponsorshipLevel = get_field('sponsorship_level');
+                    if($sponsorshipLevel == 'Localhost') : ?>
+                        <li class="sponsor">
+                            <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
+                                <img src="<?php the_field('square_image_for_homepage') ?>" alt="<?php the_title(); ?>" />
+                            </a>
+                        </li>
+                    <?php endif; endwhile; ?>
+                <li class="sponsor empty"></li>
+                <li class="sponsor empty"></li>
+            </ul>
+            <?php endif; ?>
         </section>
     </div>
-</section>-->
+</section>
 
 
 <!-- TICKETS -->
@@ -483,79 +520,144 @@
             <span>Tickets</span>
         </h1>
         <section class="header--description">
-            <!--$49 - $119 for a day learning from the very best speakers the WordPress business community has to offer.
-            <span>Tickets are transferrable but NOT refundable.</span>-->
-            We're busy planning the next Prestige Conference. Until then, you can purchase access to all the past videos.
+            $39 - $99 for two days of learning from the very best speakers the WordPress business community has to offer.
+            <span>Tickets are transferrable but NOT refundable.</span>
         </section>
         <section class="tickets--button_wrapper">
-            <a class="button" href="/tickets/">Purchase Videos</a>
-            <!--<a class="button" href="/tickets/">Register Now</a><br>
-            <a href="/scholarships/">Apply for a scholarship</a>-->
+            <a class="button" href="/tickets/">Register Now</a><br>
+            <a href="/purchase-past-videos/">Purchase access to past videos</a>
         </section>
     </header>
     <section class="tickets--list_wrapper">
         <ul class="tickets--list">
-            <li class="ticket coming-soon">
-                <h2 class="ticket--title">
-                    <span class="ticket--date">October 3rd</span>
-                    Friday Only Ticket
+            <li class="ticket">
+                <h2 class="ticket--title sold-out">
+                    <span class="ticket--date">Feb 27th-28th</span>
+                    <strong>Early-bird</strong><br>
+                    Saturday Conference + Friday Night Panel
                 </h2>
                 <section class="ticket--description">
-                    Friday night pre-conference business panel. Drinks and food included in ticket price. FRIDAY ONLY! Only buy this ticket if you're not going to any other Prestige events.
-                </section>
-                <section class="ticket--price">
-                    $49
-                </section>
-            </li>
-            <li class="ticket coming-soon">
-                <h2 class="ticket--title">
-                    <span class="ticket--date">October 4th</span>
-                    Saturday Conference
-                </h2>
-                <section class="ticket--description">
-                    Includes lunch, swag, Saturday ticket, and Saturday after party. Ticket includes access to stream all Saturday videos for 6 months on the Prestige Conference website.
+                    Includes lunch, swag, Saturday ticket, Saturday after party, and the Friday night business panel. Ticket includes access to stream all videos for 6 months on the Prestige Conference website.
                 </section>
                 <section class="ticket--price">
                     $99
                 </section>
             </li>
-            <li class="ticket coming-soon">
-                <h2 class="ticket--title sold-out">
-                    <span class="ticket--date">October 3rd - 4th</span>
-                    Saturday Conference + Friday Night Panel
-                </h2>
-                <section class="ticket--description">
-                    Includes lunch, swag, Saturday ticket, Saturday after party, and the Friday night pre-conference business panel. Ticket includes access to stream all Saturday videos for 6 months on the Prestige Conference website.
-                </section>
-                <section class="ticket--price">
-                    $119
-                </section>
-            </li>
-            <li class="ticket coming-soon">
+            <li class="ticket">
                 <h2 class="ticket--title">
-                    <span class="ticket--date">October 4th</span>
+                    <span class="ticket--date">Feb 27th-28th</span>
+                    <strong>Early-bird</strong><br>
                     Prestige Streaming Ticket
                 </h2>
                 <section class="ticket--description">
-                    Streaming ticket to the Saturday event as well as access to stream all Saturday videos for 6 months on the Prestige Conference website.
+                    Streaming ticket to the event as well as access to stream all videos for 6 months on the Prestige Conference website.
                 </section>
                 <section class="ticket--price">
-                    $49
+                    $39
+                </section>
+            </li>
+            <li class="ticket">
+                <h2 class="ticket--title">
+                    <span class="ticket--date">Feb 27th-28th</span>
+                    Community Sponsorship
+                </h2>
+                <section class="ticket--description">
+                    Includes everything from the Friday + Saturday ticket, as well as <!--a ticket to the speakers and sponsors dinner on Thursday night and--> a listing as a Community Sponsor on the Sponsors page.
+                </section>
+                <section class="ticket--price">
+                    $499
+                </section>
+            </li>
+            <li class="ticket">
+                <h2 class="ticket--title">
+                    <span class="ticket--date">Past Videos</span>
+                    Streaming Ticket
+                </h2>
+                <section class="ticket--description">
+                    Purchase access to videos from past Prestige Conference events.
+                </section>
+                <section class="ticket--price">
+                    $69
                 </section>
             </li>
         </ul>
     </section>
     <section class="tickets--button_wrapper">
-        <a class="button" href="/tickets/">Purchase Videos</a>
-        <!--<a class="button" href="/tickets/">Register Now</a><br>
-        <a href="/scholarships/">Apply for a scholarship</a>-->
+        <a class="button" href="/tickets/">Register Now</a><br>
+        <a href="/purchase-past-videos/">Purchase access to past videos</a>
+    </section>
+</section>
+
+
+
+<!-- PRESS -->
+<section class="home--press">
+    <header class="press--header">
+        <h1 class="home--title home--press--title title_centered" data-30p-center-top="">
+            <span class="title--small">Buzz for</span>
+            Prestige
+        </h1>
+    </header>
+    <section class="press--content">
+        <section class="press--quote">
+            <section class="quote--image">
+                <img src="http://prestigeconf.com/wp-content/uploads/2014/07/matt.jpg" alt="Matt Medeiros" />
+            </section>
+            <section class="quote--text">
+                PrestigeConf was a refreshing experience as a speaker and for the attendees seeking to enhance their business prowess.<br>
+                <br>
+                Scoring from top to bottom, starting with communication of the organizing team to the logistics the day of, the PrestigeConf team receives an A+ in my book. Josh and Kiko managed to put something together that broke the mold for those of us caught in the circuit of conferences and provided real ROI for attendees.<br>
+                <br>
+                Their secret sauce? Creating an intimate atmosphere where attendees could interact with featured speakers and extend their conference experience. PrestigeConf was a tremendous event with super value -- don't miss the next one.<br>
+                <br>
+                <div class="quote--name">
+                    - Matt Medeiros, Slocum Studios
+                </div>
+            </section>
+        </section>
+        <section class="press--quote">
+            <section class="quote--image">
+                <img src="https://pbs.twimg.com/profile_images/518101445280022528/tO9FK3wH.jpeg" alt="Jeremy Ward" />
+            </section>
+            <section class="quote--text">
+                Most of today's technology conferences focus solely on tools and techniques for building cutting-edge web applications. Prestige breaks the mold by offering something different: real-talk from leaders in the tech community about what it actually means to run a products or client services business. With topics ranging from how to grow your business, what to expect upon entering the products market, how to identify process inefficiencies, and what to charge, Prestige provides a valuable new set of tools for entrepreneurial developers and leaders. I highly recommend it.<br>
+                <br>
+                <div class="quote--name">
+                    - Jeremy Ward, Room 34 Creative Services
+                </div>
+            </section>
+        </section>
+        <section class="press--quote">
+            <section class="quote--image">
+                <img src="http://prestigeconf.com/wp-content/uploads/2014/07/jake.jpg" alt="Jake Goldman" />
+            </section>
+            <section class="quote--text">
+                Kudos to #prestigeconf for a solid business event. Exactly what we need: a lot less preaching, and a lot more teaching.<br>
+                <br>
+                <div class="quote--name">
+                    - Jake Goldman, 10up
+                </div>
+            </section>
+        </section>
+        <section class="press--quote">
+            <section class="quote--image">
+                <img src="http://prestigeconf.com/wp-content/uploads/2014/09/James-Dalman.jpg" alt="James Dalman" />
+            </section>
+            <section class="quote--text">
+                If I didn't say it already, #PrestigeConf was better than any WordCamp I've ever attended. So MUCH great stuff!<br>
+                <br>
+                <div class="quote--name">
+                    - James Dalman, Happy Joe
+                </div>
+            </section>
+        </section>
     </section>
 </section>
 
 
 <!-- MAP -->
 <section class="home--map">
-    <a target="_blank" href="https://www.google.com/maps/preview?ie=UTF-8&fb=1&gl=us&cid=11125183430936972151&q=University+of+St.+Thomas+-+Minneapolis+Campus&ei=q6j2U8bDIs-cygTytIDgBQ&ved=0CIsBEPwSMAs">View St. Thomas on Google Maps</a>
+    <a target="_blank" href="https://www.google.com/maps/place/The+Innevation+Center,+Powered+by+SUPERNAP/@36.066639,-115.213307,17z/data=!3m1!4b1!4m2!3m1!1s0x80c8c63d8de58c57:0x4f1c35e8f68b2e74">View Prestige Conference on Google Maps</a>
 </section>
 
 

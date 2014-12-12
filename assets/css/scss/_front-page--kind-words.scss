@@ -1,0 +1,46 @@
+.home--press {
+
+}
+
+.press--header {
+    padding: 4em 2em 2em 2em;
+}
+
+    .home--press--title {
+        text-align: center;
+
+        &:after {
+            margin: 1rem auto 0;
+        }
+    }
+
+    .press--content {
+        padding: 0 0 4em 0;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .press--quote {
+        @include clearfix();
+        padding: 1em 0;
+
+        &:not(:first-child) {
+            border-top: 1px solid $siteLightGrey;
+        }
+    }
+
+        .quote--image {
+            float: left;
+            width: 128px;
+            height: 128px;
+        }
+
+        .quote--text {
+            float: left;
+            @include css3-calc('width', '100% - 128px');
+            padding: 0 1em;
+        }
+
+        .quote--name {
+            font-size: .875em;
+        }

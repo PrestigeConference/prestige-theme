@@ -22,13 +22,16 @@
             </h2>
         <?php endif; ?>
         <section class="video--content">
-            <?php if(get_field('full_video_available_to_public') || pmpro_hasMembershipLevel(array(1,2))): ?>
+            <?php if(get_field('full_video_available_to_public') || pmpro_hasMembershipLevel(array(1,2,3))): ?>
                 <section class="youtube">
                     <?php the_field('full_video_embed_code'); ?>
                 </section>
             <?php else: ?>
-                <section class="signup">
-                    Please <a href="/wp-login/">login</a> to view videos.
+                <section class="signup preview">
+                    Please <a href="/wp-login.php">login</a> to view the full video, or <a href="/purchase-past-videos/">purchase access to past videos</a>.
+                </section>
+                <section class="youtube preview">
+                    <?php the_field('preview_video_embed_code'); ?>
                 </section>
             <?php endif; ?>
             <section class="video--description">

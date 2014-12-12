@@ -2,7 +2,16 @@
     .youtube {
         margin-bottom: 1em;
         margin-top: 3em;
+
+        &.preview {
+            margin-top: 0;
+        }
     }
+}
+
+.signup.preview {
+    margin-top: 2em;
+    margin-bottom: .25em;
 }
 
 .video--title_link {
