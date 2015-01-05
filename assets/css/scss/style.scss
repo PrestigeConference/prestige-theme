@@ -1,5 +1,5 @@
 /*--
-    Theme Name:  Prestige Las Vegas Theme
+    Theme Name:  Westwerk's Las Vegas Theme
     Theme URI:  http: //www.github.com/PrestigeConference/prestige-theme
     Description:  Theme for Prestige Conference
     Author:  Prestige Conference Team
@@ -27,13 +27,15 @@
 @import "navigation-with-subnav";
 
 @import "front-page";
-@import "front-page--section-nav";
+@import "front-page--intro";
+//@import "front-page--section-nav";
 @import "front-page--speakers";
 @import "front-page--schedule";
 @import "front-page--kind-words";
 @import "front-page--sponsors";
 @import "front-page--tickets";
 @import "front-page--map";
+@import "front-page--videos";
 @import "front-page--mailing-list";
 @import "pages";
 @import "posts";
@@ -49,5 +51,6 @@
 @import "videos";
 
 @import "pmpro";
+@import "camp-tix";
 
 @import "admin-bar";

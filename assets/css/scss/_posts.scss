@@ -1,6 +1,11 @@
 .post {
     @include clearfix();
-    margin-bottom: 5em;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #ececec;
+}
+
+.single .post {
+    border-bottom: 0;
 }
 
     .post--title {
@@ -32,15 +37,10 @@
     }
 
     .post--metadata {
-        margin-top: 1em;
-        padding-top: .25em;
-        font-size: .875em;
-        border-top: 1px solid $springLightGrey;
-        font-style: italic;
-
-        a {
-            font-style: italic;
-        }
+        margin-top: 1rem;
+        padding: 1rem;
+        font-size: (13rem/16);
+        background: $vegasLightGrey;
     }
 
     .single .post--metadata {
@@ -61,6 +61,23 @@
         margin: 0;
         margin-bottom: .75em;
         padding: 0;
+    }
+
+    .blog,
+    .post {
+        .content--body.content-main {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .page--header,
+        .post {
+            padding: 0 (50rem/16);
+        }
+
+        .post {
+            padding-bottom: 1rem;
+        }
     }
 
 @media only screen and (min-width: #{$midBreakpoint}) {

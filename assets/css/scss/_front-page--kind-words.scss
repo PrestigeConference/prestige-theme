@@ -1,28 +1,27 @@
 .home--press {
-
+    padding: 0 1rem;
 }
 
 .press--header {
-    padding: 4em 2em 2em 2em;
+    max-width: (600rem/16);
+    margin: 0 auto;
+    padding:0 0 2em;
+    text-align: center;
+    line-height: 1.5;
 }
 
     .home--press--title {
-        text-align: center;
-
-        &:after {
-            margin: 1rem auto 0;
-        }
     }
 
     .press--content {
         padding: 0 0 4em 0;
-        max-width: 600px;
         margin: 0 auto;
     }
 
     .press--quote {
-        @include clearfix();
-        padding: 1em 0;
+
+        padding: 1rem 0 3rem;
+        text-align: center;
 
         &:not(:first-child) {
             border-top: 1px solid $siteLightGrey;
@@ -30,17 +29,59 @@
     }
 
         .quote--image {
-            float: left;
+            display: inline-block;
+            position: relative;
             width: 128px;
             height: 128px;
+            @include transform-rotate(45);
+            @include transform-origin(50%, 50%);
+            overflow: hidden;
+
+            img {
+                position: absolute;
+                top: -26px;
+                left: -26px;
+                width: 180px;
+                max-width: inherit;
+                height: 180px;
+                @include transform-rotate(-45);
+                @include transform-origin(50%, 50%);
+                vertical-align: top;
+            }
         }
 
         .quote--text {
-            float: left;
-            @include css3-calc('width', '100% - 128px');
-            padding: 0 1em;
+            text-align: left;
+            font-style: italic;
         }
 
         .quote--name {
-            font-size: .875em;
+            margin-top: 3.25rem;
+            color: $vegasGold;
+            font-family: $altFont;
+            line-height: 1;
+            text-transform: uppercase;
+
+            &:after {
+                content: '';
+                display: block;
+                width: 100px;
+                margin: 1.5rem auto;
+                height: 1px;
+                background: $vegasGold;
+            }
         }
+
+
+
+@media only screen and (min-width: #{$midBreakpoint}) {
+    .press--content {
+        @include flexbox();
+        @include flexbox-justify-content(space-between);
+    }
+
+    .press--quote {
+        width: calc(25% - 3rem);
+        padding-bottom: 0;
+    }
+}

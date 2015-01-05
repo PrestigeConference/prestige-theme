@@ -1,0 +1,25 @@
+.home--intro {
+    margin: -4rem auto 4rem;
+
+    #mce-EMAIL {
+        background: #f6f6f6;
+        border: 2px solid darken(#f6f6f6, 5%);
+        padding-bottom: (7rem/16);
+
+        &:focus {
+            outline: 0;
+            border-color: $vegasGold;
+        }
+    }
+}
+
+.intro--hosted-in {
+    a {
+        font-weight: bold;
+    }
+}
+
+
+@media only screen and (min-width: #{$smallBreakpoint}) {
+
+}

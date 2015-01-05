@@ -120,7 +120,12 @@ Element.prototype.removeAClass = function(className) {
 })();
 
 window.onload = function() {
-    var s = skrollr.init({forceHeight: false});
+    if(Modernizr.mq("(min-width:769px")) {
+        var s = skrollr.init({forceHeight: false});
+    } else {
+        var s = skrollr.init({forceHeight: true});
+    }
+
 
     //The options (second parameter) are all optional. The values shown are the default values.
     skrollr.menu.init(s, {

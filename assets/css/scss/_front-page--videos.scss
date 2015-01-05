@@ -1,0 +1,20 @@
+.home--videos {
+    max-width: (800rem/16);
+    margin: 0 auto;
+    padding: 4rem 1rem;
+    text-align: center;
+
+    .videos--header {
+        max-width: (600rem/16);
+        margin: 0 auto;
+    }
+}
+
+.videos--thumbnail {
+    margin: 1rem 0 2rem;
+
+    .youtube {
+        margin-bottom: 0;
+    }
+}
+

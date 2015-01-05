@@ -1,13 +1,11 @@
 .home--speakers--header {
     padding: 4em 2em;
-    background: $siteGrey;
-    color: white;
+    background: white;
 }
 
     .header--description,
     .header--description p {
         font-weight: 300;
-        font-size: .875rem;
         line-height: 1.75;
     }
 
@@ -26,26 +24,23 @@
         @include flexbox-align-items(center);
         margin: 0;
         padding: 0;
-        font-family: $altFont;
+        background: $vegasDarkGrey;
+        font-family: $brandon;
+        color: $linkColor;
 
         a {
-            font-family: $altFont;
+            font-family: $brandon;
+
+            &:hover,
+            &:active,
+            &:visited,
+            &:focus {
+                color: $linkColor;
+            }
         }
 
         .home--speaker--biography {
             display: none;
-        }
-    }
-
-    .no-csscalc {
-        .home--speaker--content {
-            text-align: left;
-            padding-left: .5em;
-            font-size: .875em;
-        }
-
-        .home--speaker--name {
-            padding-left: 0;
         }
     }
 
@@ -67,7 +62,7 @@
                 margin-bottom: 0;
                 padding-left: 8px;
                 font-weight: bold;
-                color: $siteGrey;
+                color: $linkColor;
             }
 
 
@@ -122,12 +117,13 @@
             .arrow-left,
             .arrow-right {
                 font-size: 1.5em;
-                text-decoration: none;
                 @include transition(color .3s ease);
+                color: $textColor;
 
                 &:hover,
                 &:active {
-                    color: white;
+                    color: $linkColor;
+                    text-decoration: none;
                 }
             }
 
@@ -142,7 +138,7 @@
     }
 
         .home--speakers--list {
-            width: 288rem;
+            width: 312rem;
         }
 
             .home--speaker {
@@ -155,7 +151,6 @@
                 &:hover,
                 &.active {
                     opacity: 1;
-                    background-color: $siteLightGrey;
                 }
             }
 
@@ -163,11 +158,14 @@
                     padding: 4em 0;
                     height: 11rem;
                     width: 24rem;
+                    background: $vegasDarkGrey;
+                    border-right: 1px solid white;
                 }
 
                 .home--speaker--picture {
                     width: 24rem;
                     height: 24rem;
+                    border-right: 1px solid white;
 
                     img {
                         width: 24rem;

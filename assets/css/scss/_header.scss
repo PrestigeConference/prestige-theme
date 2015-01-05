@@ -1,14 +1,21 @@
 .header-main {
     position: relative;
-    background: url(assets/img/header-bg_mobile.jpg) no-repeat center top;
+    padding-bottom: 4rem;
+    background: url(assets/img/header-bg_tile.jpg) repeat center top;
+}
+
+body:not(.home) {
+    .header-main {
+        //padding-bottom: 0;
+    }
 }
 
     .sponsors--menu-button_wrapper {
         text-align: center;
-        padding: 1em 0;
         border-bottom: 1px solid rgba(255,255,255,.2);
+        background: white;
 
-        a {
+        .primary-sponsors a {
             display: inline-block;
             height: 1em;
             margin-right: .25em;
@@ -19,22 +26,39 @@
         }
     }
 
+    .sponsors--menu-button_inner {
+        position: relative;
+    }
+
+        .logo-sponsors {
+            @include flexbox();
+            @include flexbox-flex-direction(column-reverse);
+        }
+
+        .primary-sponsors {
+            padding: .5rem 0;
+            background-color: $vegasLightGrey;
+        }
+
         .sponsors--presents {
             display: inline-block;
             text-transform: uppercase;
-            margin-right: 1em;
-            color: white;
             font-size: .5em;
             letter-spacing: 2px;
             line-height: 2;
             vertical-align: middle;
         }
 
+        .prestige-logo_small {
+            padding: .5rem 0;
+        }
+
         .open-button {
-            //position: absolute;
-            //top: 3em;
-            width: 1.25em;
-            height: 1.5em;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 68px;
+            height: 68px;
             padding: 0;
             background: transparent;
             border: 0;
@@ -64,9 +88,10 @@
                 content: ' ';
                 display: block;
                 height: 9px;
-                width: 100%;
-                border-top: 2px solid white;
-                border-bottom: 2px solid white;
+                width: 1.25rem;
+                border-top: 2px solid $vegasDarkGrey;
+                border-bottom: 2px solid $vegasDarkGrey;
+                margin: 0 auto;
                 margin-bottom: 5px;
             }
 
@@ -74,8 +99,9 @@
                 content: ' ';
                 display: block;
                 height: 0;
-                width: 100%;
-                border-top: 2px solid white;
+                width: 1.25rem;
+                border-top: 2px solid $vegasDarkGrey;
+                margin: 0 auto;
             }
         }
 
@@ -85,7 +111,7 @@
 
     .header--blog-name {
         overflow: hidden;
-        @include css3-calc('width', '100% - 2rem');
+        width: calc(100% - 2rem);
         margin: 0 auto;
         color: white;
         font-size: 1.25em;
@@ -97,7 +123,7 @@
             display: block;
             position: relative;
             max-width: 15rem;
-            margin: 2rem auto;
+            margin: 1rem auto;
         }
 
         .blog-name {
@@ -107,48 +133,46 @@
         }
     }
 
+    body:not(.home) {
+        .header--blog-name {
+            a {
+                max-width: 20rem;
+            }
+        }
+    }
+
+    .header--subtitle {
+        color: $vegasGold;
+        font-size: (20rem/16);
+    }
+
         .subtitle--tagline {
             display: block;
             padding-bottom: .5em;
-            color: $sitePurple;
-            font-size: .75em;
+            color: white;
+            font-size: (26rem/16);
+            font-weight: 300;
         }
 
     .button_tickets {
-        margin: 2em 0;
+        margin: 2rem 0;
         letter-spacing: 2px;
     }
 
-    .header--hosted-in {
-        color: white;
-        font-family: $altFont;
-        font-size: .75em;
-        font-weight: lighter;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        padding: 0 1em .5em 1em;
-
-        img {
-            height: 13px;
-            vertical-align: baseline;
-        }
-    }
 
 
 
 @media only screen and (min-width: #{$smallBreakpoint}) {
     .sponsors--menu-button_wrapper {
-        a {
+        .primary-sponsors a {
             height: 1.5em;
             margin-right: 1em;
         }
-
-        button {
-            position: absolute;
-            right: 1em;
-            top: 1.25em;
-        }
     }
+
+        .open-button {
+            top: 2.625rem;
+        }
 
         .sponsors--presents {
             font-size: .75em;
@@ -162,7 +186,6 @@
     .subtitle--tagline {
         display: block;
         padding-bottom: .5em;
-        color: $sitePurple;
         font-size: .75em;
     }
 
@@ -173,50 +196,48 @@
             }
         }
     }
-
-    body:not(.home) {
-        .header--blog-name {
-            @include flexbox();
-            @include flexbox-align-items(center);
-            @include flexbox-justify-content(center);
-
-            a {
-                width: 11rem;
-                margin: 2rem 0;
-            }
-        }
-
-        .header--subtitle {
-            width: 14.5rem;
-            padding-left: 1rem;
-            font-size: 1.25rem;
-            text-align: left;
-        }
-
-        .button_tickets {
-            margin: 0 0 2rem 0;
-        }
-    }
 }
 
 
 
 
 @media only screen and (min-width: #{$midBreakpoint}) {
-    .header-main {
-        background-image: url(assets/img/header-bg_1920.jpg);
-    }
 
     .sponsors--menu-button_wrapper {
-        a {
+
+        .primary-sponsors a {
             height: 2em;
             margin-right: 2rem;
         }
+    }
 
-        button {
-            right: auto;
-            top: 1.375em;
-            @include css3-calc('left', '50% + 22em');
+    .logo-sponsors {
+        @include flexbox-flex-direction(row);
+        @include flexbox-justify-content(space-between);
+    }
+
+    .prestige-logo_small {
+        padding: 1rem;
+    }
+
+    .primary-sponsors {
+        margin-right: 84px;
+        padding: 1.75rem 1rem 0;
+    }
+
+    .open-button {
+        top: 0;
+        width: 84px;
+        height: 84px;
+        border-left: 1px solid $vegasGrey;
+        border-right: 1px solid $vegasGrey;
+
+        &:active,
+        &:hover,
+        &:focus {
+            outline: none;
+            border-left: 1px solid $vegasGrey;
+            border-right: 1px solid $vegasGrey;
         }
     }
 
@@ -229,34 +250,39 @@
                 letter-spacing: 6px;
 
                 a {
-                    margin: 6rem auto 4rem;
+                    max-width: (657rem/16);
+                    //margin: 6rem auto 4rem;
                 }
             }
 
+
+
+    body:not(.home) {
+        .header--blog-name {
+            a {
+                max-width: (657rem/16);
+            }
+        }
+    }
+
+    .header--subtitle {
+        font-size: (26rem/16);
+    }
+
                 .subtitle--tagline {
+                    padding-bottom: .5rem;
+                    font-size: (34rem/16);
                     span {
                         display: block;
                     }
                 }
 
     .button_tickets {
-        margin: 6rem 0 8rem;
+        //margin: 6rem 0 8rem;
     }
 
     .header--hosted-in {
         padding-bottom: 1em;
-    }
-
-    body:not(.home)  {
-        .header--blog-name {
-            a {
-                width: 13rem;
-            }
-        }
-
-        .header--subtitle {
-            width: 20rem;
-        }
     }
 }
 
@@ -265,16 +291,22 @@
         a {
             margin-right: 3em;
         }
-
-        button {
-            @include css3-calc('left', '50% + 30em');
-        }
     }
 
-    body:not(.home)  {
-        .header--subtitle {
-            width: auto;
-        }
+    .primary-sponsors {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+
+    .sponsors--menu-button_inner {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 1216px) {
+    .prestige-logo_small {
+        padding-left: 0;
     }
 }
 

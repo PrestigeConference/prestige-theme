@@ -1,6 +1,6 @@
 .home--tickets {
-    padding: 4em 2em;
-    background: $siteGrey;
+    padding: 4rem 2rem;
+    background: #333333;
 }
 
     .tickets--header {
@@ -14,7 +14,7 @@
 
             span {
                 display: block;
-                color: #716e6e;
+                color: $vegasGold;
                 font-size: .75em;
                 font-weight: 700;
                 text-transform: uppercase;
@@ -23,7 +23,6 @@
     }
 
     .tickets--title {
-
         &:after {
             margin: 1rem auto 0;
         }
@@ -31,7 +30,7 @@
 
     .tickets--button_wrapper {
         text-align: center;
-        margin-top: 2em;
+        margin-top: 1em;
 
         a:not(.button) {
             color: white;
@@ -46,12 +45,7 @@
     }
 
     .ticket {
-        background: $siteMidGrey;
-        @include transition(background-color .3s ease);
-
-        &:hover {
-            background-color: white;
-        }
+        background: white;
 
         &.sold-out,
         &.coming-soon {
@@ -101,11 +95,12 @@
         }
 
             .ticket {
-                margin: 0 0 .0625em 0;
+                margin: 0 0 2rem 0;
                 padding: 2em 1em;
             }
 
                 .ticket--title {
+                    font-family: $brandon;
                     font-size: 1rem;
                     font-weight: bold;
                     text-align: center;
@@ -115,26 +110,27 @@
                         content: '';
                         display: block;
                         width: 50%;
-                        height: 2px;
+                        height: 1px;
                         margin: 1rem auto;
-                        background: #29a1f3;
+                        background: $vegasGold;
                     }
                 }
 
                     .ticket--date {
                         display: block;
                         padding-bottom: .25rem;
-                        color: #29a1f3;
+                        color: $vegasGold;
                         font-size: .875rem;
                     }
 
                 .ticket--description {
                     font-size: .875em;
+                    text-align: center;
                 }
 
                 .ticket--price {
                     margin-top: 2rem;
-                    color: #796d97;
+                    color: $vegasGold;
                     font-size: 5.5em;
                     font-weight: 300;
                     text-align: center;
@@ -143,33 +139,25 @@
 
 
 
+
 @media only screen and (min-width: #{$smallBreakpoint}) {
+    .ticket {
+        padding: 2rem;
+    }
+}
+
+
+
+@media only screen and (min-width: #{$midBreakpoint}) {
     .tickets--list {
         @include flexbox();
-        @include flexbox-align-items(stretch);
-        @include flexbox-flex-wrap(wrap);
-        max-width: 1280px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .no-flexbox.no-flexboxlegacy {
-        .tickets--list {
-            display: block;
-        }
-
-        .ticket {
-            width: 100%;
-
-            &:nth-child(odd) {
-                border: 0;
-            }
-        }
+        @include flexbox-justify-content(space-between);
     }
 
         .ticket {
             position: relative;
-            width: 50%;
+            width: calc(50% - 1rem);
+            margin-bottom: 0;
             padding-bottom: 11em;
 
             &:nth-child(odd) {
@@ -179,6 +167,7 @@
 
             .ticket--price {
                 position: absolute;
+                left: 1rem;
                 bottom: 2rem;
                 @include css3-calc('width', '100% - 2rem');
                 margin-top: 0;
@@ -188,19 +177,30 @@
 
 
 @media only screen and (min-width: #{$largeBreakpoint}) {
-    .tickets--header {
-        .tickets--button_wrapper {
+    .tickets_inner {
+        @include flexbox();
+        max-width: 1280px;
+        margin: 0 auto;
+
+        &>.tickets--button_wrapper {
             display: none;
         }
     }
 
-    .ticket {
-        width: 25%;
-        margin-bottom: 0;
-        border-right: 1px solid $siteGrey;
+    .tickets--header {
+        width: 33.33333333333%;
+        padding-right: 2rem;
+        text-align: left;
+    }
 
-        &:last-child {
-            border-right: none;
-        }
+    .tickets--button_wrapper {
+        text-align: left;
+    }
+
+    .tickets--list_wrapper {
+        width: 66.66666666666667%;
+    }
+
+    .ticket {
     }
 }

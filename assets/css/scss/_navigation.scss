@@ -34,7 +34,7 @@
         &:hover,
         &:active,
         &:focus {
-            color: $siteLightPurple;
+            color: $vegasGold;
         }
     }
 
@@ -52,15 +52,6 @@
 .open-the-menu {
     .nav-main {
         opacity: 1;
-    }
-}
-
-body:not(.home) {
-    .nav-main {
-        a {
-            font-size: 1.25em;
-            padding-top: .75rem;
-        }
     }
 }
 

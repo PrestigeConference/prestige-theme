@@ -92,11 +92,11 @@ h6 {
     margin: 0;
     padding: 0;
     font-family: $headingFont;
-    letter-spacing: 4px;
+    //letter-spacing: 4px;
     line-height: $headingLineHeight;
     text-rendering:  optimizeLegibility;
     text-shadow: $headingTextShadow;
-    text-transform: uppercase;
+    //text-transform: uppercase;
 
     * {
         line-height: $headingLineHeight;
@@ -307,12 +307,12 @@ sub {
 /* LINKS */
 a {
     color: $linkColor;
-    text-decoration: underline;
+    text-decoration: none;
     cursor: pointer;
 
     &:hover {
         color: $linkHover;
-        text-decoration: none;
+        text-decoration: underline;
         border: 0;
         outline: 0;
     }
@@ -445,6 +445,7 @@ input[type="reset"] {
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 2px;
+    line-height: 1;
 
     &.alt {
         //@include vertical($buttonAltBackground, $buttonAltBackground2);
@@ -456,6 +457,7 @@ input[type="reset"] {
         color: $buttonColor;
         border: $buttonBorderWidth $buttonBorderStyle $buttonBorderColor;
         outline-color: $buttonOutlineColor;
+        text-decoration: none;
     }
 
     &:visited {

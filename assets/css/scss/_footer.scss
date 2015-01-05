@@ -1,10 +1,11 @@
 .footer-main {
     position: relative;
-    padding: 1em;
-    background: $siteGrey url(assets/img/footer-building.png) no-repeat top right;
+    padding: 0 1rem 4rem;
+    background: $siteGrey;
     color: #909090;
     font-family: $altFont;
     letter-spacing: 2px;
+    text-align: center;
     text-transform: uppercase;
 
     a {

@@ -1,0 +1,25 @@
+body:not(.home) {
+    .content--body {
+        @extend .faux-paper;
+        margin-top: -4rem;
+        margin-bottom: 2rem;
+        text-align: left;
+    }
+}
+
+
+
+@media only screen and (min-width: #{$smallBreakpoint}) {
+    body:not(.home) .content--body {
+        padding: (25rem/16) (50rem/16);
+    }
+
+}
+
+
+
+@media only screen and (min-width: #{$midBreakpoint}) {
+    body:not(.home) .content--body {
+        width: 66.6666666667%;
+    }
+}

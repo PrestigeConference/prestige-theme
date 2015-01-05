@@ -1,44 +1,31 @@
+
+
 .home--title {
-    color: $siteTitleBlue;
-    font-size: 1.875em;
-    font-weight: normal;
-    letter-spacing: 10px;
-    text-transform: uppercase;
+    color: $vegasGold;
+    font-size: (22rem/16);
 
     span {
         display: block;
     }
 
     &:after {
-        content: '';
-        display: block;
-        height: 2px;
-        width: 0;
-        margin-top: 1rem;
-        background: $siteLightPurple;
-        @include transition(width 1s ease);
+        //content: '';
+        //display: block;
+        //height: 2px;
+        //width: 0;
+        //margin-top: 1rem;
+        //background: $siteLightPurple;
+        //@include transition(width 1s ease);
     }
 
     &.skrollable-after {
         &:after {
-            width: 4rem;
-        }
-    }
-}
-
-.no-flexbox,
-.no-csstransitions {
-    .home--title {
-        &:after {
-            width: 4rem;
+            //width: 4rem;
         }
     }
 }
 
 .title_centered {
-    span {
-        padding-left: 10px;
-    }
 }
 
 .title--small {
@@ -54,5 +41,37 @@
 
     .content--body {
         width: 100%;
+    }
+}
+
+.faux-paper {
+    width: calc(100% - 2rem);
+    margin: 0 auto;
+    padding: 1rem;
+    background: #fff;
+    border: 2px solid #ececec;
+    text-align: center;
+}
+
+.faux-paper--header {
+    margin-bottom: 1em;
+    color: $vegasGold;
+    font-family: $altFont;
+    font-size: (22rem/16);
+    line-height: 1.35;
+}
+
+@media only screen and (min-width: #{$smallBreakpoint}) {
+    .home--title {
+        font-size: (32rem/16);
+    }
+
+    .faux-paper {
+        max-width: (800rem/16);
+        padding: (50rem/16) (100rem/16);
+    }
+
+    .faux-paper--header {
+        font-size: (32rem/16);
     }
 }
