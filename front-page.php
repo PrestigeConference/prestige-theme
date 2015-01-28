@@ -45,11 +45,10 @@
                 Matt Medeiros, Slocum Studios
             </div>
             <section class="quote--text">
-                PrestigeConf was a refreshing experience as a speaker and for the attendees seeking to enhance their business prowess.<br>
-                <br>
-                Scoring from top to bottom, starting with communication of the organizing team to the logistics the day of, the PrestigeConf team receives an A+ in my book. Josh and Kiko managed to put something together that broke the mold for those of us caught in the circuit of conferences and provided real ROI for attendees.<br>
-                <br>
-                Their secret sauce? Creating an intimate atmosphere where attendees could interact with featured speakers and extend their conference experience. PrestigeConf was a tremendous event with super value -- don't miss the next one.
+                PrestigeConf was a refreshing experience as a speaker and for the attendees seeking to enhance their business prowess. Scoring from top to bottom, starting with communication of the organizing team to the logistics the day of, the PrestigeConf team receives an A+ in my book. <a class="quote--read-more-link">(read more)</a> <span class="quote--read-more-content hidden">Josh and Kiko managed to put something together that broke the mold for those of us caught in the circuit of conferences and provided real ROI for attendees.<br>
+                    <br>
+                    Their secret sauce? Creating an intimate atmosphere where attendees could interact with featured speakers and extend their conference experience. PrestigeConf was a tremendous event with super value -- don't miss the next one.
+                </span>
             </section>
         </section>
         <section class="press--quote">
@@ -76,13 +75,13 @@
         </section>
         <section class="press--quote">
             <section class="quote--image">
-                <img src="https://pbs.twimg.com/profile_images/518101445280022528/tO9FK3wH.jpeg" alt="Jeremy Ward" />
+                <img src="http://prestigeconf.com/wp-content/uploads/2015/01/jeremy-ward.jpg" alt="Jeremy Ward" />
             </section>
             <div class="quote--name">
                 Jeremy Ward, Westwerk
             </div>
             <section class="quote--text">
-                Most of today's technology conferences focus solely on tools and techniques for building cutting-edge web applications. Prestige breaks the mold by offering something different: real-talk from leaders in the tech community about what it actually means to run a products or client services business. With topics ranging from how to grow your business, what to expect upon entering the products market, how to identify process inefficiencies, and what to charge, Prestige provides a valuable new set of tools for entrepreneurial developers and leaders. I highly recommend it.
+                Most of today's technology conferences focus solely on tools and techniques for building cutting-edge web applications. Prestige breaks the mold by offering something different: real-talk from leaders in the tech community about what it actually means <a class="quote--read-more-link">(read more)</a> <span class="quote--read-more-content hidden">to run a products or client services business. With topics ranging from how to grow your business, what to expect upon entering the products market, how to identify process inefficiencies, and what to charge, Prestige provides a valuable new set of tools for entrepreneurial developers and leaders. I highly recommend it.</span>
             </section>
         </section>
     </section>
@@ -577,11 +576,11 @@
                         <?php endif; endwhile; ?>
                 <?php endif;
                 if($community > 0) : ?>
-                    <li class="community-sponsor">
-                    Community Sponsors
+                    <li class="community-sponsor-list">
+                    <h6>Community Sponsors:</h6>
                 <?php  while($sponsorQuery->have_posts()) : $sponsorQuery->the_post(); ?>
                     <?php $sponsorshipLevel = get_field('sponsorship_level');
-                    if($sponsorshipLevel == 'Localhost') : ?>
+                    if($sponsorshipLevel == 'Community') : ?>
                         <span class="community-sponsor"><?php the_title(); ?></span>
                     <?php endif; endwhile; ?>
                     </li>
@@ -619,8 +618,7 @@
                 <span>Tickets are transferrable but NOT refundable.</span>
             </section>
             <section class="tickets--button_wrapper">
-                <a class="button" href="/tickets/">Register Now</a><br>
-                <a href="/purchase-past-videos/">Purchase access to past videos</a>
+                <a class="button" href="/tickets/">Register Now</a> <a class="button alt" href="/purchase-past-videos/">Purchase Past Events</a>
             </section>
         </header>
         <section class="tickets--list_wrapper">
@@ -652,8 +650,7 @@
             </ul>
         </section>
         <section class="tickets--button_wrapper">
-            <a class="button" href="/tickets/">Register Now</a><br>
-            <a href="/purchase-past-videos/">Purchase access to past videos</a>
+            <a class="button" href="/tickets/">Register Now</a> <a class="button alt" href="/purchase-past-videos/">Purchase Past Events</a>
         </section>
     </div>
 </section>

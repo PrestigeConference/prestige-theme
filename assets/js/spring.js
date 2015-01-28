@@ -126,6 +126,11 @@ window.onload = function() {
         var s = skrollr.init({forceHeight: true});
     }
 
+    var quoteReadMoreLinks = document.querySelectorAll('.quote--read-more-link');
+
+    for(var i = 0, l = quoteReadMoreLinks.length; i < l; i++) {
+        quoteReadMoreLinks[i].listen('click', showReadMoreContent);
+    }
 
     //The options (second parameter) are all optional. The values shown are the default values.
     skrollr.menu.init(s, {
@@ -153,4 +158,12 @@ window.onload = function() {
          return 400;//Hardcoding 400 doesn't make much sense.
          }*/
     });
+}
+
+function showReadMoreContent(event) {
+    var readMoreContent = event.target.parentNode.querySelector('.quote--read-more-content');
+
+    readMoreContent.removeAClass('hidden');
+
+    event.target.style.display = 'none';
 }

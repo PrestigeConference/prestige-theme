@@ -72,6 +72,14 @@
             }
         }
 
+        .quote--read-more-link {
+            display: none;
+        }
+
+        div.quote--read-more-content {
+            margin-top: 1.35rem;
+        }
+
 
 
 @media only screen and (min-width: #{$midBreakpoint}) {
@@ -83,5 +91,13 @@
     .press--quote {
         width: calc(25% - 3rem);
         padding-bottom: 0;
+    }
+
+    .quote--read-more-link {
+        display: inline;
+    }
+
+    .quote--read-more-content.hidden {
+        display: none;
     }
 }

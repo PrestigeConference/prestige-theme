@@ -11,7 +11,7 @@
  * 3. /theme/assets/js/main.min.js (in footer)
  */
 function spring_scripts() {
-    wp_enqueue_style('google_fonts', 'http://fonts.googleapis.com/css?family=Roboto:400,300,700)', false);
+    wp_enqueue_style('google_fonts', 'http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700,300)', false);
     wp_enqueue_style('spring_main', get_template_directory_uri() . '/style.css', false);
 
 

@@ -80,11 +80,12 @@
 
             .session--title {
                 margin-bottom: 0;
+                color: $textColor;
+                font-family: $baseFont;
                 font-size: 1em;
                 font-weight: bold;
-                line-height: 1.35;
-                font-family: $baseFont;
                 letter-spacing: 0;
+                line-height: 1.35;
                 text-transform: none;
             }
 

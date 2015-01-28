@@ -1,5 +1,4 @@
 <?php $activeConference = 'feb15'; ?>
-<?php dynamic_sidebar('sidebar-primary'); ?>
 <div class="widget">
 <h3>Our Sponsors</h3>
 <?php
@@ -54,3 +53,4 @@ $sponsorQuery = new WP_Query( $sponsorQueryArgs ); ?>
     </ul>
 </section>
 </div>
+<?php dynamic_sidebar('sidebar-primary'); ?>

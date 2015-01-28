@@ -72,6 +72,7 @@ body {
     min-height: 100%;
     background: transparent;
     font-family: $baseFont;
+    font-weight: 400;
     font-size: $baseFontSize;
     line-height: $baselineHeight;
     color: $textColor;
@@ -448,7 +449,7 @@ input[type="reset"] {
     line-height: 1;
 
     &.alt {
-        //@include vertical($buttonAltBackground, $buttonAltBackground2);
+        background: rgba(0,0,0,.3);
     }
 
     &:active,

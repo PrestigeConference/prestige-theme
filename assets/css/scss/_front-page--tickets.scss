@@ -4,7 +4,7 @@
 }
 
     .tickets--header {
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
         color: white;
         text-align: center;
 
@@ -41,6 +41,10 @@
             &:hover {
                 text-decoration: underline;
             }
+        }
+
+        .button {
+            margin-bottom: 1rem;
         }
     }
 
@@ -172,6 +176,12 @@
                 @include css3-calc('width', '100% - 2rem');
                 margin-top: 0;
             }
+
+    .tickets_inner {
+        &>.tickets--button_wrapper {
+            display: none;
+        }
+    }
 }
 
 
@@ -181,13 +191,10 @@
         @include flexbox();
         max-width: 1280px;
         margin: 0 auto;
-
-        &>.tickets--button_wrapper {
-            display: none;
-        }
     }
 
     .tickets--header {
+        position: relative;
         width: 33.33333333333%;
         padding-right: 2rem;
         text-align: left;
@@ -195,6 +202,13 @@
 
     .tickets--button_wrapper {
         text-align: left;
+
+        .alt {
+            position: absolute;
+            left: 0;
+            bottom: -1rem;
+            margin-bottom: 0;
+        }
     }
 
     .tickets--list_wrapper {

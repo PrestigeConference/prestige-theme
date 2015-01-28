@@ -206,8 +206,8 @@ body:not(.home) {
     .sponsors--menu-button_wrapper {
 
         .primary-sponsors a {
-            height: 2em;
-            margin-right: 2rem;
+            height: 1.5rem;
+            margin-right: 1rem;
         }
     }
 
@@ -288,7 +288,9 @@ body:not(.home) {
 
 @media only screen and (min-width: #{$largeBreakpoint}) {
     .sponsors--menu-button_wrapper {
-        a {
+
+        .primary-sponsors a {
+            height: 2rem;
             margin-right: 3em;
         }
     }
