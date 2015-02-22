@@ -45,9 +45,7 @@ $sponsorQuery = new WP_Query( $sponsorQueryArgs ); ?>
         if($sponsorshipLevel == 'Bronze') : ?>
             <li class="sponsor">
                 <h6>Bronze Sponsor</h6>
-                <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
-                    <img src="<?php the_field('square_image_for_homepage') ?>" alt="<?php the_title(); ?>" />
-                </a>
+                <img src="<?php the_field('square_image_for_homepage') ?>" alt="<?php the_title(); ?>" />
             </li>
         <?php endif; endwhile; ?>
     </ul>

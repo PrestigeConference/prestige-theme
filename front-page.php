@@ -170,13 +170,19 @@
                 </time>
                 <section class="session--content">
                     <h3 class="session--title">
-                        From Enterprise Software to WordPress
+                        Why Here, Why Now?
                     </h3>
                     <section class="session--speaker">
                         Jake Goldman and Chris Lema
                     </section>
                     <section class="session--description">
-
+                        "When I was a kid, my father would have guests over, and would point to me and say, 'Chris is going to sing now.’”<br>
+                        <br>
+                        Chris Lema quit a once in a lifetime academic opportunity in bioengineering to study social welfare. He become the “data guy” at Berkeley labs where he worked at the forefront of the Internet, then sold his first company for $10 million before he turned 30, and spent several years as an executive at an enterprise software company. Now he's the CTO of Crowd Favorite, one of the oldest agencies in the WordPress ecosystem, and a popular proponent of WordPress and its community. How did that happen?<br>
+                        <br>
+                        Maybe you know Chris for his rousing talks - what Jake Goldman calls his "sermons on the camp". Maybe you've stumbled upon his prolific blog, where he's managed to pump out content every single day for the last couple of years. You might admire his influence, and you might wonder, well, what’s in all of this for Chris? Why dedicate so much time and energy, and so many resources to the WordPress community?<br>
+                        <br>
+                        Jake Goldman, President & Founder of 10up, kicks off Prestige with an intimate interview with Chris Lema, exploring where he’s been, where he’s going, and why he’s betting on WordPress.
                     </section>
                 </section>
             </li>
@@ -186,13 +192,15 @@
                 </time>
                 <section class="session--content">
                     <h3 class="session--title">
-                        Honest Answers from Business Experts
+                        Panel: Are WordPress products big business?
                     </h3>
                     <section class="session--speaker">
                         Cory Miller, Ben Fox, Andrew Norcross, Jake Goldman (moderator)
                     </section>
                     <section class="session--description">
-
+                        WordPress is said to power 23% of the web’s top 10 million websites. Of identifiable CMS’s, its share is estimated at over 60%. But when was the last time you read about a WordPress product on TechCrunch or Bloomberg? By tech industry standards, how do our smashing successes measure up? Is the future in platforms and software as a service, and if so, how do WordPress product businesses factor in?<br>
+                        <br>
+                        Jake Goldman, President & Founder of 10up, sits down with Corey Miller - owner of one of the oldest and longest standing WordPress product companies, Ben Fox - a younger entrepreneur using WordPress as a jumping off point for SIDEKICK.pro, and Andrew Norcross - who sits at the intersection of agency services and products, for a provocative conversation about the WordPress product economy.
                     </section>
                 </section>
             </li>
@@ -227,13 +235,13 @@
                 </time>
                 <section class="session--content">
                     <h3 class="session--title">
-                        Keynote
+                        More Than Just a Website
                     </h3>
                     <section class="session--speaker">
                         John Hawkins, Founder 9seeds and Kim Schaefer, DowntownProject
                     </section>
                     <section class="session--description">
-
+                        Sometimes building websites isn’t just about the sites. Sometimes, it’s also about the community that those sites serve and how they help them to grow. John Hawkins of 9seeds and his client, Kim Schaefer, share the ups and downs of working together on a series of sites that exist at the center of a neighborhood and tech revitalization in Downtown Las Vegas.
                     </section>
                 </section>
             </li>
@@ -243,13 +251,13 @@
                 </time>
                 <section class="session--content">
                     <h3 class="session--title">
-                        The Value of a Great Customer Experience
+                        Cash is King:  Options for Funding Your Business
                     </h3>
                     <section class="session--speaker">
-                        Tina Dobie, VP Customer Experience WP Engine
+                        April Downing, CFO WP Engine
                     </section>
                     <section class="session--description">
-
+                        Every business owner worries about cash flow.  Whether it’s cash flow to grow or to just keep the doors open.  From bootstrapping, to venture capital, to debt (and everything in between), there are so many options available today to fund businesses of all sizes and stages.  We will take a look at the different avenues for funding your business and how they relate to the goals you are trying to achieve.  I will share some of the good, bad and the ugly I have experienced from raising over $200 million for companies of all stages.  Cash is critical but how you get it and from whom makes all the difference in the world!
                     </section>
                 </section>
             </li>
@@ -259,13 +267,15 @@
                 </time>
                 <section class="session--content">
                     <h3 class="session--title">
-                        The Value, Challenges, and Boundaries of Serving the WordPress Economy
+                        What Can Easy Digital Downloads Tell Us About the WordPress Marketplace?
                     </h3>
                     <section class="session--speaker">
                         Pippin Williamson, Founder Pippin's Plugins and Jake Goldman, Founder 10up
                     </section>
                     <section class="session--description">
-
+                        Just what does the "WordPress economy” look like, anyways? If there’s one man that might just have the answers, its probably Pippin Williamson. Easy Digital Downloads, his brainchild, is by any definition, a WordPress product made for WordPress makers: it’s successful… and profitable! But what exactly is successful in this marketplace? What does the top of the market look like? Is catering to the Presserati a scalable business plan?<br>
+                        <br>
+                        10up’s Jake Goldman sits down with EDD founder Pippin Williamson to understand his business, and the business of WordPress.
                     </section>
                 </section>
             </li>
@@ -288,13 +298,13 @@
                 </time>
                 <section class="session--content">
                     <h3 class="session--title">
-                        Making Your First Hire
+                        Hiring Employee Number One: From Freelancer to Agency
                     </h3>
                     <section class="session--speaker">
                         Brad Williams, Founder WebDevStudios
                     </section>
                     <section class="session--description">
-
+                        From a part-time hobby to a full-blown agency, Brad has built WebDevStudios into one of the largest agencies in the world focusing 100% on WordPress development and design.  In this presentation Brad will talk through the history of the company, discuss challenges faced along the way, and share tips on how he grew a hobby to a distributed company with 32 full-time employees.
                     </section>
                 </section>
             </li>
@@ -304,13 +314,13 @@
                 </time>
                 <section class="session--content">
                     <h3 class="session--title">
-                        Accounting for a Small Business
+                        Stop Sucking At Accounting
                     </h3>
                     <section class="session--speaker">
                         Brianna Norcross, Owner Balance Virtual
                     </section>
                     <section class="session--description">
-
+                        No matter how great your coding chops, your business needs a solid financial foundation to be able to thrive. This talk will outline the most common ways small business owners erode that foundation and how to build it right instead.
                     </section>
                 </section>
             </li>
@@ -330,13 +340,19 @@
                 </time>
                 <section class="session--content">
                     <h3 class="session--title">
-                        WordPress in the Enterprise
+                        Tales from the CMS Wars: WordPress and the Enterprise
                     </h3>
                     <section class="session--speaker">
                         John Eckman, CEO 10up
                     </section>
                     <section class="session--description">
-
+                        WordPress isn't your typical enterprise CMS - and that's a good thing. The typical enterprise CMS is expensive, complicated, and difficult to use - but the best have a strong market presence and also support robust ecosystems of implementation partners. WordPress, on the other hand, still faces challenges being taken seriously as "more than a blogging platform."<br>
+                        <br>
+                        What can the community of WordPress agencies interested in larger projects with more impact learn from other platforms aimed at the enterprise market? Adobe Experience Manager, Sitecore, and even Drupal offer object lessons in how to speak to enterprise buyers.<br>
+                        <br>
+                        We'll also look at other ways the enterprise market differs from the small-to-medium business market and how WordPress agencies can more effectively break into that conversation.<br>
+                        <br>
+                        Selling WordPress into the enterprise can be challenging - there are lots of assumptions and myths to be overcome - but it ultimately offers a compelling value proposition no other platform can touch.
                     </section>
                 </section>
             </li>
@@ -346,13 +362,15 @@
                 </time>
                 <section class="session--content">
                     <h3 class="session--title">
-                        Growing a Big Small Company
+                        Mining Lessons from the Commercial Plugin Gold Rush
                     </h3>
                     <section class="session--speaker">
                         Carl Hancock, Owner Rocket Genius
                     </section>
                     <section class="session--description">
-
+                        Since 2007, Rocketgenius has been specializing in extending WordPress, especially through their flagship product: Gravity Forms. Carl Hancock, founder of Rocketgenius, joins us for an interview to dig into the business background of their commercial plugin success.<br>
+                        <br>
+                        If you heard Carl on our expert business panel in Minneapolis last year, you know he’s full of great information that can help other entrepreneurs grow their business. In Vegas, we’re dedicating an entire session to interviewing him about the organization design, revenue perspective, and profitably of Rocketgenius to answer the question - are WordPress products really the gold rush some people make them out to be?
                     </section>
                 </section>
             </li>
@@ -632,7 +650,7 @@
                         Includes lunch, swag, Saturday ticket, Saturday after party, and the Friday night business panel. Ticket includes access to stream all videos for 6 months on the Prestige Conference website.
                     </section>
                     <section class="ticket--price">
-                        $149
+                        $199
                     </section>
                 </li>
                 <li class="ticket">
@@ -644,7 +662,7 @@
                         Streaming ticket to the event as well as access to stream all videos for 6 months on the Prestige Conference website.
                     </section>
                     <section class="ticket--price">
-                        $49
+                        $69
                     </section>
                 </li>
             </ul>
