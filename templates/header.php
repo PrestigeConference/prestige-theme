@@ -35,31 +35,31 @@
                     <section class="prestige-logo_small">
                         <a href="/"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png 1x <?php echo get_template_directory_uri(); ?>/assets/img/logo_2x.png 2x" alt="Prestige Conference" /></a>
                     </section>
-                    <section class="primary-sponsors">
+                    <!--<section class="primary-sponsors">
                         <a href="http://gravityforms.com">
                             <span data-picture data-alt="Gravity Forms">
-                                <span data-src="<?php echo get_template_directory_uri(); ?>/assets/img/sponsor-logos/gravity-forms-logo_header.png"></span>
-                                <span data-src="<?php echo get_template_directory_uri(); ?>/assets/img/sponsor-logos/gravity-forms-logo_header_2x.png"  data-media="(-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)"></span>
+                                <span data-src="<?php /*echo get_template_directory_uri(); */?>/assets/img/sponsor-logos/gravity-forms-logo_header.png"></span>
+                                <span data-src="<?php /*echo get_template_directory_uri(); */?>/assets/img/sponsor-logos/gravity-forms-logo_header_2x.png"  data-media="(-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)"></span>
                                 <noscript>
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sponsor-logos/gravity-forms-logo_header.png" alt="Gravity Forms">
+                                    <img src="<?php /*echo get_template_directory_uri(); */?>/assets/img/sponsor-logos/gravity-forms-logo_header.png" alt="Gravity Forms">
                                 </noscript>
                             </span>
                         </a>
                         <a href="http://wpengine.com">
                             <span data-picture data-alt="WP Engine">
-                                <span data-src="<?php echo get_template_directory_uri(); ?>/assets/img/sponsor-logos/wpengine-logo_header.png"></span>
-                                <span data-src="<?php echo get_template_directory_uri(); ?>/assets/img/sponsor-logos/wpengine-logo_header_2x.png"  data-media="(-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)"></span>
+                                <span data-src="<?php /*echo get_template_directory_uri(); */?>/assets/img/sponsor-logos/wpengine-logo_header.png"></span>
+                                <span data-src="<?php /*echo get_template_directory_uri(); */?>/assets/img/sponsor-logos/wpengine-logo_header_2x.png"  data-media="(-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)"></span>
                                 <noscript>
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sponsor-logos/wpengine-logo_header.png" alt="WP Engine">
+                                    <img src="<?php /*echo get_template_directory_uri(); */?>/assets/img/sponsor-logos/wpengine-logo_header.png" alt="WP Engine">
                                 </noscript>
                             </span>
                         </a>
                         <a href="http://westwerk.com">
                             <span data-picture data-alt="Westwerk">
-                                <span data-src="<?php echo get_template_directory_uri(); ?>/assets/img/sponsor-logos/westwerk-logo_header.png"></span>
-                                <span data-src="<?php echo get_template_directory_uri(); ?>/assets/img/sponsor-logos/westwerk-logo_header_2x.png"  data-media="(-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)"></span>
+                                <span data-src="<?php /*echo get_template_directory_uri(); */?>/assets/img/sponsor-logos/westwerk-logo_header.png"></span>
+                                <span data-src="<?php /*echo get_template_directory_uri(); */?>/assets/img/sponsor-logos/westwerk-logo_header_2x.png"  data-media="(-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)"></span>
                                 <noscript>
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sponsor-logos/westwerk-logo_header.png" alt="Westwerk">
+                                    <img src="<?php /*echo get_template_directory_uri(); */?>/assets/img/sponsor-logos/westwerk-logo_header.png" alt="Westwerk">
                                 </noscript>
                             </span>
                         </a>
@@ -67,7 +67,7 @@
                         <span class="sponsors--presents">
                             Present:
                         </span>
-                    </section>
+                    </section>-->
                 </div>
                 <button id="openMainMenu" class="open-main-menu open-button"><span>Open Main Menu</span></button>
             </div>
@@ -84,7 +84,7 @@
                 <?php if(is_front_page()): ?>
                 <div class="header--subtitle">
                     <span class="subtitle--tagline">A Premium Business and <span>Career Development Conference</span></span>
-                    February 27-28, 2015
+                    August 1-2, 2015
                 </div>
                 <?php endif; ?>
 

@@ -122,6 +122,11 @@ Element.prototype.removeAClass = function(className) {
 window.onload = function() {
     if(Modernizr.mq("(min-width:769px")) {
         var s = skrollr.init({forceHeight: false});
+
+        //Size speaker wrapper
+        var speakers = document.querySelector('.home--speakers--list');
+
+        speakers.style.width = (document.querySelectorAll('.home--speaker').length * 24) + 'em';
     } else {
         var s = skrollr.init({forceHeight: true});
     }

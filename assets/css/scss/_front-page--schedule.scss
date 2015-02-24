@@ -25,7 +25,7 @@
         position: relative;
         margin-bottom: .25em;
         padding-left: 2em;
-        color: $vegasScheduleGold;
+        color: $mplsPurple;
         font-family: $brandon;
         text-transform: uppercase;
         z-index: 1;
@@ -64,7 +64,7 @@
 
                 &.skrollable-after {
                     &:before {
-                        background-color: $vegasScheduleGold;
+                        background-color: $mplsPurple;
                     }
                 }
             }
@@ -73,7 +73,7 @@
             .no-csstransitions {
                 .session--start-time {
                     &:before {
-                        background-color: $vegasScheduleGold;
+                        background-color: $mplsPurple;
                     }
                 }
             }
@@ -117,7 +117,7 @@
             top: 0;
             width: 100%;
             height: 100%;
-            background: $vegasScheduleGold;
+            background: $mplsPurple;
         }
 
 .schedule--the-end {
@@ -159,7 +159,7 @@
 
     .the-end--text {
         //margin-top: -1.2em;
-        color: $vegasScheduleGold;
+        color: $mplsPurple;
         font-family: $brandon;
         font-weight: bold;
         letter-spacing: 3px;
@@ -269,7 +269,7 @@
 
         &.skrollable-after {
             &:before {
-                background-color: $vegasScheduleGold;
+                background-color: $mplsPurple;
             }
         }
     }
@@ -278,7 +278,7 @@
     .no-csstransitions {
         .schedule--the-end {
             &:before {
-                background-color: $vegasScheduleGold;
+                background-color: $mplsPurple;
             }
         }
     }

@@ -33,9 +33,7 @@ $vegasLightGrey: #f2f2f2;
 $vegasGrey: #b7b7b7;
 $vegasMidGrey: #898989;
 $vegasDarkGrey: #363636;
-$vegasGold: #c2aa76;
-$vegasScheduleGold: #c6a657;
-$vegasLightGold: #dfcda4;
+$mplsPurple: #5491ce;
 
 // Root
 $bodyColor: $vegasLightGrey;
@@ -47,34 +45,34 @@ $textFontSize: 1em;
 
 // Typography
 $baseFont: 'Open Sans', sans-serif;
-$altFont: 'refrigerator-deluxe', sans-serif;
+$altFont: 'Brandon Grotesque', sans-serif;
 $brandon: 'Brandon Grotesque', sans-serif;
 $baseFontSize: 100%;
 $baselineHeight: 1.35em;
 $headingFont: $altFont;
 $headingLineHeight: 1.1;
 
-$h1Color: $vegasGold;
+$h1Color: $mplsPurple;
 $h1Size: 2em;
 $h1FontWeight: 300;
 
-$h2Color: $vegasGold;
+$h2Color: $mplsPurple;
 $h2Size: 1.75em;
 $h2FontWeight: 300;
 
-$h3Color: $vegasGold;
+$h3Color: $mplsPurple;
 $h3Size: 1.25em;
 $h3FontWeight: 300;
 
-$h4Color: $vegasGold;
+$h4Color: $mplsPurple;
 $h4Size: 1em;
 $h4FontWeight: 400;
 
-$h5Color: $vegasGold;
+$h5Color: $mplsPurple;
 $h5Size: 1em;
 $h5FontWeight: 400;
 
-$h6Color: $vegasGold;
+$h6Color: $mplsPurple;
 $h6Size: .875em;
 $h6FontWeight: 400;
 
@@ -82,7 +80,7 @@ $headingTextShadow: none;
 $codeFont: 'Source Code Pro', monospace;
 
 // Links
-$linkColor: $vegasGold;
+$linkColor: $mplsPurple;
 $linkHover: darken($linkColor,5%);
 $linkVisited: darken($linkColor,10%);
 $linkFocus: darken($linkColor,15%);
@@ -104,17 +102,17 @@ $textboxMaxWidth: 30em;
 $labelFontSize: 1.125em;
 $labelColor: $textColor;
 
-$buttonBackground: transparent;
+$buttonBackground: $mplsPurple;
 //$buttonBackground2: lighten($springDarkGrey, 10%); //Uncomment if you want a gradient background on a button. Also uncomment gradient in
-$buttonBorderColor: $vegasLightGold;
+$buttonBorderColor: $mplsPurple;
 $buttonBorderWidth: 2px;
 $buttonBorderStyle: solid;
-$buttonColor: $vegasGold;
+$buttonColor: white;
 $buttonOutlineColor: none;
 $buttonFont: $altFont;
 $buttonFontSize: 1em;
 $buttonFontWeight: bold;
-$buttonPadding: .625em 2em;
+$buttonPadding: .625em 2em .5em;
 
 $buttonAltBackground: $springDarkGrey;
 $buttonAltBackground2: $springLightGrey;

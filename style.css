@@ -247,10 +247,11 @@ h5,
 h6 {
   margin: 0;
   padding: 0;
-  font-family: "refrigerator-deluxe", sans-serif;
+  font-family: "Brandon Grotesque", sans-serif;
   line-height: 1.1;
   text-rendering: optimizeLegibility;
   text-shadow: none;
+  text-transform: uppercase;
 }
 h1 *,
 h2 *,
@@ -265,7 +266,7 @@ h1,
 .h1,
 .widget h3 {
   margin-bottom: 1rem;
-  color: #c2aa76;
+  color: #5491ce;
   font-size: 32px;
   font-size: 2rem;
   font-weight: 300;
@@ -279,7 +280,7 @@ h1 a,
 h2,
 .h2 {
   margin-bottom: 1rem;
-  color: #c2aa76;
+  color: #5491ce;
   font-size: 28px;
   font-size: 1.75rem;
   font-weight: 300;
@@ -292,7 +293,7 @@ h2 a,
 h3,
 .h3 {
   margin-bottom: 1rem;
-  color: #c2aa76;
+  color: #5491ce;
   font-size: 20px;
   font-size: 1.25rem;
   font-weight: 300;
@@ -305,7 +306,7 @@ h3 a,
 h4,
 .h4 {
   margin-bottom: 1rem;
-  color: #c2aa76;
+  color: #5491ce;
   font-size: 16px;
   font-size: 1rem;
   font-weight: 400;
@@ -318,7 +319,7 @@ h4 a,
 h5,
 .h5 {
   margin-bottom: 1rem;
-  color: #c2aa76;
+  color: #5491ce;
   font-size: 16px;
   font-size: 1rem;
   font-weight: 400;
@@ -378,14 +379,14 @@ blockquote {
   padding-left: 0;
   border-left: 0 solid #bfbfbf;
   color: gray;
-  font-family: "refrigerator-deluxe", sans-serif;
+  font-family: "Brandon Grotesque", sans-serif;
   font-size: 20px;
   font-size: 1.25rem;
   font-style: italic;
   font-weight: 200;
 }
 blockquote * {
-  font-family: "refrigerator-deluxe", sans-serif;
+  font-family: "Brandon Grotesque", sans-serif;
   font-size: 20px;
   font-size: 1.25rem;
   font-style: italic;
@@ -476,21 +477,21 @@ sub {
 
 /* LINKS */
 a {
-  color: #c2aa76;
+  color: #5491ce;
   text-decoration: none;
   cursor: pointer;
 }
 a:hover {
-  color: #ba9f64;
+  color: #4084c8;
   text-decoration: underline;
   border: 0;
   outline: 0;
 }
 a:visited {
-  color: #b29453;
+  color: #3577ba;
 }
 a:focus, a:active {
-  color: #a38649;
+  color: #306ba6;
   border: 0;
   outline: 0;
 }
@@ -638,11 +639,11 @@ input[type="reset"] {
   display: inline-block;
   width: auto;
   height: auto;
-  padding: 0.625em 2em;
-  background-color: transparent;
-  border: 2px solid #dfcda4;
-  color: #c2aa76;
-  font-family: "refrigerator-deluxe", sans-serif;
+  padding: 0.625em 2em 0.5em;
+  background-color: #5491ce;
+  border: 2px solid #5491ce;
+  color: white;
+  font-family: "Brandon Grotesque", sans-serif;
   font-size: 1em;
   font-weight: bold;
   cursor: pointer;
@@ -699,8 +700,8 @@ input[type="submit"]:hover,
 input[type="reset"]:active,
 input[type="reset"]:focus,
 input[type="reset"]:hover {
-  color: #c2aa76;
-  border: 2px solid #dfcda4;
+  color: white;
+  border: 2px solid #5491ce;
   outline-color: none;
   text-decoration: none;
 }
@@ -715,7 +716,7 @@ button:visited,
 input[type="button"]:visited,
 input[type="submit"]:visited,
 input[type="reset"]:visited {
-  color: #c2aa76;
+  color: white;
 }
 
 input[type="hidden"] {
@@ -1131,7 +1132,7 @@ body {
   display: block;
   position: relative;
   max-width: 15rem;
-  margin: 1rem auto;
+  margin: 4rem auto;
 }
 .header--blog-name .blog-name {
   position: absolute;
@@ -1144,7 +1145,7 @@ body:not(.home) .header--blog-name a {
 }
 
 .header--subtitle {
-  color: #c2aa76;
+  color: #5491ce;
   font-size: 1.25rem;
 }
 
@@ -1249,7 +1250,7 @@ body:not(.home) .header--blog-name a {
     letter-spacing: 6px;
   }
   .header--blog-name a {
-    max-width: 41.0625rem;
+    max-width: 28.5625rem;
   }
 
   body:not(.home) .header--blog-name a {
@@ -1318,7 +1319,7 @@ body:not(.home) .header--blog-name a {
   width: 100%;
   padding: 1rem 1.75rem 0;
   color: white;
-  font-family: "refrigerator-deluxe", sans-serif;
+  font-family: "Brandon Grotesque", sans-serif;
   font-size: 1.75em;
   font-weight: lighter;
   text-decoration: none;
@@ -1333,7 +1334,7 @@ body:not(.home) .header--blog-name a {
   color: white;
 }
 .nav-main a:hover, .nav-main a:active, .nav-main a:focus {
-  color: #c2aa76;
+  color: #5491ce;
 }
 .nav-main .close-menu-button {
   width: auto;
@@ -1419,7 +1420,7 @@ body:not(.home) .header--blog-name a {
   }
 }
 .home--title {
-  color: #c2aa76;
+  color: #5491ce;
   font-size: 1.375rem;
 }
 .home--title span {
@@ -1450,10 +1451,11 @@ body:not(.home) .header--blog-name a {
 
 .faux-paper--header {
   margin-bottom: 1em;
-  color: #c2aa76;
-  font-family: "refrigerator-deluxe", sans-serif;
+  color: #5491ce;
+  font-family: "Brandon Grotesque", sans-serif;
   font-size: 1.375rem;
   line-height: 1.35;
+  text-transform: uppercase;
 }
 
 @media only screen and (min-width: 30.5em) {
@@ -1480,7 +1482,7 @@ body:not(.home) .header--blog-name a {
 }
 .home--intro #mce-EMAIL:focus {
   outline: 0;
-  border-color: #c2aa76;
+  border-color: #5491ce;
 }
 
 .intro--hosted-in a {
@@ -1524,13 +1526,13 @@ body:not(.home) .header--blog-name a {
   padding: 0;
   background: #363636;
   font-family: "Brandon Grotesque", sans-serif;
-  color: #c2aa76;
+  color: #5491ce;
 }
 .home--speaker a {
   font-family: "Brandon Grotesque", sans-serif;
 }
 .home--speaker a:hover, .home--speaker a:active, .home--speaker a:visited, .home--speaker a:focus {
-  color: #c2aa76;
+  color: #5491ce;
 }
 .home--speaker .home--speaker--biography {
   display: none;
@@ -1556,7 +1558,7 @@ body:not(.home) .header--blog-name a {
   margin-bottom: 0;
   padding-left: 8px;
   font-weight: bold;
-  color: #c2aa76;
+  color: #5491ce;
 }
 
 @media only screen and (min-width: 48.5em) {
@@ -1633,7 +1635,7 @@ body:not(.home) .header--blog-name a {
   .arrow-left:hover, .arrow-left:active,
   .arrow-right:hover,
   .arrow-right:active {
-    color: #c2aa76;
+    color: #5491ce;
     text-decoration: none;
   }
 
@@ -1739,7 +1741,7 @@ body:not(.home) .header--blog-name a {
   position: relative;
   margin-bottom: .25em;
   padding-left: 2em;
-  color: #c6a657;
+  color: #5491ce;
   font-family: "Brandon Grotesque", sans-serif;
   text-transform: uppercase;
   z-index: 1;
@@ -1783,12 +1785,12 @@ body:not(.home) .header--blog-name a {
   transition: background-color 0.3s ease;
 }
 .session--start-time.skrollable-after:before {
-  background-color: #c6a657;
+  background-color: #5491ce;
 }
 
 .no-flexbox .session--start-time:before,
 .no-csstransitions .session--start-time:before {
-  background-color: #c6a657;
+  background-color: #5491ce;
 }
 
 .session--title {
@@ -1827,7 +1829,7 @@ body:not(.home) .header--blog-name a {
   top: 0;
   width: 100%;
   height: 100%;
-  background: #c6a657;
+  background: #5491ce;
 }
 
 .schedule--the-end {
@@ -1869,7 +1871,7 @@ body:not(.home) .header--blog-name a {
 }
 
 .the-end--text {
-  color: #c6a657;
+  color: #5491ce;
   font-family: "Brandon Grotesque", sans-serif;
   font-weight: bold;
   letter-spacing: 3px;
@@ -2005,12 +2007,12 @@ body:not(.home) .header--blog-name a {
     top: 1em;
   }
   .schedule--the-end.skrollable-after:before {
-    background-color: #c6a657;
+    background-color: #5491ce;
   }
 
   .no-flexbox .schedule--the-end:before,
   .no-csstransitions .schedule--the-end:before {
-    background-color: #c6a657;
+    background-color: #5491ce;
   }
 
   .the-end--text {
@@ -2083,8 +2085,8 @@ body:not(.home) .header--blog-name a {
 
 .quote--name {
   margin-top: 3.25rem;
-  color: #c2aa76;
-  font-family: "refrigerator-deluxe", sans-serif;
+  color: #5491ce;
+  font-family: "Brandon Grotesque", sans-serif;
   line-height: 1;
   text-transform: uppercase;
 }
@@ -2094,7 +2096,7 @@ body:not(.home) .header--blog-name a {
   width: 100px;
   margin: 1.5rem auto;
   height: 1px;
-  background: #c2aa76;
+  background: #5491ce;
 }
 
 .quote--read-more-link {
@@ -2147,7 +2149,7 @@ div.quote--read-more-content {
 .home--sponsors .header--description a {
   display: inline-block;
   margin: 2rem 0;
-  font-family: "refrigerator-deluxe", sans-serif;
+  font-family: "Brandon Grotesque", sans-serif;
   text-transform: uppercase;
 }
 
@@ -2167,7 +2169,7 @@ div.quote--read-more-content {
 .sponsors--list_wrapper h3 {
   margin-bottom: 2rem;
   color: #898989;
-  font-family: "refrigerator-deluxe", sans-serif;
+  font-family: "Brandon Grotesque", sans-serif;
   font-size: 1rem;
   text-transform: uppercase;
 }
@@ -2210,7 +2212,7 @@ div.quote--read-more-content {
 .sponsors--list_square .sponsor h6 {
   margin-bottom: .75rem;
   color: #898989;
-  font-family: "refrigerator-deluxe", sans-serif;
+  font-family: "Brandon Grotesque", sans-serif;
   font-size: 1rem;
   text-transform: uppercase;
 }
@@ -2231,7 +2233,7 @@ div.quote--read-more-content {
 .community-sponsor-list h6 {
   margin-bottom: .75rem;
   color: #898989;
-  font-family: "refrigerator-deluxe", sans-serif;
+  font-family: "Brandon Grotesque", sans-serif;
   font-size: 1rem;
   text-transform: uppercase;
 }
@@ -2274,7 +2276,7 @@ div.quote--read-more-content {
 }
 .tickets--header .header--description span {
   display: block;
-  color: #c2aa76;
+  color: #5491ce;
   font-size: .75em;
   font-weight: 700;
   text-transform: uppercase;
@@ -2330,7 +2332,7 @@ div.quote--read-more-content {
   -ms-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
   color: red;
-  font-family: "refrigerator-deluxe", sans-serif;
+  font-family: "Brandon Grotesque", sans-serif;
   font-size: 3em;
   text-transform: uppercase;
   font-weight: 700;
@@ -2366,13 +2368,13 @@ div.quote--read-more-content {
   width: 50%;
   height: 1px;
   margin: 1rem auto;
-  background: #c2aa76;
+  background: #5491ce;
 }
 
 .ticket--date {
   display: block;
   padding-bottom: .25rem;
-  color: #c2aa76;
+  color: #5491ce;
   font-size: .875rem;
 }
 
@@ -2383,7 +2385,7 @@ div.quote--read-more-content {
 
 .ticket--price {
   margin-top: 2rem;
-  color: #c2aa76;
+  color: #5491ce;
   font-size: 5.5em;
   font-weight: 300;
   text-align: center;
@@ -2456,7 +2458,7 @@ div.quote--read-more-content {
   .tickets--button_wrapper {
     text-align: left;
   }
-  .tickets--button_wrapper .alt {
+  .tickets--button_wrapper .button:nth-of-type(2), .tickets--button_wrapper .pmpro_btn:nth-of-type(2), .tickets--button_wrapper .pmpro_content_message a:nth-of-type(2), .pmpro_content_message .tickets--button_wrapper a:nth-of-type(2) {
     position: absolute;
     left: 0;
     bottom: -1rem;
@@ -2490,7 +2492,7 @@ div.quote--read-more-content {
 .home--map a {
   display: inline-block;
   margin-top: 1rem;
-  font-family: "refrigerator-deluxe", sans-serif;
+  font-family: "Brandon Grotesque", sans-serif;
   text-transform: uppercase;
 }
 
@@ -2835,7 +2837,7 @@ body:not(.home) .content--body {
   padding: 0 1rem 4rem;
   background: #333333;
   color: #909090;
-  font-family: "refrigerator-deluxe", sans-serif;
+  font-family: "Brandon Grotesque", sans-serif;
   letter-spacing: 2px;
   text-align: center;
   text-transform: uppercase;
@@ -2950,7 +2952,7 @@ body:not(.home) .content--body {
   text-align: center;
 }
 .speaker--metadata a {
-  font-family: "refrigerator-deluxe", sans-serif;
+  font-family: "Brandon Grotesque", sans-serif;
   text-transform: uppercase;
 }
 
@@ -3171,7 +3173,7 @@ body:not(.home) .content--body {
 
 .video--speaker--links {
   text-transform: uppercase;
-  font-family: "refrigerator-deluxe", sans-serif;
+  font-family: "Brandon Grotesque", sans-serif;
 }
 
 .past-videos .video:not(:last-child) {

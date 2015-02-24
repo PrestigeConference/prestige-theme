@@ -1,4 +1,4 @@
-<?php $activeConference = 'feb15'; ?>
+<?php $activeConference = 'aug15'; ?>
 
 <!-- INTRO -->
 <section class="home--intro faux-paper">
@@ -151,61 +151,36 @@
     </header>
     <section class="schedule--content">
         <time class="schedule--date">
-            Day 1: Friday, February 27:
+            Confirmed Sessions:
+            <!--Day 1: Friday, February 27:-->
         </time>
         <ul class="schedule--day-list">
+            <?php
+            $sessionQueryArgs = array('post_type' => 'Session',
+                'posts_per_page' => '100',
+                'category_name' => $activeConference);
+            $sessionQuery = new WP_Query( $sessionQueryArgs );
+
+            while($sessionQuery->have_posts()) : $sessionQuery->the_post(); ?>
             <li class="schedule--session">
                 <time data-center-center="" class="session--start-time">
-                    6:00-7:00 pm
+                    <?php the_field('time'); ?>
                 </time>
                 <section class="session--content">
                     <h3 class="session--title">
-                        Registration and Social Hour
-                    </h3>
-                </section>
-            </li>
-            <li class="schedule--session">
-                <time data-center-center="" class="session--start-time">
-                    7:00-8:00 pm
-                </time>
-                <section class="session--content">
-                    <h3 class="session--title">
-                        Why Here, Why Now?
+                        <?php the_title(); ?>
                     </h3>
                     <section class="session--speaker">
-                        Jake Goldman and Chris Lema
+                        <?php $speaker = get_field('session_speaker'); echo get_the_title( $speaker->ID ) . ', ' . get_field('job_title', $speaker->ID); ?>
                     </section>
                     <section class="session--description">
-                        "When I was a kid, my father would have guests over, and would point to me and say, 'Chris is going to sing now.’”<br>
-                        <br>
-                        Chris Lema quit a once in a lifetime academic opportunity in bioengineering to study social welfare. He become the “data guy” at Berkeley labs where he worked at the forefront of the Internet, then sold his first company for $10 million before he turned 30, and spent several years as an executive at an enterprise software company. Now he's the CTO of Crowd Favorite, one of the oldest agencies in the WordPress ecosystem, and a popular proponent of WordPress and its community. How did that happen?<br>
-                        <br>
-                        Maybe you know Chris for his rousing talks - what Jake Goldman calls his "sermons on the camp". Maybe you've stumbled upon his prolific blog, where he's managed to pump out content every single day for the last couple of years. You might admire his influence, and you might wonder, well, what’s in all of this for Chris? Why dedicate so much time and energy, and so many resources to the WordPress community?<br>
-                        <br>
-                        Jake Goldman, President & Founder of 10up, kicks off Prestige with an intimate interview with Chris Lema, exploring where he’s been, where he’s going, and why he’s betting on WordPress.
+                        <?php the_content(); ?>
                     </section>
                 </section>
             </li>
-            <li class="schedule--session">
-                <time data-center-center="" class="session--start-time">
-                    8:30-10:00 pm
-                </time>
-                <section class="session--content">
-                    <h3 class="session--title">
-                        Panel: Are WordPress products big business?
-                    </h3>
-                    <section class="session--speaker">
-                        Cory Miller, Ben Fox, Andrew Norcross, Jake Goldman (moderator)
-                    </section>
-                    <section class="session--description">
-                        WordPress is said to power 23% of the web’s top 10 million websites. Of identifiable CMS’s, its share is estimated at over 60%. But when was the last time you read about a WordPress product on TechCrunch or Bloomberg? By tech industry standards, how do our smashing successes measure up? Is the future in platforms and software as a service, and if so, how do WordPress product businesses factor in?<br>
-                        <br>
-                        Jake Goldman, President & Founder of 10up, sits down with Corey Miller - owner of one of the oldest and longest standing WordPress product companies, Ben Fox - a younger entrepreneur using WordPress as a jumping off point for SIDEKICK.pro, and Andrew Norcross - who sits at the intersection of agency services and products, for a provocative conversation about the WordPress product economy.
-                    </section>
-                </section>
-            </li>
+            <?php endwhile; ?>
         </ul>
-        <time class="schedule--date">
+        <!--<time class="schedule--date">
             Day 2: Saturday, February 28:
         </time>
         <ul class="schedule--day-list">
@@ -397,7 +372,7 @@
                     </section>
                 </section>
             </li>
-        </ul>
+        </ul>-->
         <section class="schedule--progress-line">
             <section class="schedule--progress-line_inner"
                      data-center-top="-webkit-transform: translate(0, -100%); transform: translate(0, -100%);"
@@ -636,7 +611,7 @@
                 <span>Tickets are transferrable but NOT refundable.</span>
             </section>
             <section class="tickets--button_wrapper">
-                <a class="button" href="/tickets/">Register Now</a> <a class="button alt" href="/purchase-past-videos/">Purchase Past Events</a>
+                <a class="button" href="/tickets/">Register Now</a> <a class="button" href="/purchase-past-videos/">Purchase Past Events</a>
             </section>
         </header>
         <section class="tickets--list_wrapper">

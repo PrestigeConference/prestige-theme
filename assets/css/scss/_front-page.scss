@@ -1,7 +1,7 @@
 
 
 .home--title {
-    color: $vegasGold;
+    color: $mplsPurple;
     font-size: (22rem/16);
 
     span {
@@ -55,10 +55,11 @@
 
 .faux-paper--header {
     margin-bottom: 1em;
-    color: $vegasGold;
+    color: $mplsPurple;
     font-family: $altFont;
     font-size: (22rem/16);
     line-height: 1.35;
+    text-transform: uppercase;
 }
 
 @media only screen and (min-width: #{$smallBreakpoint}) {

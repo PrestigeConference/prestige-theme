@@ -14,7 +14,7 @@
 
             span {
                 display: block;
-                color: $vegasGold;
+                color: $mplsPurple;
                 font-size: .75em;
                 font-weight: 700;
                 text-transform: uppercase;
@@ -116,14 +116,14 @@
                         width: 50%;
                         height: 1px;
                         margin: 1rem auto;
-                        background: $vegasGold;
+                        background: $mplsPurple;
                     }
                 }
 
                     .ticket--date {
                         display: block;
                         padding-bottom: .25rem;
-                        color: $vegasGold;
+                        color: $mplsPurple;
                         font-size: .875rem;
                     }
 
@@ -134,7 +134,7 @@
 
                 .ticket--price {
                     margin-top: 2rem;
-                    color: $vegasGold;
+                    color: $mplsPurple;
                     font-size: 5.5em;
                     font-weight: 300;
                     text-align: center;
@@ -203,7 +203,7 @@
     .tickets--button_wrapper {
         text-align: left;
 
-        .alt {
+        .button:nth-of-type(2) {
             position: absolute;
             left: 0;
             bottom: -1rem;
