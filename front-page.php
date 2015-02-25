@@ -392,8 +392,11 @@
                     <h3 class="session--title">
                         After Party
                     </h3>
+                    <section class="session--speaker"></section>
                     <section class="session--description">
-
+                        Gold Spike<br>
+                        217 Las Vegas Blvd North, Las Vegas, NV 89101<br>
+                        <a href="https://www.google.com/maps/place/217+N+Las+Vegas+Blvd,+Las+Vegas,+NV+89101/@36.1709571,-115.1397611,17z/data=!3m1!4b1!4m2!3m1!1s0x80c8c3753414c675:0xc552381b3f35510">Directions</a>
                     </section>
                 </section>
             </li>
