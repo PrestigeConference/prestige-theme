@@ -1,7 +1,7 @@
 .header-main {
     position: relative;
     padding-bottom: 4rem;
-    background: url(assets/img/header-bg_tile.jpg) repeat center top;
+    background: url(assets/img/header-bg_mobile.jpg) no-repeat center top;
 }
 
 body:not(.home) {
@@ -202,9 +202,11 @@ body:not(.home) {
 
 
 @media only screen and (min-width: #{$midBreakpoint}) {
+    .header-main {
+        background-image: url(assets/img/header-bg_1920.jpg);
+    }
 
     .sponsors--menu-button_wrapper {
-
         .primary-sponsors a {
             height: 1.5rem;
             margin-right: 1rem;
@@ -315,4 +317,7 @@ body:not(.home) {
 
 
 @media only screen and (min-width: #{$widescreenBreakpoint}) {
+    .header-main {
+        background-size: cover;
+    }
 }

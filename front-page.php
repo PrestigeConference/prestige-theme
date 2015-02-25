@@ -20,7 +20,7 @@
                 </div>
             </section>
             <section class="intro--hosted-in">
-                Hosted by <a href="http://innevation.com">Innevation</a> and <a href="http://9seeds.com">9seeds</a> in Las Vegas, Nevada and streamed live wherever you are.
+                Hosted by <a href="http://ingroupconsulting.com/">InGroup Consulting</a> and <a href="http://westwerk.com">Westwerk</a> in Minneapolis, Minnesota and streamed live wherever you are.
             </section>
         </section>
     </div>
@@ -593,8 +593,8 @@
         <header class="faux-paper--header">
             Location
         </header>
-        Prestige Conference Las Vegas will be held at <strong>The Innevation Center</strong>.<br>
-        <a target="_blank" href="https://www.google.com/maps/place/The+Innevation+Center,+Powered+by+SUPERNAP/@36.066639,-115.213307,17z/data=!3m1!4b1!4m2!3m1!1s0x80c8c63d8de58c57:0x4f1c35e8f68b2e74">Get Directions</a>
+        Prestige Conference Minneapolis 2015 will be held at <strong>St. Thomas Minneapolis Campus</strong>.<br>
+        <a target="_blank" href="https://www.google.com/maps/place/Schulze+Hall,+University+of+St.+Thomas+-+Minneapolis+Campus,+46+S+11th+St,+Minneapolis,+MN+55403/@44.9742921,-93.2776462,17z/data=!3m1!4b1!4m2!3m1!1s0x52b332944c4be609:0xb98e7bf839108fa1">Get Directions</a>
     </section>
 </section>
 
@@ -618,26 +618,28 @@
             <ul class="tickets--list">
                 <li class="ticket">
                     <h2 class="ticket--title">
-                        <span class="ticket--date">Feb 27th-28th</span>
-                        Saturday Conference + Friday Night Panel
+                        <span class="ticket--date">Aug 1st-2nd</span>
+                        Early-Bird<br>
+                        Saturday + Sunday Conference
                     </h2>
                     <section class="ticket--description">
                         Includes lunch, swag, Saturday ticket, Saturday after party, and the Friday night business panel. Ticket includes access to stream all videos for 6 months on the Prestige Conference website.
                     </section>
                     <section class="ticket--price">
-                        $199
+                        $149
                     </section>
                 </li>
                 <li class="ticket">
                     <h2 class="ticket--title">
-                        <span class="ticket--date">Feb 27th-28th</span>
+                        <span class="ticket--date">Aug 1st-2nd</span>
+                        Early-Bird<br>
                         Prestige Streaming Ticket
                     </h2>
                     <section class="ticket--description">
                         Streaming ticket to the event as well as access to stream all videos for 6 months on the Prestige Conference website.
                     </section>
                     <section class="ticket--price">
-                        $69
+                        $49
                     </section>
                 </li>
             </ul>

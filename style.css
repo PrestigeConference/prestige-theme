@@ -1013,7 +1013,7 @@ body {
 .header-main {
   position: relative;
   padding-bottom: 4rem;
-  background: url(assets/img/header-bg_tile.jpg) repeat center top;
+  background: url(assets/img/header-bg_mobile.jpg) no-repeat center top;
 }
 
 .sponsors--menu-button_wrapper {
@@ -1192,6 +1192,10 @@ body:not(.home) .header--blog-name a {
   }
 }
 @media only screen and (min-width: 48.5em) {
+  .header-main {
+    background-image: url(assets/img/header-bg_1920.jpg);
+  }
+
   .sponsors--menu-button_wrapper .primary-sponsors a {
     height: 1.5rem;
     margin-right: 1rem;
@@ -1292,6 +1296,11 @@ body:not(.home) .header--blog-name a {
 @media only screen and (min-width: 1216px) {
   .prestige-logo_small {
     padding-left: 0;
+  }
+}
+@media only screen and (min-width: 83.5em) {
+  .header-main {
+    background-size: cover;
   }
 }
 .nav-main {
