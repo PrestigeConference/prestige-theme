@@ -156,7 +156,7 @@
         <ul class="schedule--day-list">
             <li class="schedule--session">
                 <time data-center-center="" class="session--start-time">
-                    6:00-7:00 pm
+                    6:00-7:30 pm
                 </time>
                 <section class="session--content">
                     <h3 class="session--title">
@@ -166,29 +166,7 @@
             </li>
             <li class="schedule--session">
                 <time data-center-center="" class="session--start-time">
-                    7:00-8:00 pm
-                </time>
-                <section class="session--content">
-                    <h3 class="session--title">
-                        Why Here, Why Now?
-                    </h3>
-                    <section class="session--speaker">
-                        Jake Goldman and Chris Lema
-                    </section>
-                    <section class="session--description">
-                        "When I was a kid, my father would have guests over, and would point to me and say, 'Chris is going to sing now.’”<br>
-                        <br>
-                        Chris Lema quit a once in a lifetime academic opportunity in bioengineering to study social welfare. He become the “data guy” at Berkeley labs where he worked at the forefront of the Internet, then sold his first company for $10 million before he turned 30, and spent several years as an executive at an enterprise software company. Now he's the CTO of Crowd Favorite, one of the oldest agencies in the WordPress ecosystem, and a popular proponent of WordPress and its community. How did that happen?<br>
-                        <br>
-                        Maybe you know Chris for his rousing talks - what Jake Goldman calls his "sermons on the camp". Maybe you've stumbled upon his prolific blog, where he's managed to pump out content every single day for the last couple of years. You might admire his influence, and you might wonder, well, what’s in all of this for Chris? Why dedicate so much time and energy, and so many resources to the WordPress community?<br>
-                        <br>
-                        Jake Goldman, President & Founder of 10up, kicks off Prestige with an intimate interview with Chris Lema, exploring where he’s been, where he’s going, and why he’s betting on WordPress.
-                    </section>
-                </section>
-            </li>
-            <li class="schedule--session">
-                <time data-center-center="" class="session--start-time">
-                    8:30-10:00 pm
+                    7:30-10:00 pm
                 </time>
                 <section class="session--content">
                     <h3 class="session--title">
@@ -362,15 +340,19 @@
                 </time>
                 <section class="session--content">
                     <h3 class="session--title">
-                        Mining Lessons from the Commercial Plugin Gold Rush
+                        Why Here, Why Now?
                     </h3>
                     <section class="session--speaker">
-                        Carl Hancock, Owner Rocket Genius
+                        Jake Goldman and Chris Lema
                     </section>
                     <section class="session--description">
-                        Since 2007, Rocketgenius has been specializing in extending WordPress, especially through their flagship product: Gravity Forms. Carl Hancock, founder of Rocketgenius, joins us for an interview to dig into the business background of their commercial plugin success.<br>
+                        "When I was a kid, my father would have guests over, and would point to me and say, 'Chris is going to sing now.’”<br>
                         <br>
-                        If you heard Carl on our expert business panel in Minneapolis last year, you know he’s full of great information that can help other entrepreneurs grow their business. In Vegas, we’re dedicating an entire session to interviewing him about the organization design, revenue perspective, and profitably of Rocketgenius to answer the question - are WordPress products really the gold rush some people make them out to be?
+                        Chris Lema quit a once in a lifetime academic opportunity in bioengineering to study social welfare. He become the “data guy” at Berkeley labs where he worked at the forefront of the Internet, then sold his first company for $10 million before he turned 30, and spent several years as an executive at an enterprise software company. Now he's the CTO of Crowd Favorite, one of the oldest agencies in the WordPress ecosystem, and a popular proponent of WordPress and its community. How did that happen?<br>
+                        <br>
+                        Maybe you know Chris for his rousing talks - what Jake Goldman calls his "sermons on the camp". Maybe you've stumbled upon his prolific blog, where he's managed to pump out content every single day for the last couple of years. You might admire his influence, and you might wonder, well, what’s in all of this for Chris? Why dedicate so much time and energy, and so many resources to the WordPress community?<br>
+                        <br>
+                        Jake Goldman, President & Founder of 10up, finishes up Prestige with an intimate interview with Chris Lema, exploring where he’s been, where he’s going, and why he’s betting on WordPress.
                     </section>
                 </section>
             </li>
