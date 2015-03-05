@@ -56,16 +56,16 @@
                         </a>-->
                         <a href="http://westwerk.com">
                             <span data-picture data-alt="Westwerk">
-                                <span data-src="<?php /*echo get_template_directory_uri(); */?>/assets/img/sponsor-logos/westwerk-logo_header.png"></span>
-                                <span data-src="<?php /*echo get_template_directory_uri(); */?>/assets/img/sponsor-logos/westwerk-logo_header_2x.png"  data-media="(-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)"></span>
+                                <span data-src="<?php echo get_template_directory_uri(); ?>/assets/img/sponsor-logos/westwerk-logo_header.png"></span>
+                                <span data-src="<?php echo get_template_directory_uri(); ?>/assets/img/sponsor-logos/westwerk-logo_header_2x.png"  data-media="(-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)"></span>
                                 <noscript>
-                                    <img src="<?php /*echo get_template_directory_uri(); */?>/assets/img/sponsor-logos/westwerk-logo_header.png" alt="Westwerk">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sponsor-logos/westwerk-logo_header.png" alt="Westwerk">
                                 </noscript>
                             </span>
                         </a>
 
                         <span class="sponsors--presents">
-                            Present:
+                            Presents:
                         </span>
                     </section>
                 </div>

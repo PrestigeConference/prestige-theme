@@ -20,7 +20,7 @@
                 </div>
             </section>
             <section class="intro--hosted-in">
-                Hosted by <a href="http://ingroupconsulting.com/">InGroup Consulting</a> and <a href="http://westwerk.com">Westwerk</a> in Minneapolis, Minnesota and streamed live wherever you are.
+                Hosted by <a href="http://westwerk.com">Westwerk</a> and <a href="http://ingroupconsulting.com/">InGroup Consulting</a> in Minneapolis, Minnesota and streamed live wherever you are.
             </section>
         </section>
     </div>
@@ -95,7 +95,7 @@
             Our Speakers
         </h1>
         <section class="header--description">
-            Instead of many tracks filled with volunteer speakers, we've scoured the WordPress community for some of the very best speakers and are paying for their travel to come and speak in Las Vegas. What does that mean for you? You'll have a day full of great sessions on managing a business and your career.
+            Instead of many tracks filled with volunteer speakers, we've scoured the digital marketplace for some of the very best speakers and are paying for their travel to come and speak in Minneapolis. What does that mean for you? You'll have a day full of great sessions on managing a business and your career.
             <section class="header--biography_wrapper" id="headerBiography"></section>
         </section>
         <nav class="home--speakers--nav">
@@ -379,7 +379,47 @@
                      data-center-bottom="-webkit-transform: translate(0, 0); transform: translate(0, 0);"></section>
         </section>
         <section class="schedule--the-end" data-center-top="">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/prestige-vegas.svg" alt="Prestige Conference Las Vegas" />
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 140.312 58.188" enable-background="new 0 0 140.312 115.188" xml:space="preserve">
+
+
+                                <path class="schedule--building" d="M11.4,53.047
+                    c3.426,1.566,14.093,3.286,14.093,3.286l-0.236-15.329l-6.639-1.599l-2.776,2.132v7.51L11.4,45.53l-3.337,3.517v5.238"/>
+                <path class="schedule--building" d="
+                    M55.168,37.508V15.422l-1.23-0.673l-0.002-3.216l1.653-0.981v-0.404c-1.39-0.26-3.351-0.528-5.516-0.528
+                    c-2.166,0-4.125,0.268-5.517,0.528v0.404l1.655,0.981v3.216L44.894,15.2v18.471"/>
+                <path class="schedule--building" d="
+                    M54.341,14.924c-1.076-0.202-2.593-0.409-4.268-0.409c-1.676,0-3.192,0.207-4.269,0.409"/>
+                <path class="schedule--building" d="
+                    M49.637,56.968c0.037-0.605-0.016-7.865-0.016-7.865l-13.057-2V36.886l-1.704-3.508l-1.103-8.521l-0.999,8.521l-1.81,3.508v10.036
+                    l-3.205-0.282v8.931"/>
+                <path class="schedule--building" d="M18.284,52.284
+                    c0-2.239,0-0.87,0-15.597l5.187,1.484v2.402"/>
+                <path class="schedule--building" d="M31.166,53.747
+                    c0,0,3.531,0.67,8.824,0.799V37.155l4.865-1.243l5.055,1.243v2.732l5.238,0.947v13.586l-3.132,0.178v-7.863l-7.161-1.214v-6.474"/>
+                <path class="schedule--building" d="M48.044,19.322
+                    c0,0,4.747-0.939,10.077,0.956c0,1.184,0,31.029,0,31.029l9.481-1.955l4.494,2.625v2.528c0,0-10.179,1.421-10.711,1.421
+                    c0-1.303,0-26.529,0-26.529l2.013-1.599v-1.627l4.382-2.309l6.211,3.758v2.783l1.836,1.362v21.186"/>
+                <path class="schedule--building" d="
+                    M67.603,21.422V8.672l3.398-2.754l4.826-1.155l7.609,2.491v36.147l4.536-1.355l5.813,2.625c0,0,0,5.353,0,5.906
+                    c-1.673,0.553-13.48,2.666-13.48,2.666V2.672l-4.451-1.484l-4.941,1.155v20.452"/>
+                <path class="schedule--building" d="M67.603,27.236V46.64
+                    "/>
+                <path class="schedule--building" d="M93.784,22.588V41.73
+                    l-3.509-1.437V27.947"/>
+                <path class="schedule--building" d="M103.333,53.333
+                    v-15.79l6.077-3.204v16.528l-2.879,0.533V39.585l7.462-4.081l4.529,2.417v14.078l-4.885,0.356V39.297"/>
+                <path class="schedule--building" d="M96.694,24.588
+                    v25.848c0,0,1.891-0.317,3.76-0.73V26.792l-1.126-1.32v-2.219l-1.284-1.582v-2.075l-1.149-0.977v-1.954L93.159,15.6v1.447
+                    l-1.206,1.76v1.696l-1.978,1.894v1.51l-2.003,1.972v13.668"/>
+                <path class="schedule--building" d="M116.301,38.623"/>
+                <path class="schedule--building" d="M113.636,27.15v4.938
+                    l-2.309,1.244v-7.781l2.309-1.155l4.885,3.731v6.42l4.264,2.655v12.154h6.129v-4.264l5.685,1.954v7.536"/>
+                <path class="schedule--building" d="M113.636,19.955
+                    v3.997"/>
+                <path class="schedule--building" d="M117.012,26.64v-3.49
+                    "/>
+                </svg>
             <section class="the-end--text">
                 The End
             </section>
@@ -607,7 +647,7 @@
                 Event Tickets
             </h1>
             <section class="header--description">
-                Two days of learning from the very best speakers the WordPress business community has to offer.
+                Two days of learning from the very best speakers the digital marketplace has to offer.
                 <span>Tickets are transferrable but NOT refundable.</span>
             </section>
             <section class="tickets--button_wrapper">
@@ -623,7 +663,7 @@
                         Saturday + Sunday Conference
                     </h2>
                     <section class="ticket--description">
-                        Includes lunch, swag, Saturday ticket, Saturday after party, and the Friday night business panel. Ticket includes access to stream all videos for 6 months on the Prestige Conference website.
+                        Saturday & Sunday Full Conference Pass - Includes full day pass for Saturday & Sunday, lunch both days, swag, & Saturday after party. Ticket includes access to stream all videos for 6 months on the Prestige Conference website.
                     </section>
                     <section class="ticket--price">
                         $149

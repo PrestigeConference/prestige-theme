@@ -1,4 +1,4 @@
-<?php $activeConference = 'feb15'; ?>
+<?php $activeConference = 'Aug15'; ?>
 <div class="widget">
 <h3>Our Sponsors</h3>
 <?php

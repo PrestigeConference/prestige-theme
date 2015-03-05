@@ -1,5 +1,5 @@
 /*--
-    Theme Name:  Westwerk's Las Vegas Theme
+    Theme Name:  Broty's Minneapolis 2015 Theme
     Theme URI:  http: //www.github.com/PrestigeConference/prestige-theme
     Description:  Theme for Prestige Conference
     Author:  Prestige Conference Team
@@ -1850,7 +1850,7 @@ body:not(.home) .header--blog-name a {
   padding-top: 8rem;
   background: #f2f2f2;
 }
-.schedule--the-end img {
+.schedule--the-end svg {
   position: absolute;
   left: 0;
   right: 0;
