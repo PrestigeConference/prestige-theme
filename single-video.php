@@ -22,13 +22,19 @@
             </h2>
         <?php endif; ?>
         <section class="video--content">
-            <?php if(get_field('full_video_available_to_public') || pmpro_hasMembershipLevel(array(1,2,3))): ?>
+            <?php
+            if(get_field('location') == 'Minneapolis') {
+                $membershipLevels = array(1,2,3,9);
+            } else {
+                $membershipLevels = array(7,8,9,10);
+            }
+            if(get_field('full_video_available_to_public') || pmpro_hasMembershipLevel($membershipLevels)): ?>
                 <section class="youtube">
                     <?php the_field('full_video_embed_code'); ?>
                 </section>
             <?php else: ?>
                 <section class="signup preview">
-                    Please <a href="/wp-login.php">login</a> to view the full video, or <a href="/purchase-past-videos/">purchase access to past videos</a>.
+                    Please <a href="/wp-login.php">login</a> to view the full video<!--, or <a href="/purchase-past-videos/">purchase access to past videos</a>-->.
                 </section>
                 <section class="youtube preview">
                     <?php the_field('preview_video_embed_code'); ?>
@@ -40,6 +46,78 @@
             <section class="video--metadata">
                 <?php
                 $post_object = get_field('speaker');
+                if($post_object) :
+                    $post = $post_object;
+                    setup_postdata($post);
+                    ?>
+                    <section class="video--speaker">
+                        <section class="video--speaker--picture">
+                            <?php if(has_post_thumbnail()) : the_post_thumbnail(); endif; ?>
+                        </section>
+                        <section class="video--speaker--content">
+                            <h3 class="video--speaker--name">
+                                <?php the_title(); ?>
+                            </h3>
+                            <section class="video--speaker--links">
+                                <a href="http://www.twitter.com/<?php the_field('twitter'); ?>">@<?php the_field('twitter'); ?></a>
+                                | <a href="<?php the_field('url'); ?>">website</a>
+                            </section>
+                        </section>
+                    </section>
+                    <?php
+                    wp_reset_postdata();
+                endif;
+                ?>
+                <?php
+                $post_object = get_field('speaker_2');
+                if($post_object) :
+                    $post = $post_object;
+                    setup_postdata($post);
+                    ?>
+                    <section class="video--speaker">
+                        <section class="video--speaker--picture">
+                            <?php if(has_post_thumbnail()) : the_post_thumbnail(); endif; ?>
+                        </section>
+                        <section class="video--speaker--content">
+                            <h3 class="video--speaker--name">
+                                <?php the_title(); ?>
+                            </h3>
+                            <section class="video--speaker--links">
+                                <a href="http://www.twitter.com/<?php the_field('twitter'); ?>">@<?php the_field('twitter'); ?></a>
+                                | <a href="<?php the_field('url'); ?>">website</a>
+                            </section>
+                        </section>
+                    </section>
+                    <?php
+                    wp_reset_postdata();
+                endif;
+                ?>
+                <?php
+                $post_object = get_field('speaker_3');
+                if($post_object) :
+                    $post = $post_object;
+                    setup_postdata($post);
+                    ?>
+                    <section class="video--speaker">
+                        <section class="video--speaker--picture">
+                            <?php if(has_post_thumbnail()) : the_post_thumbnail(); endif; ?>
+                        </section>
+                        <section class="video--speaker--content">
+                            <h3 class="video--speaker--name">
+                                <?php the_title(); ?>
+                            </h3>
+                            <section class="video--speaker--links">
+                                <a href="http://www.twitter.com/<?php the_field('twitter'); ?>">@<?php the_field('twitter'); ?></a>
+                                | <a href="<?php the_field('url'); ?>">website</a>
+                            </section>
+                        </section>
+                    </section>
+                    <?php
+                    wp_reset_postdata();
+                endif;
+                ?>
+                <?php
+                $post_object = get_field('speaker_4');
                 if($post_object) :
                     $post = $post_object;
                     setup_postdata($post);

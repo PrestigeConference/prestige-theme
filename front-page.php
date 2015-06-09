@@ -421,7 +421,7 @@
                     "/>
                 </svg>
             <section class="the-end--text">
-                The End
+                <!--The End-->More to Come
             </section>
         </section>
     </section>

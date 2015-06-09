@@ -37,8 +37,10 @@
 .video--speaker {
     @include flexbox();
     @include flexbox-align-items(center);
-    margin-top: 3em;
     background: $siteMidGrey;
+    &:first-child {
+        margin-top: 3em;
+    }
 }
 
     .video--speaker--picture {

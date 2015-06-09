@@ -48,6 +48,14 @@ $sponsorQuery = new WP_Query( $sponsorQueryArgs ); ?>
                 <img src="<?php the_field('square_image_for_homepage') ?>" alt="<?php the_title(); ?>" />
             </li>
         <?php endif; endwhile; ?>
+    <?php  while($sponsorQuery->have_posts()) : $sponsorQuery->the_post(); ?>
+        <?php $sponsorshipLevel = get_field('sponsorship_level');
+        if($sponsorshipLevel == 'Afterparty') : ?>
+            <li class="sponsor">
+                <h6>Afterparty</h6>
+                <img src="<?php the_field('square_image_for_homepage') ?>" alt="<?php the_title(); ?>" />
+            </li>
+        <?php endif; endwhile; ?>
     </ul>
 </section>
 </div>

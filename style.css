@@ -3156,8 +3156,10 @@ body:not(.home) .content--body {
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
-  margin-top: 3em;
   background: #efefef;
+}
+.video--speaker:first-child {
+  margin-top: 3em;
 }
 
 .video--speaker--picture {
