@@ -151,8 +151,7 @@
     </header>
     <section class="schedule--content">
         <time class="schedule--date">
-            Confirmed Sessions:
-            <!--Day 1: Friday, February 27:-->
+            Day 1: Saturday, August 1:
         </time>
         <ul class="schedule--day-list">
             <?php
@@ -161,29 +160,63 @@
                 'category_name' => $activeConference);
             $sessionQuery = new WP_Query( $sessionQueryArgs );
 
-            while($sessionQuery->have_posts()) : $sessionQuery->the_post(); ?>
-            <li class="schedule--session">
-                <time data-center-center="" class="session--start-time">
-                    <?php the_field('time'); ?>
-                </time>
-                <section class="session--content">
-                    <h3 class="session--title">
-                        <?php the_title(); ?>
-                    </h3>
-                    <section class="session--speaker">
-                        <?php $speaker = get_field('session_speaker'); echo get_the_title( $speaker->ID ) . ', ' . get_field('job_title', $speaker->ID); ?>
+            while($sessionQuery->have_posts()) : $sessionQuery->the_post();
+                $day = get_field('day');
+                if($day == 'Sat') : ?>
+                <li class="schedule--session">
+                    <time data-center-center="" class="session--start-time">
+                        <?php the_field('time'); ?> CST
+                    </time>
+                    <section class="session--content">
+                        <h3 class="session--title">
+                            <?php the_title(); ?>
+                        </h3>
+                        <section class="session--speaker">
+                            <?php if(get_field('time') == '11:00 - 11:45') {
+                                echo 'Nick Pelton &amp; Travis Totz, Partners, Westwerk';
+                            } else {
+                                $speaker = get_field('session_speaker');
+                                if($speaker) { echo get_the_title( $speaker->ID ) . ', ' . get_field('job_title', $speaker->ID); }
+                            }
+                            ?>
+                        </section>
+                        <section class="session--description">
+                            <?php the_field('session_description'); ?>
+                        </section>
                     </section>
-                    <section class="session--description">
-                        <?php the_content(); ?>
-                    </section>
-                </section>
-            </li>
+                </li>
+                <?php endif; ?>
             <?php endwhile; ?>
         </ul>
-        <!--<time class="schedule--date">
-            Day 2: Saturday, February 28:
+        <time class="schedule--date">
+            Day 2: Sunday, August 2:
         </time>
         <ul class="schedule--day-list">
+            <?php
+            while($sessionQuery->have_posts()) : $sessionQuery->the_post();
+                $day = get_field('day');
+                if($day == 'Sun') : ?>
+                    <li class="schedule--session">
+                        <time data-center-center="" class="session--start-time">
+                            <?php the_field('time'); ?> CST
+                        </time>
+                        <section class="session--content">
+                            <h3 class="session--title">
+                                <?php the_title(); ?>
+                            </h3>
+                            <section class="session--speaker">
+                                <?php $speaker = get_field('session_speaker');
+                                if($speaker) { echo get_the_title( $speaker->ID ) . ', ' . get_field('job_title', $speaker->ID); } ?>
+                            </section>
+                            <section class="session--description">
+                                <?php the_field('session_description'); ?>
+                            </section>
+                        </section>
+                    </li>
+                <?php endif; ?>
+            <?php endwhile; ?>
+        </ul>
+        <!--<ul class="schedule--day-list">
             <li class="schedule--session">
                 <time data-center-center="" class="session--start-time">
                     8:00-8:30 am
@@ -421,7 +454,7 @@
                     "/>
                 </svg>
             <section class="the-end--text">
-                <!--The End-->More to Come
+                The End
             </section>
         </section>
     </section>
@@ -498,6 +531,22 @@
                     </ul>
                 </section>
             <?php endif;
+            if($afterparty > 0) : ?>
+                <section class="sponsors--list_wrapper primary_wrapper">
+                    <h3>Afterparty Sponsor</h3>
+                    <ul class="sponsors--list primary">
+                        <?php while($sponsorQuery->have_posts()) : $sponsorQuery->the_post(); ?>
+                            <?php $sponsorshipLevel = get_field('sponsorship_level');
+                            if($sponsorshipLevel == 'Afterparty') : ?>
+                                <li class="sponsor">
+                                    <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
+                                        <?php the_post_thumbnail(); ?>
+                                    </a>
+                                </li>
+                            <?php endif; endwhile; ?>
+                    </ul>
+                </section>
+            <?php endif;
             if($gold > 0) : ?>
                 <section class="sponsors--list_wrapper gold_wrapper">
                     <h3>Gold Sponsors</h3>
@@ -548,19 +597,7 @@
             <section class="sponsors--list_wrapper other-sponsors_wrapper">
                 <ul class="sponsors--list sponsors--list_square">
 
-                <?php if($afterparty > 0) : ?>
-                    <?php  while($sponsorQuery->have_posts()) : $sponsorQuery->the_post(); ?>
-                        <?php $sponsorshipLevel = get_field('sponsorship_level');
-                        if($sponsorshipLevel == 'Afterparty') : ?>
-                            <li class="sponsor">
-                                <h6>Afterparty Sponsor</h6>
-                                <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
-                                    <img src="<?php the_field('square_image_for_homepage') ?>" alt="<?php the_title(); ?>" />
-                                </a>
-                            </li>
-                        <?php endif; endwhile; ?>
-                <?php endif;
-                if($design > 0) : ?>
+                <?php if($design > 0) : ?>
                     <?php  while($sponsorQuery->have_posts()) : $sponsorQuery->the_post(); ?>
                         <?php $sponsorshipLevel = get_field('sponsorship_level');
                         if($sponsorshipLevel == 'Design') : ?>
@@ -666,7 +703,7 @@
                         Saturday & Sunday Full Conference Pass - Includes full day pass for Saturday & Sunday, lunch both days, swag, & Saturday after party. Ticket includes access to stream all videos for 6 months on the Prestige Conference website.
                     </section>
                     <section class="ticket--price">
-                        $149
+                        $249
                     </section>
                 </li>
                 <li class="ticket">
@@ -679,7 +716,7 @@
                         Streaming ticket to the event as well as access to stream all videos for 6 months on the Prestige Conference website.
                     </section>
                     <section class="ticket--price">
-                        $49
+                        $79
                     </section>
                 </li>
             </ul>

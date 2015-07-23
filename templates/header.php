@@ -36,16 +36,16 @@
                         <a href="/"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png 1x <?php echo get_template_directory_uri(); ?>/assets/img/logo_2x.png 2x" alt="Prestige Conference" /></a>
                     </section>
                     <section class="primary-sponsors">
-                        <!--<a href="http://gravityforms.com">
+                        <a href="http://gravityforms.com">
                             <span data-picture data-alt="Gravity Forms">
-                                <span data-src="<?php /*echo get_template_directory_uri(); */?>/assets/img/sponsor-logos/gravity-forms-logo_header.png"></span>
-                                <span data-src="<?php /*echo get_template_directory_uri(); */?>/assets/img/sponsor-logos/gravity-forms-logo_header_2x.png"  data-media="(-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)"></span>
+                                <span data-src="<?php echo get_template_directory_uri(); ?>/assets/img/sponsor-logos/gravity-forms-logo_header.png"></span>
+                                <span data-src="<?php echo get_template_directory_uri(); ?>/assets/img/sponsor-logos/gravity-forms-logo_header_2x.png"  data-media="(-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)"></span>
                                 <noscript>
-                                    <img src="<?php /*echo get_template_directory_uri(); */?>/assets/img/sponsor-logos/gravity-forms-logo_header.png" alt="Gravity Forms">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sponsor-logos/gravity-forms-logo_header.png" alt="Gravity Forms">
                                 </noscript>
                             </span>
                         </a>
-                        <a href="http://wpengine.com">
+                        <!--<a href="http://wpengine.com">
                             <span data-picture data-alt="WP Engine">
                                 <span data-src="<?php /*echo get_template_directory_uri(); */?>/assets/img/sponsor-logos/wpengine-logo_header.png"></span>
                                 <span data-src="<?php /*echo get_template_directory_uri(); */?>/assets/img/sponsor-logos/wpengine-logo_header_2x.png"  data-media="(-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)"></span>
