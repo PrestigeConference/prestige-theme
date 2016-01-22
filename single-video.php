@@ -23,10 +23,10 @@
         <?php endif; ?>
         <section class="video--content">
             <?php
-            if(get_field('location') == 'Minneapolis') {
-                $membershipLevels = array(1,2,3,9);
+            if(has_category('Aug15')) {
+                $membershipLevels = array(3,10);
             } else {
-                $membershipLevels = array(7,8,9,10);
+                $membershipLevels = array(3);
             }
             if(get_field('full_video_available_to_public') || pmpro_hasMembershipLevel($membershipLevels)): ?>
                 <section class="youtube">

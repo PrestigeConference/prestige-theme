@@ -1,11 +1,12 @@
-<?php $activeConference = 'Aug15'; ?>
-<div class="widget">
-<h3>Our Sponsors</h3>
+<?php $activeConference = 'may16'; ?>
 <?php
 $sponsorQueryArgs = array('post_type' => 'Sponsor',
     'posts_per_page' => '100',
     'category_name' => $activeConference);
-$sponsorQuery = new WP_Query( $sponsorQueryArgs ); ?>
+$sponsorQuery = new WP_Query( $sponsorQueryArgs );
+if($sponsorQuery->have_posts()) : ?>
+<div class="widget">
+    <h3>Our Sponsors</h3>
 
 <section class="sponsors--list_wrapper other-sponsors_wrapper">
     <ul class="sponsors--list sponsors--list_square">
@@ -61,4 +62,5 @@ $sponsorQuery = new WP_Query( $sponsorQueryArgs ); ?>
     </ul>
 </section>
 </div>
+<?php endif; ?>
 <?php dynamic_sidebar('sidebar-primary'); ?>

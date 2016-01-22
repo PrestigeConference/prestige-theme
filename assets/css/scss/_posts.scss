@@ -24,11 +24,14 @@
     }
 
     .post--byline {
-        @include rem-px('margin', 0, 0, .75rem, 0);
+        @include rem-px('margin', .5rem, 0, 1rem, 0);
         font-style: italic;
+        color: lighten($midGrey, 15%);
+        font-size: .75rem;
 
         a {
             font-style: italic;
+            color: lighten($midGrey, 15%);
         }
     }
 

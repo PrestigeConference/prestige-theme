@@ -2,6 +2,7 @@
     position: relative;
     padding-bottom: 4rem;
     background: url(assets/img/header-bg_mobile.jpg) no-repeat center top;
+    background-size: cover;
 }
 
 body:not(.home) {
@@ -136,12 +137,14 @@ body:not(.home) {
     body:not(.home) {
         .header--blog-name {
             a {
-                max-width: 20rem;
+                max-width: (300rem/16);
+                margin: 2rem auto;
             }
         }
     }
 
     .header--subtitle {
+        margin-bottom: 2rem;
         color: $mplsPurple;
         font-size: (20rem/16);
     }
@@ -150,7 +153,7 @@ body:not(.home) {
             display: block;
             padding-bottom: .5em;
             color: white;
-            font-size: (26rem/16);
+            font-size: .75em;
             font-weight: 300;
         }
 
@@ -186,7 +189,7 @@ body:not(.home) {
     .subtitle--tagline {
         display: block;
         padding-bottom: .5em;
-        font-size: .75em;
+        font-size: (26rem/16);
     }
 
     .home {
@@ -262,7 +265,6 @@ body:not(.home) {
     body:not(.home) {
         .header--blog-name {
             a {
-                max-width: (657rem/16);
             }
         }
     }

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html class="no-js" <?php language_attributes(); ?>>
 <head>
-    <title><?php wp_title(' | ', true, 'right'); ?></title>
-    <meta name="description" content="<?php wp_title(); echo ' | '; bloginfo( 'description' ); ?>" />
+    <title><?php the_title(); ?> | Prestige Conference</title>
+    <meta name="description" content="<?php bloginfo( 'description' ); ?>" />
     <meta charset="utf-8">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
@@ -33,18 +33,18 @@
             <div class="sponsors--menu-button_inner">
                 <div class="logo-sponsors">
                     <section class="prestige-logo_small">
-                        <a href="/"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png 1x <?php echo get_template_directory_uri(); ?>/assets/img/logo_2x.png 2x" alt="Prestige Conference" /></a>
+                        <a href="/"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/logo_2x.png 2x, <?php echo get_template_directory_uri(); ?>/assets/img/logo.png 1x" alt="Prestige Conference" /></a>
                     </section>
                     <section class="primary-sponsors">
-                        <a href="http://gravityforms.com">
+                        <!--<a href="http://gravityforms.com">
                             <span data-picture data-alt="Gravity Forms">
-                                <span data-src="<?php echo get_template_directory_uri(); ?>/assets/img/sponsor-logos/gravity-forms-logo_header.png"></span>
-                                <span data-src="<?php echo get_template_directory_uri(); ?>/assets/img/sponsor-logos/gravity-forms-logo_header_2x.png"  data-media="(-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)"></span>
+                                <span data-src="<?php /*echo get_template_directory_uri(); */?>/assets/img/sponsor-logos/gravity-forms-logo_header.png"></span>
+                                <span data-src="<?php /*echo get_template_directory_uri(); */?>/assets/img/sponsor-logos/gravity-forms-logo_header_2x.png"  data-media="(-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)"></span>
                                 <noscript>
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sponsor-logos/gravity-forms-logo_header.png" alt="Gravity Forms">
+                                    <img src="<?php /*echo get_template_directory_uri(); */?>/assets/img/sponsor-logos/gravity-forms-logo_header.png" alt="Gravity Forms">
                                 </noscript>
                             </span>
-                        </a>
+                        </a>-->
                         <!--<a href="http://wpengine.com">
                             <span data-picture data-alt="WP Engine">
                                 <span data-src="<?php /*echo get_template_directory_uri(); */?>/assets/img/sponsor-logos/wpengine-logo_header.png"></span>
@@ -54,12 +54,12 @@
                                 </noscript>
                             </span>
                         </a>-->
-                        <a href="http://westwerk.com">
-                            <span data-picture data-alt="Westwerk">
-                                <span data-src="<?php echo get_template_directory_uri(); ?>/assets/img/sponsor-logos/westwerk-logo_header.png"></span>
-                                <span data-src="<?php echo get_template_directory_uri(); ?>/assets/img/sponsor-logos/westwerk-logo_header_2x.png"  data-media="(-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)"></span>
+                        <a href="http://press75.com">
+                            <span data-picture data-alt="Press75">
+                                <span data-src="<?php echo get_template_directory_uri(); ?>/assets/img/sponsor-logos/press75-logo_header.png"></span>
+                                <span data-src="<?php echo get_template_directory_uri(); ?>/assets/img/sponsor-logos/press75-logo_header_2x.png"  data-media="(-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)"></span>
                                 <noscript>
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sponsor-logos/westwerk-logo_header.png" alt="Westwerk">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sponsor-logos/press75-logo_header.png" alt="Press75">
                                 </noscript>
                             </span>
                         </a>
@@ -79,18 +79,18 @@
                     <div class="blog-name">
                         <?php bloginfo('name'); ?>
                     </div>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/prestige-logo.png" alt="<?php bloginfo('name'); ?>" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/prestige-logo.png" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/prestige-logo_2x.png 2x, <?php echo get_template_directory_uri(); ?>/assets/img/prestige-logo.png 1x" alt="<?php bloginfo('name'); ?>" />
                 </a>
                 <?php if(is_front_page()): ?>
                 <div class="header--subtitle">
                     <span class="subtitle--tagline">A Premium Business and <span>Career Development Conference</span></span>
-                    August 1-2, 2015
+                    May 24-25, 2016
                 </div>
                 <?php endif; ?>
 
             </h1>
             <?php if(is_front_page()): ?>
-            <a href="/tickets/" class="button button_tickets">Register Now</a>
+            <!--<a href="/tickets/" class="button button_tickets">Register Now</a>-->
             <!--<section class="header--hosted-in">
                 Hosted by <a href="http://innevation.com"><img src="<?php /*echo get_template_directory_uri(); */?>/assets/img/sponsor-logos/innevation-logo_header.png" alt="Innevation"></a> and <a href="http://9seeds.com"><img src="<?php /*echo get_template_directory_uri(); */?>/assets/img/sponsor-logos/9seeds-logo_header.png" alt="9seeds"></a> in <strong>Las Vegas, Nevada</strong> and <strong>streamed live</strong> wherever you are
             </section>-->

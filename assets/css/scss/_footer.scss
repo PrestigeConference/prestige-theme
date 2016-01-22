@@ -32,9 +32,21 @@
     }
 
     .twitter-link {
-        display: block;
+        display: inline-block;
         width: 70px;
         height: 70px;
-        margin: 0 auto 1em auto;
-        background: url(assets/img/twitter.png) no-repeat left top;
+        margin: 0;
+        margin-bottom: 1rem;
+        background: url(assets/img/twitter.svg) no-repeat 50% 50%;
+        background-size: 40px 40px;
     }
+
+.facebook-link {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    margin: 0;
+    margin-bottom: 1rem;
+    background: url(assets/img/facebook.svg) no-repeat 50% 50%;
+    background-size: 40px 40px;
+}

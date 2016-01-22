@@ -1,7 +1,9 @@
-gr<section class="past-videos">
-    <h1>Past Videos</h1>
-    <?php while (have_posts()) : the_post(); ?>
+<?php $activeConference = 'Aug15'; ?>
 
+<section class="past-videos">
+    <h1>Completed Sessions</h1>
+    <?php while (have_posts()) : the_post(); ?>
+        <?php if(has_category($activeConference)) : ?>
         <section class="video">
             <section class="past-video--content">
                 <section class="video--thumbnail">
@@ -30,24 +32,57 @@ gr<section class="past-videos">
                             echo $videoTitle; ?>
                     </a>
                     <section class="video--metadata">
-                        <?php
-                        $post_object = get_field('speaker');
-                        if($post_object) :
+                        <section class="past-videos--speaker">
+                            <?php
+                            $post_object = get_field('speaker');
                             $post = $post_object;
                             setup_postdata($post);
                             ?>
-                            <section class="past-videos--speaker">
                                 <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                            </section>
                             <?php
                             wp_reset_postdata();
-                        endif;
-                        ?>
+
+
+                            $post_object = get_field('speaker_2');
+                            if($post_object) :
+                                $post = $post_object;
+                                setup_postdata($post);
+                                ?>
+                                    , <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                <?php
+                                wp_reset_postdata();
+                            endif;
+
+                            $post_object = get_field('speaker_3');
+                            if($post_object) :
+                                $post = $post_object;
+                                setup_postdata($post);
+                                ?>
+                                , <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                <?php
+                                wp_reset_postdata();
+                            endif;
+
+                            $post_object = get_field('speaker_4');
+                            if($post_object) :
+                                $post = $post_object;
+                                setup_postdata($post);
+                                ?>
+                                , <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                <?php
+                                wp_reset_postdata();
+                            endif;
+                            ?>
+
+                        </section>
                     </section>
                     <?php echo $videoDescription; ?>
                 </section>
             </section>
         </section>
 
-    <?php endwhile; ?>
+    <?php endif; endwhile; ?>
+    <div class="more-coming" style="display: none;">
+        Thank you for your interest in our past videos. Our Minneapolis event just finished and we're busy editing the videos. We'll add them here as we complete them. Expect them all by Thursday.
+    </div>
 </section>

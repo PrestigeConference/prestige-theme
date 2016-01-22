@@ -13,7 +13,7 @@ h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, cite, cod
     font-weight: normal;
     font-style: normal;
     font-size: 100%;
-    line-height: 1.35;
+    line-height: $baselineHeight;
     font-family: inherit;
 }
 
@@ -178,7 +178,6 @@ h6,
 ol,
 ul,
 dl {
-    margin-bottom: $baselineHeight;
     line-height: $baselineHeight * 1.25;
 }
 
@@ -194,16 +193,12 @@ small {
 ul,
 ol {
     margin-left: 1em;
+    margin-bottom: 1em;
     padding: 0 0 0 $gutter;
-
-    ul,
-    ol {
-        margin-bottom: 0;
-    }
 }
 
     li {
-        margin: .25em 0;
+        margin: 0;
     }
 
 blockquote {
@@ -355,7 +350,7 @@ strong a {
 /* ELEMENTS */
 hr {
     display: block;
-    margin: 1em 0;
+    margin: 50px 0;
     padding: 0;
     height: 1px;
     border: 0;

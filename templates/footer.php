@@ -22,7 +22,7 @@
 </section>
 
 <footer class="footer-main" role="contentinfo">
-    <a href="http://twitter.com/prestigeconf" class="twitter-link"></a>
+    <a href="http://twitter.com/prestigeconf" class="twitter-link"></a> <a href="http://facebook.com/prestigeconf" class="facebook-link"></a>
 	<aside class="footer--copyright">
         &copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?> / <a href="mailto:joshbroton+prestige@gmail.com">email</a>
     </aside>
